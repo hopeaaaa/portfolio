@@ -1,0 +1,104 @@
+/* styles.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 50px;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.project {
+  text-align: left;
+  padding-bottom: 3rem;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project:hover img {
+  transform: scale(1.05);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.project h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.project a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #0073e6;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.project a:hover {
+  color: #005bb5;
+}
+
+.project p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 5px;
+}
+
+footer {
+  padding: 20px;
+  font-size: 0.9rem;
+  background-color: #fff;
+  width: 100%;
+}
