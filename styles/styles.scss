@@ -1,0 +1,173 @@
+@use "partials/colors" as *;
+@use "partials/variables" as *;
+@use "partials/mixins" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+hr {
+  border: 1px solid #e35b00;
+  margin: 0 auto;
+  max-width: 1110px;
+}
+
+.header {
+  padding: 2rem;
+
+  &__content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    /*   font-size: 1.5rem;
+    font-weight: 100; */
+    margin-bottom: 2rem;
+    color: #e35b00;
+
+    a {
+      text-decoration: none;
+      color: #e35b00;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  &__link {
+    margin-top: 0.5rem;
+  }
+
+  &__CVbtn {
+    color: #ffff;
+    background-color: #e35b00;
+    border: solid 1px #e35b00;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+      color: #e35b00;
+      background-color: #fff;
+    }
+    &.active {
+      color: #e35b00;
+      background-color: #fff;
+    }
+  }
+}
+
+.hero {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  &__section {
+    margin-bottom: 6rem;
+  }
+
+  &__intro {
+    font-size: 2.5rem;
+    /* font-weight: 700; */
+    padding: 2rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
+  }
+}
+
+.casestudies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  width: calc(100% - 4rem);
+  box-sizing: border-box;
+
+  &__preview {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex: 1 1 0;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 15rem;
+    display: block;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  &__img-ubc {
+    width: 100%;
+    height: 15rem;
+    display: block;
+    object-fit: cover;
+    object-position: 10% center;
+    border-radius: 0.5rem;
+  }
+
+  &__text-container {
+    padding: 0.5rem;
+  }
+
+  &__title {
+    margin-top: 1rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .casestudies__preview {
+    width: calc(50% - 1rem);
+  }
+}
+
+.contact,
+.other {
+  max-width: 700px;
+  margin-left: 2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.875rem;
+  color: #888;
+}
