@@ -179,4 +179,9 @@ main {
     white-space: nowrap;
     margin: 0;
   }
+
+  &__icon img {
+    width: 20px;
+    margin-top: 1rem;
+  }
 }

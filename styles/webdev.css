@@ -163,4 +163,8 @@ main {
 .contact__title {
   white-space: nowrap;
   margin: 0;
+}
+.contact__icon img {
+  width: 20px;
+  margin-top: 1rem;
 }/*# sourceMappingURL=webdev.css.map */
