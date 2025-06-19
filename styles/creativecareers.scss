@@ -190,6 +190,13 @@ a:hover {
     object-fit: cover;
     border-radius: 0.5rem;
   }
+  &__img1 {
+    width: 60%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
 
   &__body {
     margin-bottom: 4rem;
@@ -217,7 +224,21 @@ a:hover {
   }
 
   &__dp {
-    width: 20rem;
+    width: 15rem;
+    background-color: #fdf4eb;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  &__dp-title {
+    /*     font-weight: bold; */
+    margin-bottom: 1rem;
+    color: #e35b00;
+  }
+
+  &__dp-item {
+    color: #e35b00;
+    line-height: 1.5rem;
   }
 
   &__callouts-container {
@@ -261,7 +282,14 @@ a:hover {
     /*     color: #8c9e92; */
     color: var(--accent-color);
     letter-spacing: 0.08rem;
-    margin-top: 1rem;
+    /*     margin-top: 1rem; */
     margin-bottom: 0.5rem;
   }
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.875rem;
+  color: #888;
 }

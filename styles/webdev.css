@@ -5,7 +5,9 @@
   --font-body: "Helvetica Neue", sans-serif;
 }
 
-/* #FCEAC5 */
+/* #FCEAC5 
+ #fdf4eb
+*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -98,6 +100,15 @@ main {
   padding: 2rem;
 }
 
+.skills {
+  /*   &__list-container {
+    padding: none;
+  }
+
+  &__list-item {
+    list-style-type: none;
+  } */
+}
 .skills__line-container {
   display: flex;
   align-items: center;
@@ -120,7 +131,7 @@ main {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 .work__container {
   display: flex;
@@ -129,20 +140,26 @@ main {
 }
 .work__casestudy {
   flex: 1 1 calc(30% - 2rem);
+  overflow: hidden;
 }
 .work__casestudy-img {
   width: 100%;
-  height: 14rem;
+  height: 15rem;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.work__img {
+.work__img-coffee, .work__img-microsoft, .work__img {
   width: 100%;
   height: 15rem;
   display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
 }
-.work__img:hover img {
-  transform: scale(1.05);
+.work__img-coffee {
+  -o-object-position: 5% center;
+     object-position: 5% center;
 }
 .work__header {
   display: flex;
@@ -154,17 +171,44 @@ main {
 .contact {
   margin-top: 4rem;
 }
+.contact__info {
+  margin-left: 2rem;
+}
 .contact__line-container {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 .contact__title {
   white-space: nowrap;
-  margin: 0;
+  margin-bottom: 0rem;
 }
-.contact__icon img {
-  width: 20px;
+.contact__icon-img {
   margin-top: 1rem;
+  margin-right: 0.5rem;
+  margin-left: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  transition: fill 0.3s ease, transform 0.3s ease;
+}
+.contact__icon-img:hover {
+  transform: translateY(-10px);
+}
+.contact__icon-img-github {
+  margin-top: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateY(8px);
+  transition: fill 0.3s ease, transform 0.3s ease;
+}
+.contact__icon-img-github:hover {
+  transform: translateY(6px);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.875rem;
+  color: #888;
 }/*# sourceMappingURL=webdev.css.map */

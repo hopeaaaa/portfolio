@@ -5,7 +5,9 @@
   --font-body: "Helvetica Neue", sans-serif;
 }
 
-/* #FCEAC5 */
+/* #FCEAC5 
+ #fdf4eb
+*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -175,6 +177,14 @@ a:hover {
      object-fit: cover;
   border-radius: 0.5rem;
 }
+.final-design__img1 {
+  width: 60%;
+  height: auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem;
+}
 .final-design__body {
   margin-bottom: 4rem;
   line-height: 1.5rem;
@@ -196,7 +206,19 @@ a:hover {
   gap: 1rem;
 }
 .final-design__dp {
-  width: 20rem;
+  width: 15rem;
+  background-color: #fdf4eb;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.final-design__dp-title {
+  /*     font-weight: bold; */
+  margin-bottom: 1rem;
+  color: #e35b00;
+}
+.final-design__dp-item {
+  color: #e35b00;
+  line-height: 1.5rem;
 }
 .final-design__callouts-container {
   display: flex;
@@ -234,6 +256,13 @@ a:hover {
   /*     color: #8c9e92; */
   color: var(--accent-color);
   letter-spacing: 0.08rem;
-  margin-top: 1rem;
+  /*     margin-top: 1rem; */
   margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.875rem;
+  color: #888;
 }/*# sourceMappingURL=creativecareers.css.map */
