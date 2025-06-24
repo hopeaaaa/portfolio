@@ -1,12 +1,16 @@
+@charset "UTF-8";
 :root {
   --bg-color: #fdfdfd;
   --text-color: #1a1a1a;
-  --accent-color: #e35b00;
+  --accent-color: #161615;
   --font-body: "Helvetica Neue", sans-serif;
 }
 
 /* #FCEAC5 
  #fdf4eb
+  --accent-color: #e35b00;
+  "Helvetica Neue", "Montserrat"
+
 */
 * {
   box-sizing: border-box;
@@ -28,12 +32,37 @@ a {
 
 a:hover {
   text-decoration: underline;
-  color: var(--accent-color);
+  color: #e35b00;
 }
 
-/* hr {
-  border: solid 2px #e35b00;
-} */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+.lightbox__img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+.lightbox__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .header {
   padding: 2rem;
   /*   position: sticky;
@@ -55,6 +84,9 @@ a:hover {
 }
 .header__title a {
   text-decoration: none;
+  color: #e35b00;
+}
+.header__title a:hover {
   color: #e35b00;
 }
 .header__nav {
@@ -84,19 +116,52 @@ a:hover {
   background-color: #fff;
 }
 
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #e35b00; /* Set a background color */
+  opacity: 100%;
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  /*   background-color: #555; */
+  opacity: 100%;
+}
+
 .hero {
+  /*   max-width: 1050px;
+  margin: 0 auto;
+  padding: 2rem; */
+}
+.hero__intro-text-container {
   max-width: 1050px;
   margin: 0 auto;
   padding: 2rem;
+  margin-bottom: 6rem;
+  margin-top: 10rem;
 }
 .hero__title {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
-  margin: 2rem 0;
+}
+.hero__subtitle {
+  font-size: 28px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .hero__img {
   width: 100%;
-  height: 40rem;
+  height: auto;
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
@@ -104,13 +169,20 @@ a:hover {
 }
 .hero__context, .hero__outcomes_title {
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 600;
   /*     color: #3a4f41; */
   /*     color: #8c9e92; */
-  color: var(--accent-color);
+  /*  color: var(--accent-color); */
+  color: #7f8380;
   letter-spacing: 0.08rem;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+}
+.hero__context-megawrapper {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 2rem;
+  margin-top: 2rem;
 }
 .hero__context-wrapper {
   margin-top: 4rem;
@@ -119,6 +191,8 @@ a:hover {
   justify-content: space-between;
   gap: 0 4rem;
   flex-wrap: wrap;
+  max-width: 1050px;
+  margin: 0 auto;
 }
 .hero__container {
   flex: 1 1 40%;
@@ -131,8 +205,8 @@ a:hover {
 }
 .hero__intro {
   margin-bottom: 2rem;
-  line-height: 1.5rem;
-  /*    font-size: 1.3em; */
+  /*  line-height: 1.5rem; */
+  font-size: 20px;
 }
 .hero__deliverables {
   display: flex;
@@ -149,18 +223,23 @@ a:hover {
   border-radius: 1.3rem;
   padding: 1rem;
 }
-.hero__outcomes_li {
-  line-height: 1.3rem;
-  margin-bottom: 1rem;
-}
-
-.final-design {
+.hero__outcomes {
   max-width: 1050px;
   margin: 0 auto;
   padding: 2rem;
+  font-size: 20px;
 }
-.final-design__details-section {
-  margin-top: 3rem;
+.hero__outcomes_li {
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  list-style-type: "✱ ";
+  margin-left: -2rem;
+}
+
+.final-design {
+  /*   max-width: 1050px;
+  margin: 0 auto;
+  padding: 2rem; */
 }
 .final-design__title, .final-design__features-title {
   font-size: 0.8rem;
@@ -173,51 +252,71 @@ a:hover {
   width: 60%;
   height: 40rem;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
   border-radius: 0.5rem;
 }
-.final-design__img1 {
-  width: 60%;
+.final-design__fd-img {
+  width: 100%;
+  max-width: 30%;
   height: auto;
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 0.5rem;
 }
-.final-design__body {
-  margin-bottom: 4rem;
-  line-height: 1.5rem;
+.final-design__img-container {
+  margin: 0 auto;
+  display: flex;
+  max-width: 1050px;
+  gap: 1rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2rem 0;
 }
-.final-design__wrapper {
+.final-design__body {
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
+  font-size: 20px;
+  padding: 0 3rem 0 0;
+}
+.final-design__container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding-left: 2rem;
   display: flex;
   gap: 1rem;
   flex: 1;
+  margin-top: 2rem;
 }
-.final-design__details-section {
-  gap: 4rem;
+.final-design__action-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 .final-design__dp-container {
-  margin: 2rem 0;
+  padding: 2rem 4rem;
+  background-color: #e5e6e4;
 }
 .final-design__dp-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  justify-content: space-between;
 }
 .final-design__dp {
-  width: 15rem;
-  background-color: #fdf4eb;
-  padding: 2rem;
+  width: 18rem;
+  /*     background-color: #fdf4eb; */
   border-radius: 1rem;
 }
 .final-design__dp-title {
   /*     font-weight: bold; */
-  margin-bottom: 1rem;
-  color: #e35b00;
+  padding: 1rem 0;
+  color: black;
 }
 .final-design__dp-item {
-  color: #e35b00;
+  color: black;
   line-height: 1.5rem;
 }
 .final-design__callouts-container {
@@ -236,11 +335,12 @@ a:hover {
   max-width: 100%;
   height: auto;
   display: block;
+  cursor: zoom-in;
 }
 .final-design__co-text {
   padding: 1rem;
 }
-.final-design__tools-section {
+.final-design__tools-container {
   margin-top: 2rem;
 }
 
@@ -258,6 +358,12 @@ a:hover {
   letter-spacing: 0.08rem;
   /*     margin-top: 1rem; */
   margin-bottom: 0.5rem;
+}
+
+.end {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 footer {

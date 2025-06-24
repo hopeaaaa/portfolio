@@ -1,12 +1,15 @@
 :root {
   --bg-color: #fdfdfd;
   --text-color: #1a1a1a;
-  --accent-color: #e35b00;
+  --accent-color: #161615;
   --font-body: "Helvetica Neue", sans-serif;
 }
 
 /* #FCEAC5 
  #fdf4eb
+  --accent-color: #e35b00;
+  "Helvetica Neue", "Montserrat"
+
 */
 * {
   box-sizing: border-box;
@@ -28,7 +31,7 @@ a {
 
 a:hover {
   /*   text-decoration: underline; */
-  color: var(--accent-color);
+  color: #e35b00;
 }
 
 hr {
@@ -101,13 +104,21 @@ hr {
 }
 
 .casestudies {
-  display: flex;
+  /*   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  max-width: 1200px;
+
   margin: 2rem auto;
+  padding: 2rem;
   width: calc(100% - 4rem);
-  box-sizing: border-box;
+  box-sizing: border-box; */
+  max-width: 1200px;
+}
+.casestudies__row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .casestudies__preview {
   border: 1px solid #ccc;
@@ -136,12 +147,15 @@ hr {
 }
 .casestudies__preview:hover::after {
   opacity: 0.3;
+  color: #e35b00;
 }
 .casestudies__preview:hover {
   transform: scale(1.02);
+  color: #e35b00;
 }
 .casestudies__preview-link {
-  width: calc(50% - 1rem);
+  /*     width: calc(50% - 1rem); */
+  flex: 1 1 calc(33.333% - 1.5rem);
   text-decoration: none;
   color: inherit;
 }

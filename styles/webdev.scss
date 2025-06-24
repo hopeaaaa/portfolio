@@ -115,17 +115,18 @@ main {
   }
 
   &__container {
-    /*     border: 2px solid; */
     padding: 2rem;
   }
 
   /*   &__list-container {
     padding: none;
-  }
+  }*/
 
   &__list-item {
-    list-style-type: none;
-  } */
+    line-height: 2rem;
+    list-style-type: "✱ ";
+    margin-left: -1.3rem;
+  }
 }
 
 .work {
@@ -181,10 +182,6 @@ main {
 .contact {
   margin-top: 4rem;
 
-  &__info {
-    margin-left: 2rem;
-  }
-
   &__line-container {
     display: flex;
     align-items: center;
@@ -200,7 +197,6 @@ main {
   &__icon-img {
     margin-top: 1rem;
     margin-right: 0.5rem;
-    margin-left: 2rem;
     display: inline-block;
     vertical-align: middle;
     transition: fill 0.3s ease, transform 0.3s ease;

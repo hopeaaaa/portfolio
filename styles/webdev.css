@@ -1,12 +1,16 @@
+@charset "UTF-8";
 :root {
   --bg-color: #fdfdfd;
   --text-color: #1a1a1a;
-  --accent-color: #e35b00;
+  --accent-color: #161615;
   --font-body: "Helvetica Neue", sans-serif;
 }
 
 /* #FCEAC5 
  #fdf4eb
+  --accent-color: #e35b00;
+  "Helvetica Neue", "Montserrat"
+
 */
 * {
   box-sizing: border-box;
@@ -103,11 +107,7 @@ main {
 .skills {
   /*   &__list-container {
     padding: none;
-  }
-
-  &__list-item {
-    list-style-type: none;
-  } */
+  }*/
 }
 .skills__line-container {
   display: flex;
@@ -120,8 +120,12 @@ main {
   justify-content: space-between;
 }
 .skills__container {
-  /*     border: 2px solid; */
   padding: 2rem;
+}
+.skills__list-item {
+  line-height: 2rem;
+  list-style-type: "✱ ";
+  margin-left: -1.3rem;
 }
 
 .work {
@@ -171,9 +175,6 @@ main {
 .contact {
   margin-top: 4rem;
 }
-.contact__info {
-  margin-left: 2rem;
-}
 .contact__line-container {
   display: flex;
   align-items: center;
@@ -187,7 +188,6 @@ main {
 .contact__icon-img {
   margin-top: 1rem;
   margin-right: 0.5rem;
-  margin-left: 2rem;
   display: inline-block;
   vertical-align: middle;
   transition: fill 0.3s ease, transform 0.3s ease;

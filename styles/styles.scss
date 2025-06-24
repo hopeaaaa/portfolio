@@ -22,7 +22,7 @@ a {
 
 a:hover {
   /*   text-decoration: underline; */
-  color: var(--accent-color);
+  color: #e35b00;
 }
 
 hr {
@@ -104,13 +104,21 @@ hr {
 }
 
 .casestudies {
-  display: flex;
+  /*   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  max-width: 1200px;
+  
   margin: 2rem auto;
+  padding: 2rem;
   width: calc(100% - 4rem);
-  box-sizing: border-box;
+  box-sizing: border-box; */
+  max-width: 1200px;
+  &__row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
   &__preview {
     border: 1px solid #ccc;
@@ -140,15 +148,18 @@ hr {
 
     &:hover::after {
       opacity: 0.3;
+      color: #e35b00;
     }
 
     &:hover {
       transform: scale(1.02);
+      color: #e35b00;
     }
   }
 
   &__preview-link {
-    width: calc(50% - 1rem);
+    /*     width: calc(50% - 1rem); */
+    flex: 1 1 calc(33.333% - 1.5rem);
     text-decoration: none;
     color: inherit;
   }

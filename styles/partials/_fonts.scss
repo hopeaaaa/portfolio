@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Titillium Web";
+  src: url("./assets/fonts/alternative-files/TitilliumWeb-Regular.woff2")
+      format("woff2"),
+    url("./assets/fonts/TitilliumWeb-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Titillium Web";
+  src: url("./assets/fonts/alternative-files/TitilliumWeb-SemiBold.woff2")
+      format("woff2"),
+    url("./assets/fonts/TitilliumWeb-SemiBold.woff") format("woff");
+  font-weight: 600;
+}
+
+/*     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    /> */
+
+//./assets/fonts/alternative-files/TitilliumWeb-SemiBold.woff2

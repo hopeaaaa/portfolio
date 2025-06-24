@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hope akello | ubc pharmacists clinic</title>
     <link rel="stylesheet" href="../styles/ubc.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/images/about/asterisk.png?v=2"
+    />
   </head>
   <body>
     <header class="header">
@@ -19,42 +24,55 @@
       </div>
     </header>
     <section class="hero">
+      <div class="hero__intro-text-container">
+        <h2 class="hero__title">UBC Pharmacists Clinic</h2>
+        <p class="hero__subtitle">
+          <!--           Improving communication systems in a high-trust environment. -->
+          <!--           Streamlining information flow in a collaborative care ecosystem. -->
+          Designing interfaces that simplify complexity and support
+          patient-centered care.
+        </p>
+      </div>
       <img
         src="../assets/images/ubc/Screenshot 2025-06-03 095438.png"
         alt="hero image"
         class="hero__img"
       />
-      <div class="hero__context-wrapper">
-        <div class="hero__container">
-          <h3 class="hero__context">CLIENT</h3>
-          <p class="hero__intro">
-            <a href="https://pharmsci.ubc.ca/pharmacists-clinic"
-              >The UBC Pharmacists Clinic</a
-            >
-          </p>
-        </div>
-        <div class="hero__container">
-          <h3 class="hero__context">ROLE</h3>
-          <p class="hero__intro">
-            Service Designer and UX Lead; I facilitated stakeholder engagement,
-            led the research and prototyping process, and supported the clinic
-            through technology integration.
-          </p>
-        </div>
-        <div class="hero__container">
-          <h3 class="hero__context">PROBLEM</h3>
-          <p class="hero__intro">
-            Clinic operations relied heavily on manual processes, creating
-            administrative burdens and inefficiencies for pharmacists and staff.
-          </p>
-        </div>
-        <div class="hero__container">
-          <h3 class="hero__context">SOLUTION</h3>
-          <p class="hero__intro">
-            A suite of digital tools and service improvements to reduce
-            administrative workload, improve communication, and enhance the
-            overall patient care experience.
-          </p>
+      <div class="hero__context-megawrapper">
+        <p class="hero__subtitle">Overview</p>
+        <div class="hero__context-wrapper">
+          <div class="hero__container">
+            <h3 class="hero__context">CLIENT</h3>
+            <p class="hero__intro">
+              <a href="https://pharmsci.ubc.ca/pharmacists-clinic"
+                >The UBC Pharmacists Clinic</a
+              >
+            </p>
+          </div>
+          <div class="hero__container">
+            <h3 class="hero__context">ROLE</h3>
+            <p class="hero__intro">
+              Service Designer and UX Lead; I facilitated stakeholder
+              engagement, led the research and prototyping process, and
+              supported the clinic through technology integration.
+            </p>
+          </div>
+          <div class="hero__container">
+            <h3 class="hero__context">PROBLEM</h3>
+            <p class="hero__intro">
+              Clinic operations relied heavily on manual processes, creating
+              administrative burdens and inefficiencies for pharmacists and
+              staff.
+            </p>
+          </div>
+          <div class="hero__container">
+            <h3 class="hero__context">SOLUTION</h3>
+            <p class="hero__intro">
+              A suite of digital tools and service improvements to reduce
+              administrative workload, improve communication, and enhance the
+              overall patient care experience.
+            </p>
+          </div>
         </div>
       </div>
       <!--       <div class="hero__deliverables">
@@ -68,7 +86,7 @@
         <p class="hero__deliverables_btn">UX Research</p>
       </div> -->
       <div class="hero__outcomes">
-        <h3 class="hero__outcomes_title">IMPACT</h3>
+        <p class="hero__outcomes_title">Impact</p>
         <ul class="hero__outcomes_container">
           <li class="hero__outcomes_li">
             Led redesign of 5+ core clinical processes, including appointment
@@ -105,19 +123,20 @@
       </div>
     </section>
     <section class="final-design">
-      <h3 class="final-design__title">PROJECTS</h3>
+      <p class="final-design__title">Projects</p>
       <p class="final-design__body">
         The UBC Pharmacists Clinic is a university-affiliated, pharmacist-led
         patient care clinic. At the Clinic, the clinicians use their specialized
         knowledge in medication to support the care of medically complex
-        patients. As Healthcare Designer for the clinic, I worked to improve the
-        clinical processes and patient experience by integrating new
-        technologies and streamlining digital interactions. I led the service
-        and UX design processes, collaborating closely with clinicians,
-        administrators, and external stakeholders to deliver solutions. My
-        contributions spanned research, design, implementation, and mentorship,
-        resulting in a more efficient and user-friendly experience for patients
-        and staff alike.
+        patients. <br />
+        <br />
+        As Healthcare Designer for the clinic, I worked to improve the clinical
+        processes and patient experience by integrating new technologies and
+        streamlining digital interactions. I led the service and UX design
+        processes, collaborating closely with clinicians, administrators, and
+        external stakeholders to deliver solutions. My contributions spanned
+        research, design, implementation, and mentorship, resulting in a more
+        efficient and user-friendly experience for patients and staff alike.
       </p>
       <div class="final-design__intro-img-container">
         <img
@@ -152,5 +171,19 @@
         Other: Rx form, waiting room signage/graphics, CARE graphics
       </p> -->
     </section>
+    <footer>
+      <p>&copy; 2025 design and code by hope akello</p>
+    </footer>
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox__close">&times;</span>
+      <img
+        class="lightbox__img"
+        id="lightbox-img"
+        src=""
+        alt="Expanded image"
+      />
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">top</button>
+    <script src="../scripts/btn.js"></script>
   </body>
 </html>
