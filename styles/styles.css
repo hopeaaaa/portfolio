@@ -112,7 +112,7 @@ hr {
   padding: 2rem;
   width: calc(100% - 4rem);
   box-sizing: border-box; */
-  max-width: 1200px;
+  max-width: 1050px;
 }
 .casestudies__row {
   display: flex;
@@ -154,8 +154,8 @@ hr {
   color: #e35b00;
 }
 .casestudies__preview-link {
-  /*     width: calc(50% - 1rem); */
-  flex: 1 1 calc(33.333% - 1.5rem);
+  width: calc(50% - 1rem);
+  /*    flex: 1 1 calc(33.333% - 1.5rem); */
   text-decoration: none;
   color: inherit;
 }
