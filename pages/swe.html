@@ -1,221 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hope akello | dev portfolio</title>
-    <link rel="stylesheet" href="../styles/webdev.css" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./assets/images/about/asterisk.png?v=2"
-    />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__content">
-        <h1 class="header__title">
-          <a href="../index.html">Hope Akello</a>
-        </h1>
-        <nav class="header__nav">
-          <a href="./about.html" class="header__link">About</a>
-          <button class="header__CVbtn">CV</button>
-        </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hope akello | dev portfolio</title>
+  <link rel="stylesheet" href="../styles/swe.css" />
+  <link rel="icon" type="image/x-icon" href="./assets/images/about/asterisk.png?v=2" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__content">
+      <h1 class="header__title">
+        <a href="../index.html">Hope Akello</a>
+      </h1>
+      <nav class="header__nav">
+        <a href="./about.html" class="header__link">About</a>
+        <button class="header__CVbtn">CV</button>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="skills">
+      <div class="skills__line-container">
+        <h2 class="skills__title">Skills</h2>
+        <hr />
       </div>
-    </header>
-    <main>
-      <section class="skills">
-        <div class="skills__line-container">
-          <h2 class="skills__title">Skills</h2>
-          <hr />
+      <div class="skills__wrapper">
+        <div class="skills__container">
+          <h3 class="skills__subtitle">Frontend</h3>
+          <ul class="skills__list-container">
+            <li class="skills__list-item">HTML</li>
+            <li class="skills__list-item">CSS</li>
+            <li class="skills__list-item">SASS</li>
+            <li class="skills__list-item">Javascript</li>
+            <li class="skills__list-item">React/React Native</li>
+            <li class="skills__list-item">Responsive Design</li>
+            <li class="skills__list-item">BEM</li>
+          </ul>
         </div>
-        <div class="skills__wrapper">
-          <div class="skills__container">
-            <h3 class="skills__subtitle">Frontend</h3>
-            <ul class="skills__list-container">
-              <li class="skills__list-item">HTML</li>
-              <li class="skills__list-item">CSS</li>
-              <li class="skills__list-item">SASS</li>
-              <li class="skills__list-item">Javascript</li>
-              <li class="skills__list-item">React/React Native</li>
-              <li class="skills__list-item">Responsive Design</li>
-              <li class="skills__list-item">BEM</li>
-            </ul>
-          </div>
-          <div class="skills__container">
-            <h3 class="skills__subtitle">Backend</h3>
-            <ul class="skills__list-container">
-              <li class="skills__list-item">MySQL/PostgreSQL</li>
-              <li class="skills__list-item">Express</li>
-              <li class="skills__list-item">Node.js</li>
-              <li class="skills__list-item">Knex</li>
-              <li class="skills__list-item">Vite</li>
-              <li class="skills__list-item">REST APIs</li>
-            </ul>
-          </div>
-          <div class="skills__container">
-            <h3 class="skills__subtitle">Other</h3>
-            <ul class="skills__list-container">
-              <li class="skills__list-item">Git</li>
-              <li class="skills__list-item">Command Line</li>
-              <li class="skills__list-item">Postman</li>
-              <li class="skills__list-item">Jira</li>
-              <li class="skills__list-item">Heroku</li>
-              <li class="skills__list-item">Tableau</li>
-              <li class="skills__list-item">P5 JS</li>
-              <li class="skills__list-item">Figma/Adobe CC</li>
-              <li class="skills__list-item">UX Design</li>
-            </ul>
-          </div>
+        <div class="skills__container">
+          <h3 class="skills__subtitle">Backend</h3>
+          <ul class="skills__list-container">
+            <li class="skills__list-item">MySQL/PostgreSQL</li>
+            <li class="skills__list-item">Express</li>
+            <li class="skills__list-item">Node.js</li>
+            <li class="skills__list-item">Knex</li>
+            <li class="skills__list-item">Vite</li>
+            <li class="skills__list-item">REST APIs</li>
+          </ul>
         </div>
-      </section>
-      <section class="work">
-        <div class="work__line-container">
-          <h2 class="work__title">Select Works</h2>
-          <hr />
+        <div class="skills__container">
+          <h3 class="skills__subtitle">Other</h3>
+          <ul class="skills__list-container">
+            <li class="skills__list-item">Git</li>
+            <li class="skills__list-item">Command Line</li>
+            <li class="skills__list-item">Postman</li>
+            <li class="skills__list-item">Jira</li>
+            <li class="skills__list-item">Heroku</li>
+            <li class="skills__list-item">Tableau</li>
+            <li class="skills__list-item">P5 JS</li>
+            <li class="skills__list-item">Figma/Adobe CC</li>
+            <li class="skills__list-item">UX Design</li>
+          </ul>
         </div>
-        <div class="work__container">
-          <div class="work__casestudy">
-            <img
-              class="work__img"
-              src="../assets/images/webdev/snaps.jpg"
-              alt="Screenshot of Snaps app"
-            />
-            <div class="work__header">
-              <h3>Snaps</h3>
-              <a href="https://github.com/hopeaaaa/snaps">Code</a>
-            </div>
-            <p>React | Node | Express | APIs | Responsive Design</p>
+      </div>
+    </section>
+    <section class="work">
+      <div class="work__line-container">
+        <h2 class="work__title">Select Works</h2>
+        <hr />
+      </div>
+      <div class="work__container">
+        <div class="work__casestudy">
+          <img class="work__img" src="../assets/images/swe/snaps.jpg" alt="Screenshot of Snaps app" />
+          <div class="work__header">
+            <h3>Snaps</h3>
+            <a href="https://github.com/hopeaaaa/snaps">Code</a>
           </div>
-          <div class="work__casestudy">
-            <img
-              class="work__img"
-              src="../assets/images/webdev/instock.svg"
-              alt="Screenshot of Instock app"
-            />
-            <div class="work__header">
-              <h3>Instock</h3>
-              <a href="https://github.com/hopeaaaa/instock-frontend">Code</a>
-            </div>
-            <p>MySQL | Figma | Git | Jira | Scrum</p>
+          <p>React | Node | Express | APIs | Responsive Design</p>
+        </div>
+        <div class="work__casestudy">
+          <img class="work__img" src="../assets/images/swe/instock.svg" alt="Screenshot of Instock app" />
+          <div class="work__header">
+            <h3>Instock</h3>
+            <a href="https://github.com/hopeaaaa/instock-frontend">Code</a>
           </div>
-          <div class="work__casestudy">
-            <a
-              href="https://www.canva.com/design/DAGh0V4EhEs/T9Pdmh_nZ4A32sgH7ah5uQ/view?utm_content=DAGh0V4EhEs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0eab37c1eb"
-            >
-              <img
-                class="work__img-microsoft"
-                src="../assets/images/webdev/autopilot.png"
-                alt="gradient image"
-              />
-            </a>
+          <p>MySQL | Figma | Git | Jira | Scrum</p>
+        </div>
+        <div class="work__casestudy">
+          <a
+            href="https://www.canva.com/design/DAGh0V4EhEs/T9Pdmh_nZ4A32sgH7ah5uQ/view?utm_content=DAGh0V4EhEs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0eab37c1eb">
+            <img class="work__img-microsoft" src="../assets/images/swe/autopilot.png" alt="gradient image" />
+          </a>
 
-            <div class="work__header">
-              <h3>AutoPilot</h3>
-              <a
-                href="https://github.com/afcanavera/microsoft-hackathon-frontend"
-                >Code</a
-              >
-            </div>
+          <div class="work__header">
+            <h3>AutoPilot</h3>
+            <a href="https://github.com/afcanavera/microsoft-hackathon-frontend">Code</a>
+          </div>
 
-            <p>Brainstation x Microsoft Hackathon | Jira | APIs | React</p>
-          </div>
-          <div class="work__casestudy">
-            <img
-              class="work__img-coffee"
-              src="../assets/images/webdev/coffeeshop-2.jpg"
-              alt="coffeebag"
-            />
-            <div class="work__header">
-              <h3>Nitro Coffee</h3>
-              <a href="https://github.com/hopeaaaa/hope-akello-coffeeshop"
-                >Code</a
-              >
-            </div>
-            <p>HTML | CSS | CSS Animations | SASS | Bem</p>
-          </div>
-          <div class="work__casestudy">
-            <img
-              class="work__casestudy-img"
-              src="../assets/images/webdev/bandsite screenshot.jpg"
-              alt="coffeebag"
-            />
-            <div class="work__header">
-              <h3>Band Website</h3>
-              <a href="https://github.com/hopeaaaa/hope-akello-bandsite"
-                >Code</a
-              >
-            </div>
-            <p>HTML | CSS | SASS | Bem | Responsive Design</p>
-          </div>
-          <div class="work__casestudy">
-            <img
-              class="work__casestudy-img"
-              src="../assets/images/webdev/dictionary screenshot2.jpg"
-              alt="coffeebag"
-            />
-            <div class="work__header">
-              <h3>Dictionary App</h3>
-              <a href="https://github.com/hopeaaaa/hope-akello-coffeeshop"
-                >Code</a
-              >
-            </div>
-            <p>React | APIs</p>
-          </div>
+          <p>Brainstation x Microsoft Hackathon | Jira | APIs | React</p>
         </div>
-      </section>
-      <section class="contact">
-        <div class="contact__line-container">
-          <h2 class="contact__title">Contact</h2>
-          <hr />
+        <div class="work__casestudy">
+          <img class="work__img-coffee" src="../assets/images/swe/coffeeshop-2.jpg" alt="coffeebag" />
+          <div class="work__header">
+            <h3>Nitro Coffee</h3>
+            <a href="https://github.com/hopeaaaa/hope-akello-coffeeshop">Code</a>
+          </div>
+          <p>HTML | CSS | CSS Animations | SASS | Bem</p>
         </div>
-        <p class="contact__info">
-          I'm Hope, a designer-developer with full stack dev experience. <br />
-          I bring design to life through research, code, and empathy.
-        </p>
-        <a
-          class="contact__icon"
-          href="https://www.linkedin.com/in/hope-akello/"
-          aria-label="Linkedin profile"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 24 24"
-            fill="#e35b00"
-            class="contact__icon-img"
-          >
-            <path
-              d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1s2.48 1.12 2.48 2.5zM0 24h5V7H0v17zM7.5 7h4.8v2.3h.07c.67-1.27 2.3-2.6 4.73-2.6 5.06 0 6 3.34 6 7.67V24h-5v-7.46c0-1.78-.03-4.07-2.48-4.07-2.5 0-2.88 1.95-2.88 3.95V24h-5V7z"
-            />
-          </svg>
-        </a>
-        <a
-          class="contact__icon"
-          href="https://github.com/hopeaaaa"
-          aria-label="GitHub profile"
-        >
-          <svg
-            width="40"
-            height="40"
-            viewBox="0 0 24 24"
-            fill="#e35b00"
-            xmlns="http://www.w3.org/2000/svg"
-            class="contact__icon-img-github"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
-              fill="#e35b00"
-            />
-          </svg>
-        </a>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2025 design and code by hope akello</p>
-    </footer>
-  </body>
+        <div class="work__casestudy">
+          <img class="work__casestudy-img" src="../assets/images/swe/bandsite screenshot.jpg" alt="coffeebag" />
+          <div class="work__header">
+            <h3>Band Website</h3>
+            <a href="https://github.com/hopeaaaa/hope-akello-bandsite">Code</a>
+          </div>
+          <p>HTML | CSS | SASS | Bem | Responsive Design</p>
+        </div>
+        <div class="work__casestudy">
+          <img class="work__casestudy-img" src="../assets/images/swe/dictionary screenshot.jpg" alt="coffeebag" />
+          <div class="work__header">
+            <h3>Dictionary App</h3>
+            <a href="https://github.com/hopeaaaa/hope-akello-coffeeshop">Code</a>
+          </div>
+          <p>React | APIs</p>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="contact__line-container">
+        <h2 class="contact__title">Contact</h2>
+        <hr />
+      </div>
+      <p class="contact__info">
+        I'm Hope, a designer-developer with full stack dev experience. <br />
+        I bring design to life through research, code, and empathy.
+      </p>
+      <a class="contact__icon" href="https://www.linkedin.com/in/hope-akello/" aria-label="Linkedin profile">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="#e35b00"
+          class="contact__icon-img">
+          <path
+            d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1s2.48 1.12 2.48 2.5zM0 24h5V7H0v17zM7.5 7h4.8v2.3h.07c.67-1.27 2.3-2.6 4.73-2.6 5.06 0 6 3.34 6 7.67V24h-5v-7.46c0-1.78-.03-4.07-2.48-4.07-2.5 0-2.88 1.95-2.88 3.95V24h-5V7z" />
+        </svg>
+      </a>
+      <a class="contact__icon" href="https://github.com/hopeaaaa" aria-label="GitHub profile">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="#e35b00" xmlns="http://www.w3.org/2000/svg"
+          class="contact__icon-img-github">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
+            fill="#e35b00" />
+        </svg>
+      </a>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 design and code by hope akello</p>
+  </footer>
+</body>
+
 </html>

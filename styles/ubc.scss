@@ -286,3 +286,83 @@ footer {
   font-size: 0.875rem;
   color: #888;
 }
+
+.accordion__item {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion__trigger {
+  background: none;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 28px;
+  /*     margin-top: 1rem;
+    margin-bottom: 1rem; */
+}
+
+.accordion__icon {
+  /*   margin-left: 0.5rem; */
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+.accordion__line {
+  stroke: currentColor;
+  stroke-width: 2;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+.accordion__trigger[aria-expanded="true"] .accordion__line--horizontal {
+  transform: rotate(45deg);
+}
+.accordion__trigger[aria-expanded="true"] .accordion__line--vertical {
+  transform: rotate(45deg);
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 1rem;
+}
+
+.accordion__item--active .accordion__content {
+  padding: 1rem;
+}
+
+.accordion__title {
+  /*   line-height: 2rem; */
+  font-size: 20px;
+}
+.accordion__body {
+  /*   line-height: 2rem; */
+  font-size: 20px;
+}
+
+.accordion__text,
+.accordion__list,
+.accordion__image {
+  margin: 0.5rem 0;
+}
+
+.accordion__list {
+  padding-left: 1.25rem;
+  font-size: 20px;
+}
+
+.accordion__li {
+  line-height: 1.3rem;
+  margin-bottom: 1rem;
+  list-style-type: "✱ ";
+}
+
+.accordion__outcomes-container,
+.accordion__approaches-container,
+.accordion__objectives-container,
+.accordion__results-container {
+  padding: 2rem 0 0 0;
+}

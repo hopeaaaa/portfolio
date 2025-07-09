@@ -39,3 +39,19 @@ lightbox.addEventListener("click", function (e) {
     lightbox.style.display = "none";
   }
 });
+
+document.querySelectorAll(".accordion__trigger").forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const item = trigger.closest(".accordion__item");
+    const content = item.querySelector(".accordion__content");
+    const isOpen = item.classList.toggle("accordion__item--active");
+
+    trigger.setAttribute("aria-expanded", String(isOpen));
+
+    if (isOpen) {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      content.style.maxHeight = null;
+    }
+  });
+});

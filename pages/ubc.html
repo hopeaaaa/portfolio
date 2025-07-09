@@ -17,7 +17,8 @@
       </h1>
       <nav class="header__nav">
         <a href="./about.html" class="header__link">About</a>
-        <button class="header__CVbtn">CV</button>
+        <a href="../assets/pdfs/Hope_AkelloResume.pdf" class="header__CVbtn" target="_blank"
+          rel="noopener noreferrer">CV</a>
       </nav>
     </div>
   </header>
@@ -27,7 +28,7 @@
       <p class="hero__subtitle">
         <!--           Improving communication systems in a high-trust environment. -->
         <!--           Streamlining information flow in a collaborative care ecosystem. -->
-        Designing interfaces that simplify complexity and support
+        Designing services and interfaces <!-- that streamline information flow --> to support
         patient-centered care.
       </p>
     </div>
@@ -50,15 +51,14 @@
           </p>
         </div>
         <div class="hero__container">
-          <h3 class="hero__context">PROBLEM</h3>
+          <h3 class="hero__context">PROBLEMS</h3>
           <p class="hero__intro">
-            Clinic operations relied heavily on manual processes, creating
-            administrative burdens and inefficiencies for pharmacists and
-            staff.
+            The clinic’s digital tools were not fully aligned with the evolving needs of pharmacists or the range of
+            services offered, leading to workarounds and added administrative load.
           </p>
         </div>
         <div class="hero__container">
-          <h3 class="hero__context">SOLUTION</h3>
+          <h3 class="hero__context">SOLUTIONS</h3>
           <p class="hero__intro">
             A suite of digital tools and service improvements to reduce
             administrative workload, improve communication, and enhance the
@@ -67,16 +67,8 @@
         </div>
       </div>
     </div>
-    <!--       <div class="hero__deliverables">
-        <p class="hero__deliverables_btn">
-          Electronic Medical Records (EMR) UI Design
-        </p>
-        <p class="hero__deliverables_btn">Online Booking Process</p>
-        <p class="hero__deliverables_btn">Forms</p>
-        <p class="hero__deliverables_btn">User Journey Maps</p>
-        <p class="hero__deliverables_btn">Service Design</p>
-        <p class="hero__deliverables_btn">UX Research</p>
-      </div> -->
+
+    <!-- IMPACT -->
     <div class="hero__outcomes">
       <p class="hero__outcomes_title">Impact</p>
       <ul class="hero__outcomes_container">
@@ -132,19 +124,176 @@
       processes, collaborating closely with clinicians, administrators, and
       external stakeholders to deliver solutions. My contributions spanned
       research, design, implementation, and mentorship, resulting in a more
-      efficient and user-friendly experience for patients and staff alike.
+      efficient and user-friendly experience for patients and staff alike. Below is a snapshot of a few projects I
+      worked on.
     </p>
     <div class="final-design__intro-img-container">
-      <img class="final-design__intro-img"
-        src="../assets/images/ubc/Copy of Pharm Clinic Journey Mapping - Clinician Journey Map.jpg" alt="" />
-      <img class="final-design__intro-img" src="../assets/images/ubc/Screenshot 2025-06-03 095438.png" alt="" />
+      <img class="final-design__intro-img" src="../assets/images/ubc/PharmacistsClinic_Location_Hero.webp" alt="" />
+      <!-- <img class="final-design__intro-img" src="../assets/images/ubc/PharmacistsClinic_inside-clinic.jpg" alt="" /> -->
     </div>
-    <p class="final-design__title">OSCAR EMR Interface Modifications</p>
-    <p class="final-design__body">
-      OSCAR is a widely used open-source electronic medical records or EMR system. At the UBC Pharmacists Clinic, staff
-      used it daily, but found many interface elements inefficient, cluttered, or unintuitive. This project involved
-      proposing small but meaningful UX improvements to better support their clinical workflow.
-    </p>
+    <div class="accordion">
+      <div class="accordion__item">
+        <button class="accordion__trigger" aria-expanded="false">Appointment Booking Process
+          <svg class="accordion__icon" width="20" height="20" viewBox="0 0 16 16" aria-hidden="true">
+            <line x1="2" y1="8" x2="14" y2="8" class="accordion__line accordion__line--horizontal" />
+            <line x1="8" y1="2" x2="8" y2="14" class="accordion__line accordion__line--vertical" />
+          </svg>
+        </button>
+        <div class="accordion__content">
+          <div class="accordion__context-container">
+            <P class="accordion__title">Context</P>
+            <p class="accordion__body">In 2023, a new provincial initiative allowed pharmacists in British Columbia to
+              prescribe medications for
+              21 minor ailments and contraceptives. In response, the clinic needed to update its appointment booking
+              process to include minor ailment and contraceptive (MAC) appointments.</p>
+          </div>
+          <div class="accordion__objectives-container">
+            <P class="accordion__title">Objective</P>
+            <P class="accordion__body"> Allow patients to book MAC appointments
+              online, including the ability to specify the condition they needed care for.</P>
+          </div>
+          <div class="accordion__approaches-container">
+            <p class="accordion__title">Approach</p>
+            <img src="../assets/images/ubc/Copy of Pharm Clinic Journey Mapping - Clinician Journey Map.jpg" alt=""
+              class="final-design__intro-img">
+            <img src="../assets/images/ubc/Copy of Pharm Clinic Journey Mapping - MOA Journey Mapping.jpg" alt=""
+              class="final-design__intro-img">
+            <img src="../assets/images/ubc/Copy of Pharm Clinic Journey Mapping - Patient Journey Mapping.jpg" alt=""
+              class="final-design__intro-img">
+            <ul class="accordion__list">
+              <li class="accordion__li"> Discovery: Mapped current patient booking journey using
+                interviews and service blueprints</li>
+              <li class="accordion__li">Synthesis: Identified pain points including unclear next steps, duplicate
+                data entry, and lack of appointment visibility</li>
+              <li class="accordion__li">Design: Prototyped an online form with conditional logic and
+                accessibility best practices (e.g. label clarity, keyboard navigation)</li>
+              <li class="accordion__li">Testing & Iteration: Presented the Figma prototype to staff and refined
+                based on their feedback</li>
+            </ul>
+            <div class="accordion__outcomes-container">
+              <p class="accordion__title">Outcomes</p>
+              <ul class="accordion__list">
+                <li class="accordion__li">A service blueprint showing existing pain points</li>
+                <li class="accordion__li">A new booking flow prototype in Figma</li>
+                <li class="accordion__li">Recommendations document outlining integration opportunities</li>
+              </ul>
+              <img src="../assets/images/ubc/MAC-appt-main-page.svg" alt="" class="final-design__intro-img">
+              <img src="../assets/images/ubc/MAC-appt-descriptions.svg" alt="" class="final-design__intro-img">
+              <img src="../assets/images/ubc/MAC-appt-cortico.svg" alt="" class="final-design__intro-img">
+            </div>
+            <!--             <div class="accordion__results-container">
+              <p class="accordion__title">Results</p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <button class="accordion__trigger">OSCAR EMR UI Modifications
+          <svg class="accordion__icon" width="20" height="20" viewBox="0 0 16 16" aria-hidden="true">
+            <line x1="2" y1="8" x2="14" y2="8" class="accordion__line accordion__line--horizontal" />
+            <line x1="8" y1="2" x2="8" y2="14" class="accordion__line accordion__line--vertical" />
+          </svg>
+        </button>
+        <div class="accordion__content">
+          <div class="accordion__context-container">
+            <P class="accordion__title">Context</P>
+            <p class="accordion__body"> OSCAR is a open-source electronic medical records (EMR) system. At
+              the UBC Pharmacists Clinic,
+              staff used it daily, but found many interface elements inefficient, cluttered, or unintuitive. This
+              project
+              involved proposing small but meaningful UX/UI improvements to better support their clinical workflow.</p>
+          </div>
+          <div class="accordion__objectives-container">
+            <P class="accordion__title">Objective</P>
+            <P class="accordion__body"> Improve UI</P>
+          </div>
+          <div class="accordion__approaches-container">
+            <p class="accordion__title">Approach</p>
+            <img src="../assets/images/ubc/Copy of Pharm Clinic Journey Mapping - Clinician Journey Map.jpg" alt=""
+              class="final-design__intro-img">
+            <img src="../assets/images/ubc/Copy of Pharm Clinic Journey Mapping - MOA Journey Mapping.jpg" alt=""
+              class="final-design__intro-img">
+            <ul class="accordion__list">
+              <li class="accordion__li">Observation: Shadowed clinicians using OSCAR in context</li>
+              <li class="accordion__li">Pain Point Mapping: Gathered examples of frequent mis-clicks, navigation issues,
+                or unclear fields</li>
+              <li class="accordion__li">pain point mapping</li>
+              <li class="accordion__li">design</li>
+              <li class="accordion__li">Dev Handoff: Created a rationale and mock up for developer, met with developer
+                to communicate multiple enhancement requests</li>
+            </ul>
+            <div class="accordion__outcomes-container">
+              <p class="accordion__title">Outcomes</p>
+              <img src="../assets/images/ubc/Screenshot 2025-06-03 095438.png" alt="" class="final-design__intro-img">
+              <ul class="accordion__list">
+                <li class="accordion__li">Recommendations document outlining integration opportunities</li>
+              </ul>
+            </div>
+            <!--             <div class="accordion__results-container">
+              <p class="accordion__title">Results</p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <button class="accordion__trigger">DTP Tracker
+          <svg class="accordion__icon" width="20" height="20" viewBox="0 0 16 16" aria-hidden="true">
+            <line x1="2" y1="8" x2="14" y2="8" class="accordion__line accordion__line--horizontal" />
+            <line x1="8" y1="2" x2="8" y2="14" class="accordion__line accordion__line--vertical" />
+          </svg>
+        </button>
+        <div class="accordion__content">
+          <div class="accordion__context-container">
+            <P class="accordion__title">Context</P>
+            <p class="accordion__body">A Drug Therapy Problem (DTP) happens when something about a medication—how it’s
+              taken, how the body reacts, or how it’s prescribed—causes an issue. DTPs take many forms—missing doses,
+              developing a tolerance, or adverse reactions like rashes—and arise when
+              medication use or non-use affects how well the patient recovers or manages their condition.</p>
+          </div>
+          <div class="accordion__objectives-container">
+            <P class="accordion__title">Objective</P>
+            <P class="accordion__body">The goal of this project was to design a digital tool to help pharmacists track
+              and manage DTPs as they emerged in patient care. The intent was to centralize and
+              simplify this documentation, and develop a tool specific to the needs of a pharmacist since OSCAR was
+              designed for doctors not pharmacists.</P>
+          </div>
+          <div class="accordion__approaches-container">
+            <p class="accordion__title">Approach</p>
+            <img src="../assets/images/ubc/Copy of Pharm Clinic Journey Mapping - Clinician Journey Map.jpg" alt=""
+              class="final-design__intro-img">
+            <img src="../assets/images/ubc/Copy of Pharm Clinic Journey Mapping - MOA Journey Mapping.jpg" alt=""
+              class="final-design__intro-img">
+            <img src="../assets/images/ubc/Copy of Pharm Clinic Journey Mapping - Patient Journey Mapping.jpg" alt=""
+              class="final-design__intro-img">
+            <ul class="accordion__list">
+              <li class="accordion__li"> Observation: Shadowed clinicians using OSCAR in context</li>
+              <li class="accordion__li">Pain Point Mapping: Gathered examples of frequent mis-clicks, navigation issues,
+                or unclear fields</li>
+              <li class="accordion__li">Design: Prototyped an online form with conditional logic and
+                accessibility best practices (e.g. label clarity, keyboard navigation)</li>
+
+            </ul>
+            <div class="accordion__outcomes-container">
+              <p class="accordion__title">Outcomes</p>
+              <img src="../assets/images/ubc/MAC-appt-main-page.svg" alt="" class="final-design__intro-img">
+              <img src="../assets/images/ubc/MAC-appt-descriptions.svg" alt="" class="final-design__intro-img">
+              <img src="../assets/images/ubc/MAC-appt-cortico.svg" alt="" class="final-design__intro-img">
+              <ul class="accordion__list">
+                <li class="accordion__li">Lo-fi wireframes and early sketches exploring how DTPs might be categorized
+                  and tracked</li>
+                <li class="accordion__li">A clickable mockup with filtering features and entry fields</li>
+                <li class="accordion__li">Notes from early stakeholder meetings and user flow attempts</li>
+              </ul>
+            </div>
+            <!--             <div class="accordion__results-container">
+              <p class="accordion__title">Results</p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
   <footer>
     <p>&copy; 2025 design and code by hope akello</p>
