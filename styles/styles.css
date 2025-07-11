@@ -54,6 +54,11 @@ a:hover {
   text-decoration: none;
   color: #e35b00;
 }
+@media (max-width: 600px) {
+  .header__title {
+    font-size: 1.5rem;
+  }
+}
 .header__nav {
   display: flex;
   gap: 3rem;
