@@ -278,6 +278,15 @@ a:hover {
     line-height: 2rem;
     font-size: 20px;
   }
+
+  &__co-img {
+    width: 45%;
+    height: 10rem;
+    object-fit: cover;
+    object-position: 10% center;
+    border-radius: 0.5rem;
+    cursor: zoom-in;
+  }
 }
 
 footer {

@@ -267,6 +267,16 @@ a:hover {
   line-height: 2rem;
   font-size: 20px;
 }
+.final-design__co-img {
+  width: 45%;
+  height: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 10% center;
+     object-position: 10% center;
+  border-radius: 0.5rem;
+  cursor: zoom-in;
+}
 
 footer {
   text-align: center;
