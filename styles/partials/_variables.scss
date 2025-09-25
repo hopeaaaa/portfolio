@@ -1,7 +1,39 @@
-@use "colors" as *;
+@use "./fonts" as *;
 
+//Breakpoints
 $mobile-breakpoint: 480px;
-$tablet-breakpoint: 767px;
-$desktop-breakpoint: 1280px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1200px;
 
 //Colors
+$bg-color: #fefefc;
+$black: #0c0c0c;
+$orange: #e35b00;
+$grey: #555;
+$light-grey: #d1d5db;
+
+//Fonts
+$font-primary: "Poppins", sans-serif;
+$font-primary-weights: (
+  extra-light: 200,
+  extra-light-italic: 200,
+  light: 300,
+  light-italic: 300,
+  regular: 400,
+  italic: 400,
+  medium: 500,
+  medium-italic: 500,
+  bold: 700,
+  bold-italic: 700,
+  extra-bold: 800,
+  black: 900,
+  black-italic: 900,
+);
+
+$font-secondary: "Inter", sans-serif;
+$font-secondary-weights: (
+  light: 300,
+  light-italic: 300,
+  regular: 400,
+  extra-bold: 800,
+);

@@ -1,71 +1,62 @@
-@use "partials/colors" as *;
-@use "partials/variables" as *;
-@use "partials/mixins" as *;
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
+@use "./partials/resets" as *;
+@use "./partials/variables" as *;
+@use "./partials/fonts" as *;
+@use "./partials/mixins" as *;
+@use "sass:map";
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-body);
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  font-family: $font-secondary;
+  font-weight: map.get($font-secondary-weights, regular);
+  background-color: $bg-color;
+  color: $black;
 }
 
 a {
   text-decoration: none;
-  color: #1a1a1a;
+  color: $black;
 }
 
 a:hover {
-  /*   text-decoration: underline; */
-  color: #e35b00;
+  color: $orange;
 }
 
 .header {
-  padding: 2rem;
+  padding: 3rem;
+  font-family: $font-primary;
+  font-weight: map.get($font-primary-weights, light);
 
   &__content {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 
   &__title {
-    /*   font-size: 1.5rem;
-    font-weight: 100; */
-    margin-bottom: 2rem;
-    color: #e35b00;
-
-    a {
-      text-decoration: none;
-      color: #e35b00;
-    }
-
-    @media (max-width: 600px) {
-      font-size: 1.5rem;
-    }
+    font-style: $font-primary;
+    font-weight: map.get($font-primary-weights, light);
+    /*     margin-bottom: 2rem; */
   }
 
   &__nav {
     display: flex;
-    gap: 3rem;
-    margin-bottom: 2rem;
+    gap: 4rem;
+    /*  margin-bottom: 2rem; */
   }
 
   &__link {
     margin-top: 0.5rem;
+    font-style: $font-primary;
+    font-weight: map.get($font-primary-weights, light);
+    font-size: 1.5rem;
   }
 
   &__CVbtn {
-    color: #ffff;
-    background-color: #e35b00;
-    border: solid 1px #e35b00;
+    font-style: $font-primary;
+    font-weight: map.get($font-primary-weights, light);
+    color: $bg-color;
+    background-color: $orange;
+    border: solid 1px $orange;
     border-radius: 1rem;
     padding: 0.5rem 1rem;
     transition: all 0.2s ease;
@@ -84,20 +75,19 @@ a:hover {
 }
 
 .hero {
-  max-width: 1110px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 4rem;
 
-  &__section {
+  /*   &__section {
     margin-bottom: 6rem;
-  }
+  } */
 
   &__intro {
-    font-size: 2.5rem;
-    /* font-weight: 700; */
-    padding: 2rem;
-    text-align: center;
-    letter-spacing: 0.1rem;
+    font-weight: map.get($font-primary-weights, medium);
+    font-size: 1.2rem;
+    /*     padding-top: 4rem; */
+    text-align: left;
   }
 }
 
@@ -181,4 +171,5 @@ footer {
   padding: 2rem;
   font-size: 0.875rem;
   color: #888;
+  font-weight: map.get($font-secondary-weights, regular);
 }

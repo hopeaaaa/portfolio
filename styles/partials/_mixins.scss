@@ -1,48 +1,22 @@
-@use "colors";
-@use "variables" as *;
+@use "./variables" as *;
 
-@use "./variables.scss" as *;
-
+//Media
+@mixin mobile {
+  @media screen and (min-width: $mobile-breakpoint) {
+    @content;
+  }
+}
 @mixin tablet {
   @media screen and (min-width: $tablet-breakpoint) {
     @content;
   }
 }
-
 @mixin desktop {
   @media screen and (min-width: $desktop-breakpoint) {
     @content;
   }
 }
 
-@mixin text-style($size, $weight, $height) {
-  font-size: $size;
-  font-weight: $weight;
-  line-height: $height;
-}
+//Buttons
 
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin space-around {
-  display: flex;
-  justify-content: space-around;
-}
-
-@mixin space-between {
-  display: flex;
-  justify-content: space-between;
-}
-
-@mixin space-evenly {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-@mixin dimensions($height, $width) {
-  height: $height;
-  width: $width;
-}
+//Containers

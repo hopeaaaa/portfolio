@@ -1,71 +1,66 @@
-@use "partials/colors" as *;
-@use "partials/variables" as *;
-@use "partials/mixins" as *;
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
+@use "./partials/resets" as *;
+@use "./partials/variables" as *;
+@use "./partials/fonts" as *;
+@use "./partials/mixins" as *;
+@use "sass:map";
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-body);
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  font-family: $font-secondary;
+  font-weight: map.get($font-secondary-weights, regular);
+  background-color: $bg-color;
+  color: $black;
 }
 
 a {
   text-decoration: none;
-  color: #1a1a1a;
+  color: $black;
 }
 
 a:hover {
-  text-decoration: underline;
-  color: var(--accent-color);
+  text-decoration: none;
+  color: $orange;
 }
 
-/* hr {
-  border: 1px solid #e35b00;
-} */
-
 .header {
-  padding: 2rem;
+  padding: 3rem;
+  font-family: $font-primary;
+  font-weight: map.get($font-primary-weights, light);
 
   &__content {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 
   &__title {
-    /*   font-size: 1.5rem;
-    font-weight: 100; */
+    font-weight: map.get($font-primary-weights, light);
     margin-bottom: 2rem;
-    color: #e35b00;
+    color: $orange;
 
     a {
       text-decoration: none;
-      color: #e35b00;
+      color: $orange;
     }
   }
 
   &__nav {
     display: flex;
-    gap: 3rem;
+    gap: 4rem;
     margin-bottom: 2rem;
   }
 
   &__link {
     margin-top: 0.5rem;
+    font-weight: map.get($font-primary-weights, light);
+    font-size: 1.5rem;
   }
 
-  &__CVbtn {
-    color: #ffff;
-    background-color: #e35b00;
-    border: solid 1px #e35b00;
+  &__cv-btn {
+    font-weight: map.get($font-primary-weights, medium);
+    color: $bg-color;
+    background-color: $orange;
+    border: solid 1px $orange;
     border-radius: 1rem;
     padding: 0.5rem 1rem;
     transition: all 0.2s ease;
@@ -73,43 +68,51 @@ a:hover {
 
     &:hover {
       transform: scale(1.05);
-      color: #e35b00;
-      background-color: #fff;
+      color: $orange;
+      background-color: $bg-color;
     }
     &.active {
-      color: #e35b00;
-      background-color: #fff;
+      color: $orange;
+      background-color: $bg-color;
     }
   }
 }
 
 .hero {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-
-  &__section {
-    margin-bottom: 3rem;
-  }
+  font-size: 1.3rem;
 
   &__headshot {
     margin-bottom: 1rem;
-    height: 20rem;
+    height: 25rem;
     width: auto;
+    border-radius: 1rem;
   }
 
   &__container {
     display: flex;
     gap: 2rem;
+    padding: 3rem;
   }
+
+  /*   &__section {
+    border: solid red;
+  } */
 }
 
 .expandedcv {
   &__skills {
-    margin-top: 6rem;
     margin-bottom: 8rem;
     display: flex;
+    flex-direction: row;
     gap: 1rem;
+  }
+
+  &__designcontainer,
+  &__devcontainer {
+    display: flex;
+    flex-direction: column;
   }
 
   &__title {
@@ -117,15 +120,21 @@ a:hover {
   }
 
   &__icon {
-    width: 50px;
+    width: 30px;
+  }
+
+  &__iconscontainer {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
   }
 }
 
 .cv {
-  /*   max-width: 1000px;
-  margin: 4rem auto;
-  padding: 2rem; */
-  margin-top: 4rem;
+  /*   max-width: 900px; */
+  font-size: 1.2rem;
+  /*   margin: 0 auto; */
+  padding: 3rem;
 
   &__entry {
     display: flex;
@@ -136,7 +145,7 @@ a:hover {
 
   &__edate {
     margin: 0;
-    color: #555;
+    color: $grey;
     flex: 1;
     width: fit-content;
   }
@@ -145,7 +154,7 @@ a:hover {
     margin: 0;
     text-align: right;
     flex: 1;
-    color: #555;
+    color: $grey;
   }
 
   &__educationcontainer {
@@ -154,9 +163,6 @@ a:hover {
 }
 
 .experience {
-  /*   display: flex;
-  gap: 4rem; */
-
   &__container1,
   &__container2 {
     margin-bottom: 2rem;
@@ -170,6 +176,7 @@ a:hover {
 }
 
 footer {
+  margin: 3rem 0;
   text-align: center;
   padding: 2rem;
   font-size: 0.875rem;
