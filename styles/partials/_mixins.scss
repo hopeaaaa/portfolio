@@ -1,6 +1,19 @@
 @use "./variables" as *;
+@use "sass:map";
 
 //Media
+@mixin large-screens {
+  @include tablet {
+    @content;
+  }
+  @include laptop {
+    @content;
+  }
+  @include desktop {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media screen and (min-width: $mobile-breakpoint) {
     @content;
@@ -8,6 +21,11 @@
 }
 @mixin tablet {
   @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (min-width: $laptop-breakpoint) {
     @content;
   }
 }
