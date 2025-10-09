@@ -21,39 +21,39 @@ a:hover {
 }
 
 .header {
-  padding: 3rem;
-  font-family: $font-primary;
-  font-weight: map.get($font-primary-weights, light);
+  padding: 1.5rem;
 
   &__content {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    gap: 1rem;
   }
 
   &__title {
-    font-style: $font-primary;
+    font-family: $font-primary;
     font-weight: map.get($font-primary-weights, light);
-    /*     margin-bottom: 2rem; */
+    margin: 0;
+    color: $orange;
   }
 
   &__nav {
     display: flex;
-    gap: 4rem;
-    /*  margin-bottom: 2rem; */
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    /*     font-size: 1.5rem; */
   }
 
   &__link {
-    margin-top: 0.5rem;
-    font-style: $font-primary;
-    font-weight: map.get($font-primary-weights, light);
-    font-size: 1.5rem;
+    font-family: $font-secondary;
+    font-weight: map.get($font-secondary-weights, light);
+    font-size: 1rem;
   }
 
-  &__CVbtn {
-    font-style: $font-primary;
-    font-weight: map.get($font-primary-weights, light);
+  &__cv-btn {
+    font-family: $font-secondary;
+    font-weight: map.get($font-secondary-weights, medium);
     color: $bg-color;
     background-color: $orange;
     border: solid 1px $orange;
@@ -64,12 +64,39 @@ a:hover {
 
     &:hover {
       transform: scale(1.05);
-      color: #e35b00;
-      background-color: #fff;
+      color: $orange;
+      background-color: $bg-color;
     }
     &.active {
-      color: #e35b00;
-      background-color: #fff;
+      color: $orange;
+      background-color: $bg-color;
+    }
+  }
+
+  @include tablet {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 1rem;
+
+    &__content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__link {
+      font-size: 1.2rem;
+    }
+
+    &__nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
     }
   }
 }
@@ -77,93 +104,135 @@ a:hover {
 .hero {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem;
-
-  /*   &__section {
-    margin-bottom: 6rem;
-  } */
+  font-size: 1rem;
+  padding: 2rem;
 
   &__intro {
     font-weight: map.get($font-primary-weights, medium);
-    font-size: 1.2rem;
-    /*     padding-top: 4rem; */
+    font-size: 1rem;
     text-align: left;
+  }
+
+  &__section {
+    padding-bottom: 2rem;
+  }
+
+  @include tablet {
+    &__intro {
+      font-size: 1.5rem;
+      padding-bottom: 4rem;
+    }
+
+    &__container {
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+    }
   }
 }
 
 .casestudies {
-  max-width: 1050px;
-  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 
-  &__preview {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  z-index: 0;
 
-    &:hover::after {
-      opacity: 0.3;
-      color: #e35b00;
-    }
-
-    &:hover {
-      transform: scale(1.02);
-      color: #e35b00;
-    }
-  }
-
+  // Each case study link
   &__preview-link {
-    flex: 0 0 calc(50% - 1rem);
-    max-width: calc(50% - 1rem);
-    box-sizing: border-box;
     text-decoration: none;
     color: inherit;
+    display: block;
+    width: 100%;
+  }
 
-    @media (max-width: 600px) {
-      flex: 0 0 100%;
-      max-width: 100%;
+  // The card container
+  &__preview {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    z-index: 0;
+
+    &:hover {
+      transform: translateY(-4px);
+      z-index: 2;
+    }
+
+    &:hover .casestudies__img-hover {
+      opacity: 1;
+    }
+
+    &:hover .casestudies__img,
+    &:hover .casestudies__img-ubc {
+      opacity: 0;
     }
   }
 
+  // Base image styles
   &__img,
-  &__img-ubc {
+  &__img-ubc,
+  &__img-hover {
     width: 100%;
-    height: 15rem;
-    display: block;
+    aspect-ratio: 16 / 9; // keeps uniform height and width
     object-fit: cover;
-    border-radius: 0.5rem;
-  }
-  &__img-ubc {
-    object-position: 10% center;
+    border-radius: 1rem;
+    border: solid 2px black;
+    display: block;
+    transition: opacity 0.4s ease;
   }
 
+  // Optional tweak for image cropping on UBC card
+  &__img-ubc {
+    object-position: 5% center;
+  }
+
+  // Hover image (initially hidden)
+  &__img-hover {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: 1;
+    border: solid 2px $orange;
+  }
+
+  // Text area below each image
   &__text-container {
-    padding: 0.5rem;
     position: relative;
-    z-index: 2;
+    z-index: 3;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
   }
 
   &__title {
-    margin-top: 1rem;
-    margin-bottom: 0.6rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
   }
-}
 
-.contact,
-.other {
-  max-width: 700px;
-  margin-left: 2rem;
-  margin-top: 2rem;
+  &__subtitle {
+    font-size: 1rem;
+    opacity: 0.7;
+  }
+
+  // Tablet and up
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2.5rem;
+    padding: 0rem;
+
+    &__preview-link {
+      flex: 0 0 calc(50% - 1.5rem);
+    }
+  }
 }
 
 footer {

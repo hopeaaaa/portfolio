@@ -1,0 +1,121 @@
+<!--       <div class="casestudies__preview-link">
+        <a href="#">
+          <div class="casestudies__preview">
+            <img src="./assets/images/wordbook/Whisk_c18178d09f.jpg" class="casestudies__img"
+              alt="screenshot of home screen page" />
+            <div class="casestudies__text-container">
+              <h2 class="casestudies__title">Wordbook</h2>
+              <p>
+                 Game mechanics to support playful language learning and
+                memory retention. 🡭 
+                A cozy hidden objects game.🡭
+              </p>
+            </div>
+          </div>
+        </a>
+      </div> -->
+
+<!-- OTHER -->
+<!--     <div class="other">
+      <h2 class="casestudies__title">Other:</h2>
+      <div class="casestudies__text-container-other">
+        <a href="./pages/swe.html">Full Stack Dev Projects</a>
+      </div>
+    </div> -->
+<!--       <section class="about">
+        <h2>About</h2>
+        <p>
+          I'm Hope, a multidisciplinary designer with a background in service
+          design, education, and community-engaged practice. I use design as a
+          tool for systems change, accessibility, and joyful storytelling.
+        </p>
+      </section> -->
+
+<div class="casestudies__category">
+  <button class="casestudies__toggle" aria-expanded="false" aria-controls="ixd-projects" type="button">IXD / UX /
+    Service</button>
+  <div class="casestudies__projects" hidden>
+    <div class="casestudies__project">UBC Pharmacists Clinic</div>
+    <div class="casestudies__project">Creative Careers</div>
+    <div class="casestudies__project">Frank</div>
+    <div class="casestudies__project">PowerClaim</div>
+    <div class="casestudies__project">Wordbook</div>
+  </div>
+</div>
+
+.contact,
+.other {
+max-width: 700px;
+margin-left: 2rem;
+margin-top: 2rem;
+}
+
+
+
+.casestudies {
+max-width: 1050px;
+margin: 0 auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+gap: 2rem;
+
+&__preview {
+border: 1px solid #ccc;
+border-radius: 8px;
+padding: 1.5rem;
+margin-bottom: 1.5rem;
+width: 100%;
+height: 100%;
+transition: transform 0.3s ease;
+cursor: pointer;
+position: relative;
+overflow: hidden;
+
+&:hover::after {
+opacity: 0.3;
+color: #e35b00;
+}
+
+&:hover {
+transform: scale(1.02);
+color: #e35b00;
+}
+}
+
+&__preview-link {
+flex: 0 0 calc(50% - 1rem);
+max-width: calc(50% - 1rem);
+box-sizing: border-box;
+text-decoration: none;
+color: inherit;
+
+@media (max-width: 600px) {
+flex: 0 0 100%;
+max-width: 100%;
+}
+}
+
+&__img,
+&__img-ubc {
+width: 100%;
+height: 15rem;
+display: block;
+object-fit: cover;
+border-radius: 0.5rem;
+}
+&__img-ubc {
+object-position: 10% center;
+}
+
+&__text-container {
+padding: 0.5rem;
+position: relative;
+z-index: 2;
+}
+
+&__title {
+margin-top: 1rem;
+margin-bottom: 0.6rem;
+}
+}

@@ -202,6 +202,7 @@ a:hover {
   padding: 1.5rem;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+  font-size: 1rem;
 }
 .header__content {
   display: flex;
@@ -214,19 +215,15 @@ a:hover {
   margin: 0;
   color: #e35b00;
 }
-.header__title a {
-  text-decoration: none;
-  color: #e35b00;
-}
 .header__nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
   align-items: center;
 }
 .header__link {
   font-weight: 300;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 .header__cv-btn {
   font-weight: 500;
@@ -254,6 +251,7 @@ a:hover {
     padding-left: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    font-size: 1rem;
   }
   .header__content {
     flex-direction: row;
@@ -261,7 +259,7 @@ a:hover {
     align-items: center;
   }
   .header__link {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .header__nav {
     display: flex;
@@ -279,7 +277,7 @@ a:hover {
   padding: 2rem;
 }
 .hero__headshot {
-  width: 80%;
+  width: 100%;
   max-width: 25rem;
   height: auto;
   border-radius: 1rem;
@@ -292,7 +290,7 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   .hero__container {
     flex-direction: row;
@@ -353,7 +351,7 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   .cv {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   .cv__entry {
     flex-direction: row;

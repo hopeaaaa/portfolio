@@ -25,6 +25,7 @@ a:hover {
   padding: 1.5rem;
   font-family: $font-primary;
   font-weight: map.get($font-primary-weights, light);
+  font-size: 1rem;
 
   &__content {
     display: flex;
@@ -37,23 +38,18 @@ a:hover {
     font-weight: map.get($font-primary-weights, light);
     margin: 0;
     color: $orange;
-
-    a {
-      text-decoration: none;
-      color: $orange;
-    }
   }
 
   &__nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     align-items: center;
   }
 
   &__link {
     font-weight: map.get($font-primary-weights, light);
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   &__cv-btn {
@@ -83,6 +79,7 @@ a:hover {
     padding-left: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    font-size: 1rem;
 
     &__content {
       flex-direction: row;
@@ -91,7 +88,7 @@ a:hover {
     }
 
     &__link {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
 
     &__nav {
@@ -111,7 +108,7 @@ a:hover {
   padding: 2rem;
 
   &__headshot {
-    width: 80%;
+    width: 100%;
     max-width: 25rem;
     height: auto;
     border-radius: 1rem;
@@ -125,7 +122,7 @@ a:hover {
   }
 
   @include tablet {
-    font-size: 1.3rem;
+    font-size: 1rem;
 
     &__container {
       flex-direction: row;
@@ -198,7 +195,7 @@ a:hover {
   }
 
   @include tablet {
-    font-size: 1.3rem;
+    font-size: 1rem;
 
     &__entry {
       flex-direction: row;

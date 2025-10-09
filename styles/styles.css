@@ -198,35 +198,34 @@ a:hover {
 }
 
 .header {
-  padding: 3rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  padding: 1.5rem;
 }
 .header__content {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  gap: 1rem;
 }
 .header__title {
-  font-style: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
-  /*     margin-bottom: 2rem; */
+  margin: 0;
+  color: #e35b00;
 }
 .header__nav {
   display: flex;
-  gap: 4rem;
-  /*  margin-bottom: 2rem; */
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  /*     font-size: 1.5rem; */
 }
 .header__link {
-  margin-top: 0.5rem;
-  font-style: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
-.header__CVbtn {
-  font-style: "Poppins", sans-serif;
-  font-weight: 300;
+.header__cv-btn {
+  font-family: "Inter", sans-serif;
   color: #fefefc;
   background-color: #e35b00;
   border: solid 1px #e35b00;
@@ -235,99 +234,149 @@ a:hover {
   transition: all 0.2s ease;
   cursor: pointer;
 }
-.header__CVbtn:hover {
+.header__cv-btn:hover {
   transform: scale(1.05);
   color: #e35b00;
-  background-color: #fff;
+  background-color: #fefefc;
 }
-.header__CVbtn.active {
+.header__cv-btn.active {
   color: #e35b00;
-  background-color: #fff;
+  background-color: #fefefc;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+  .header__content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__link {
+    font-size: 1.2rem;
+  }
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
 }
 
 .hero {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem;
-  /*   &__section {
-    margin-bottom: 6rem;
-  } */
+  font-size: 1rem;
+  padding: 2rem;
 }
 .hero__intro {
   font-weight: 500;
-  font-size: 1.2rem;
-  /*     padding-top: 4rem; */
+  font-size: 1rem;
   text-align: left;
+}
+.hero__section {
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__intro {
+    font-size: 1.5rem;
+    padding-bottom: 4rem;
+  }
+  .hero__container {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 
 .casestudies {
-  max-width: 1050px;
-  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 2rem;
-}
-.casestudies__preview {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.3s ease;
-  cursor: pointer;
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
-  overflow: hidden;
-}
-.casestudies__preview:hover::after {
-  opacity: 0.3;
-  color: #e35b00;
-}
-.casestudies__preview:hover {
-  transform: scale(1.02);
-  color: #e35b00;
+  z-index: 0;
 }
 .casestudies__preview-link {
-  flex: 0 0 calc(50% - 1rem);
-  max-width: calc(50% - 1rem);
-  box-sizing: border-box;
   text-decoration: none;
   color: inherit;
-}
-@media (max-width: 600px) {
-  .casestudies__preview-link {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-.casestudies__img, .casestudies__img-ubc {
-  width: 100%;
-  height: 15rem;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 0.5rem;
+  width: 100%;
 }
-.casestudies__img-ubc {
-  -o-object-position: 10% center;
-     object-position: 10% center;
-}
-.casestudies__text-container {
-  padding: 0.5rem;
+.casestudies__preview {
   position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  z-index: 0;
+}
+.casestudies__preview:hover {
+  transform: translateY(-4px);
   z-index: 2;
 }
-.casestudies__title {
-  margin-top: 1rem;
-  margin-bottom: 0.6rem;
+.casestudies__preview:hover .casestudies__img-hover {
+  opacity: 1;
 }
-
-.contact,
-.other {
-  max-width: 700px;
-  margin-left: 2rem;
-  margin-top: 2rem;
+.casestudies__preview:hover .casestudies__img, .casestudies__preview:hover .casestudies__img-ubc {
+  opacity: 0;
+}
+.casestudies__img, .casestudies__img-ubc, .casestudies__img-hover {
+  width: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+  border: solid 2px black;
+  display: block;
+  transition: opacity 0.4s ease;
+}
+.casestudies__img-ubc {
+  -o-object-position: 5% center;
+     object-position: 5% center;
+}
+.casestudies__img-hover {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: 1;
+  border: solid 2px #e35b00;
+}
+.casestudies__text-container {
+  position: relative;
+  z-index: 3;
+  padding: 0.5rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.casestudies__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.casestudies__subtitle {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+@media screen and (min-width: 768px) {
+  .casestudies {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2.5rem;
+    padding: 0rem;
+  }
+  .casestudies__preview-link {
+    flex: 0 0 calc(50% - 1.5rem);
+  }
 }
 
 footer {
