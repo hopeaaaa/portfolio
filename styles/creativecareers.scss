@@ -21,8 +21,88 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
-  color: #e35b00;
+  color: $orange;
+}
+
+.header {
+  padding: 1.5rem;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  &__title {
+    font-family: $font-primary;
+    font-weight: map.get($font-primary-weights, light);
+    margin: 0;
+    color: $orange;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    /*     font-size: 1.5rem; */
+  }
+
+  &__link {
+    font-family: $font-secondary;
+    font-weight: map.get($font-secondary-weights, regular);
+    font-size: 1rem;
+  }
+
+  &__cv-btn {
+    font-family: $font-secondary;
+    font-weight: map.get($font-secondary-weights, medium);
+    color: $bg-color;
+    background-color: $orange;
+    border: solid 1px $orange;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+      color: $orange;
+      background-color: $bg-color;
+    }
+    &.active {
+      color: $orange;
+      background-color: $bg-color;
+    }
+  }
+
+  @include tablet {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 1rem;
+
+    &__content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__link {
+      font-size: 1.2rem;
+    }
+
+    &__nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+    }
+  }
 }
 
 .lightbox {
