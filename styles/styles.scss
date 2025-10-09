@@ -47,7 +47,7 @@ a:hover {
 
   &__link {
     font-family: $font-secondary;
-    font-weight: map.get($font-secondary-weights, light);
+    font-weight: map.get($font-secondary-weights, regular);
     font-size: 1rem;
   }
 

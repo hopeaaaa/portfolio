@@ -1,32 +1,49 @@
 @charset "UTF-8";
-:root {
-  --bg-color: #fefefc;
-  --text-color: #0c0c0c;
-  --accent: #fc9220;
-  --grey: #d1d5db;
-  --font-body: "Montserrat", "Helvetica Neue", sans-serif;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* #FCEAC5 
- #fdf4eb
-  --accent-color: #e35b00;
-  "Helvetica Neue", "Montserrat"
+html {
+  font-size: 1rem;
+  font-family: sans-serif;
+}
 
-#361f07 brown
-#fc9220 orange
-#fec676 light orange
-#fffacc off white
-#253021 off black
+ul,
+ol,
+li {
+  list-style: none;
+}
 
-#fdfdfd white
-#1a1a1a black
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
+input,
+textarea,
+select {
+  font: inherit;
+  border-style: none;
+  resize: none;
+}
 
-f6d4ba light orange
-fefadc off white
-feea00 yellow
-3f612d green
-*/
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 @font-face {
   font-family: "Poppins";
   font-weight: 200;
@@ -171,24 +188,19 @@ feea00 yellow
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-body);
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  background-color: #fefefc;
+  color: #0c0c0c;
 }
 
 a {
   text-decoration: none;
-  color: #1a1a1a;
-  /*   font-size: 1rem;
-  font-weight: 400; */
-  transition: color 0.3s ease-in-out;
+  color: #0c0c0c;
 }
 
 a:hover {
-  text-decoration: underline;
-  color: var(--accent-color);
+  color: #e35b00;
 }
 
 hr {
@@ -198,42 +210,36 @@ hr {
   flex-grow: 1;
 }
 
-.p {
-  font-size: 1rem;
-  font-weight: 300;
-  margin-top: 5px;
-}
-
 .header {
-  padding: 2rem;
+  padding: 1.5rem;
 }
 .header__content {
-  max-width: 1000px;
-  margin: 0 auto;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  gap: 1rem;
 }
 .header__title {
-  /*   font-size: 1.5rem;
-  font-weight: 100; */
-  margin-bottom: 2rem;
-  color: #e35b00;
-}
-.header__title a {
-  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin: 0;
   color: #e35b00;
 }
 .header__nav {
   display: flex;
-  gap: 3rem;
-  margin-bottom: 2rem;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  /*     font-size: 1.5rem; */
 }
 .header__link {
-  margin-top: 0.5rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
 }
-.header__CVbtn {
-  color: white;
+.header__cv-btn {
+  font-family: "Inter", sans-serif;
+  color: #fefefc;
   background-color: #e35b00;
   border: solid 1px #e35b00;
   border-radius: 1rem;
@@ -241,14 +247,39 @@ hr {
   transition: all 0.2s ease;
   cursor: pointer;
 }
-.header__CVbtn:hover {
+.header__cv-btn:hover {
   transform: scale(1.05);
   color: #e35b00;
-  background-color: #fff;
+  background-color: #fefefc;
 }
-.header__CVbtn.active {
+.header__cv-btn.active {
   color: #e35b00;
-  background-color: #fff;
+  background-color: #fefefc;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+  .header__content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__link {
+    font-size: 1.2rem;
+  }
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
 }
 
 main {
@@ -257,11 +288,6 @@ main {
   padding: 2rem;
 }
 
-.skills {
-  /*   &__list-container {
-    padding: none;
-  }*/
-}
 .skills__line-container {
   display: flex;
   align-items: center;
@@ -273,12 +299,16 @@ main {
   justify-content: space-between;
 }
 .skills__container {
-  padding: 2rem;
+  padding: 0;
+}
+.skills__list-container {
+  padding: 0;
+  /*     border: solid; */
 }
 .skills__list-item {
   line-height: 2rem;
   list-style-type: "✱ ";
-  margin-left: -1.3rem;
+  /*     margin-left: -1.3rem; */
 }
 
 .work {

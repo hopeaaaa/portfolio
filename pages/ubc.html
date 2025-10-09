@@ -7,21 +7,24 @@
   <title>hope akello | ubc pharmacists clinic</title>
   <link rel="stylesheet" href="../styles/ubc.css" />
   <link rel="icon" type="image/x-icon" href="../assets/images/about/asterisk.png" />
+  <script src="../scripts/main.js" defer></script>
 </head>
 
 <body>
   <header class="header">
     <div class="header__content">
       <h1 class="header__title">
-        <a href="../index.html">Hope Akello</a>
+        <a href="../index.html">hope akello</a>
       </h1>
       <nav class="header__nav">
-        <a href="./about.html" class="header__link">About</a>
-        <a href="../assets/pdfs/Hope_AkelloResume.pdf" class="header__CVbtn" target="_blank"
+        <a href="../index.html" class="header__link">work</a>
+        <a href="./about.html" class="header__link">info</a>
+        <a href="../assets/pdfs/Hope_AkelloResume.pdf" class="header__cv-btn" target="_blank"
           rel="noopener noreferrer">CV</a>
       </nav>
     </div>
   </header>
+
   <section class="hero">
     <div class="hero__intro-text-container">
       <h2 class="hero__title">UBC Pharmacists Clinic</h2>
@@ -34,7 +37,7 @@
     </div>
     <img src="../assets/images/ubc/Screenshot 2025-06-03 095438.png" alt="hero image" class="hero__img" />
     <div class="hero__context-megawrapper">
-      <p class="hero__subtitle">Overview</p>
+      <p class="hero__outcomes_title">Overview</p>
       <div class="hero__context-wrapper">
         <div class="hero__container">
           <h3 class="hero__context">CLIENT</h3>
@@ -329,12 +332,41 @@
   <footer>
     <p>&copy; 2025 design and code by hope akello</p>
   </footer>
-  <div id="lightbox" class="lightbox">
-    <span class="lightbox__close">&times;</span>
-    <img class="lightbox__img" id="lightbox-img" src="" alt="Expanded image" />
-  </div>
-  <button onclick="topFunction()" id="myBtn" title="Go to top">top</button>
-  <script src="../scripts/btn.js"></script>
+  <script>
+
+    const accordionTriggers = document.querySelectorAll('.accordion__trigger');
+
+    accordionTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const item = trigger.closest('.accordion__item');
+        const content = item.querySelector('.accordion__content');
+
+        // Toggle active class
+        const isActive = item.classList.toggle('accordion__item--active');
+        trigger.setAttribute('aria-expanded', isActive);
+
+        // Adjust max-height for smooth animation
+        if (isActive) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+          content.style.maxHeight = null;
+        }
+
+        // (Optional) close others if you want only one open at a time
+        accordionTriggers.forEach(otherTrigger => {
+          if (otherTrigger !== trigger) {
+            const otherItem = otherTrigger.closest('.accordion__item');
+            const otherContent = otherItem.querySelector('.accordion__content');
+            otherItem.classList.remove('accordion__item--active');
+            otherTrigger.setAttribute('aria-expanded', false);
+            otherContent.style.maxHeight = null;
+          }
+        });
+      });
+    });
+
+  </script>
+
 </body>
 
 </html>

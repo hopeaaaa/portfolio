@@ -1,28 +1,23 @@
-@use "partials/colors" as *;
-@use "partials/variables" as *;
-@use "partials/mixins" as *;
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
+@use "./partials/resets" as *;
+@use "./partials/variables" as *;
+@use "./partials/fonts" as *;
+@use "./partials/mixins" as *;
+@use "sass:map";
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-body);
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  font-family: $font-secondary;
+  font-weight: map.get($font-secondary-weights, regular);
+  background-color: $bg-color;
+  color: $black;
 }
 
 a {
   text-decoration: none;
-  color: #1a1a1a;
+  color: $black;
 }
 
 a:hover {
-  text-decoration: underline;
-  color: #e35b00;
+  color: $orange;
 }
 
 .lightbox {
@@ -78,42 +73,42 @@ a:hover {
 }
 
 .header {
-  padding: 2rem;
+  padding: 1.5rem;
 
   &__content {
-    max-width: 1000px;
-    margin: 0 auto;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    gap: 1rem;
   }
 
   &__title {
-    /*   font-size: 1.5rem;
-    font-weight: 100; */
-    margin-bottom: 2rem;
-    color: #e35b00;
-
-    a {
-      text-decoration: none;
-      color: #e35b00;
-    }
+    font-family: $font-primary;
+    font-weight: map.get($font-primary-weights, light);
+    margin: 0;
+    color: $orange;
   }
 
   &__nav {
     display: flex;
-    gap: 3rem;
-    margin-bottom: 2rem;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    /*     font-size: 1.5rem; */
   }
 
   &__link {
-    margin-top: 0.5rem;
+    font-family: $font-secondary;
+    font-weight: map.get($font-secondary-weights, regular);
+    font-size: 1rem;
   }
 
-  &__CVbtn {
-    color: #ffff;
-    background-color: #e35b00;
-    border: solid 1px #e35b00;
+  &__cv-btn {
+    font-family: $font-secondary;
+    font-weight: map.get($font-secondary-weights, medium);
+    color: $bg-color;
+    background-color: $orange;
+    border: solid 1px $orange;
     border-radius: 1rem;
     padding: 0.5rem 1rem;
     transition: all 0.2s ease;
@@ -121,54 +116,102 @@ a:hover {
 
     &:hover {
       transform: scale(1.05);
-      color: #e35b00;
-      background-color: #fff;
+      color: $orange;
+      background-color: $bg-color;
     }
     &.active {
-      color: #e35b00;
-      background-color: #fff;
+      color: $orange;
+      background-color: $bg-color;
+    }
+  }
+
+  @include tablet {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 1rem;
+
+    &__content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__link {
+      font-size: 1.2rem;
+    }
+
+    &__nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
     }
   }
 }
 
 .hero {
-  /*   max-width: 1050px;
-  margin: 0 auto;
-  padding: 2rem; */
+  max-width: 100%;
+  padding: 1.5rem;
 
   &__intro-text-container {
-    max-width: 1050px;
+    /*     max-width: 1050px;
     margin: 0 auto;
     padding: 2rem;
     margin-bottom: 6rem;
-    margin-top: 10rem;
+    margin-top: 10rem; */
+    margin: 4rem auto 3rem auto;
+    text-align: left;
   }
 
   &__title {
-    font-size: 2.5rem;
+    /*     font-size: 2.5rem;
+    font-weight: 700; */
+    font-size: 2rem;
     font-weight: 700;
+    line-height: 1.2;
   }
 
-  &__subtitle,
-  &__outcomes_title {
-    font-size: 28px;
+  &__subtitle {
+    /*     font-size: 28px;
     margin-top: 1rem;
+    margin-bottom: 1rem; */
+    font-size: 1.25rem;
+
+    margin-top: 0.75rem;
     margin-bottom: 1rem;
   }
 
+  &__outcomes_title {
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+
   &__img {
-    width: 100%;
+    /*     width: 100%;
     height: auto;
     display: block;
     object-fit: contain;
+    border-radius: 0.5rem; */
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
     border-radius: 0.5rem;
   }
 
   &__context {
-    font-size: 0.8rem;
+    /*     font-size: 0.8rem;
     font-weight: 700;
-    /*     color: #3a4f41; */
-    /*     color: #8c9e92; */
+    color: #7f8380;
+    letter-spacing: 0.08rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem; */
+    font-size: 0.75rem;
+    font-weight: 600;
     color: #7f8380;
     letter-spacing: 0.08rem;
     margin-top: 1rem;
@@ -176,43 +219,51 @@ a:hover {
   }
 
   &__context-megawrapper {
-    max-width: 1050px;
+    /*     max-width: 1050px;
     margin: 0 auto;
     padding: 2rem;
-    margin-top: 2rem;
+    margin-top: 2rem; */
+    margin: 2rem auto;
+    padding-top: 2rem;
+    max-width: 100%;
   }
 
   &__context-wrapper {
-    margin-top: 4rem;
+    /*     margin-top: 4rem;
     margin-bottom: 4rem;
     display: flex;
     justify-content: space-between;
     gap: 0 4rem;
     flex-wrap: wrap;
     max-width: 1050px;
-    margin: 0 auto;
+    margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
   }
 
   &__container {
-    flex: 1 1 40%;
-    min-width: 18.75rem;
-
-    @media (max-width: 768px) {
-      flex: 1 1 48%;
-    }
+    flex: 1 1 100%;
+    min-width: 0;
   }
 
-  &__intro {
+  /*   &__intro {
     margin-bottom: 2rem;
-    /*  line-height: 1.5rem; */
     font-size: 20px;
-  }
+  } */
 
   &__deliverables {
-    display: flex;
+    /*     display: flex;
     gap: 1rem;
     font-size: 0.75rem;
     margin-bottom: 4rem;
+    font-weight: 700; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.75rem;
+    margin-bottom: 2rem;
     font-weight: 700;
 
     &_btn {
@@ -225,27 +276,72 @@ a:hover {
   }
 
   &__outcomes {
-    max-width: 1050px;
-    margin: 0 auto;
-    padding: 2rem;
-    font-size: 20px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    font-size: 1rem;
 
     &_li {
       line-height: 1.3rem;
       margin-bottom: 1rem;
       list-style-type: "✱ ";
-      margin-left: -1rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__intro-text-container {
+      margin-top: 8rem;
+      margin-bottom: 6rem;
+    }
+
+    &__title {
+      font-size: 3rem;
+    }
+
+    &__subtitle {
+      font-size: 1.75rem;
+    }
+
+    &__intro {
+      font-size: 1.25rem;
+    }
+    /* 
+    &__context-megawrapper {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 2rem;
+      margin-top: 2rem;
+    } */
+
+    &__context-wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0 4rem;
+    }
+
+    &__container {
+      flex: 1 1 40%;
+      min-width: 18.75rem;
+    }
+
+    &__outcomes {
+      font-size: 1.25rem;
+      padding: 2rem;
     }
   }
 }
 
 .final-design {
-  max-width: 1050px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 
   &__title {
-    font-size: 28px;
+    font-size: 1.75rem;
+    font-weight: 600;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
@@ -301,15 +397,28 @@ footer {
 }
 
 .accordion__trigger {
-  background: none;
+  /*   background: none;
   border: none;
   padding: 1rem;
   width: 100%;
   text-align: left;
   cursor: pointer;
-  font-size: 28px;
+  font-size: 28px; */
   /*     margin-top: 1rem;
     margin-bottom: 1rem; */
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: inherit;
+  font-size: 1.1rem;
+
+  cursor: pointer;
+  transition: color 0.2s ease;
 }
 
 .accordion__icon {
@@ -341,6 +450,7 @@ footer {
 
 .accordion__item--active .accordion__content {
   padding: 1rem;
+  max-height: 1000px;
 }
 
 .accordion__title {
