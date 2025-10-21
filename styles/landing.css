@@ -182,211 +182,53 @@ a {
   src: url("../../assets/fonts/Inter28pt-ExtraBold.woff") format("woff");
 }
 body {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  background-color: #fefefc;
-  color: #0c0c0c;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  background-color: #e35b00;
+  color: #fefefc;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: #0c0c0c;
-}
-
-a:hover {
-  text-decoration: none;
-  color: #e35b00;
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .header {
-  padding: 2rem;
-}
-.header__content {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30vh;
 }
-.header__title {
-  font-family: "Poppins", sans-serif;
+.header__title a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 3rem;
   font-weight: 500;
-  color: #e35b00;
 }
 .header__nav {
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  align-items: center;
-}
-.header__link {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-}
-.header__cv-btn {
-  color: #fefefc;
-  background-color: #e35b00;
-  border: solid 2px #e35b00;
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-.header__cv-btn:hover {
-  transform: scale(1.05);
-  color: #e35b00;
-  background-color: #fefefc;
-}
-.header__cv-btn.active {
-  color: #e35b00;
-  background-color: #fefefc;
-}
-@media screen and (min-width: 768px) {
-  .header {
-    /*     padding-top: 3rem;
-    padding-bottom: 8rem; */
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    font-size: 1rem;
-  }
-  .header__content {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .header__link {
-    font-size: 1.2rem;
-  }
-  .header__nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-  }
-}
-
-.hero {
-  max-width: 1200px;
-  margin: 0 auto;
-  font-size: 1rem;
-  padding: 2rem;
-}
-.hero__headshot {
-  width: 100%;
-  max-width: 25rem;
-  height: auto;
-  border-radius: 1rem;
-  border: solid 2px;
-}
-.hero__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
-@media screen and (min-width: 768px) {
-  .hero {
-    font-size: 1.2rem;
-  }
-  .hero__container {
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: left;
-  }
-  .hero__headshot {
-    height: 25rem;
-    width: auto;
-  }
+.header__tagline {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
 }
 
-.expandedcv__skills {
-  margin-bottom: 8rem;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
-.expandedcv__designcontainer, .expandedcv__devcontainer {
-  display: flex;
-  flex-direction: column;
-}
-.expandedcv__title {
-  margin-bottom: 1rem;
-}
-.expandedcv__icon {
-  width: 30px;
-}
-.expandedcv__iconscontainer {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.cv {
-  font-size: 0.9rem;
-  padding-top: 5rem;
-}
-.cv__entry {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid #ccc;
-  text-align: left;
-  justify-content: space-between;
-}
-.cv__edate {
-  margin-bottom: 0.5rem;
-  color: #555;
-}
-.cv__etitle {
-  margin: 0;
-  color: #555;
-}
-.cv__educationcontainer {
-  margin-top: 2rem;
-}
-@media screen and (min-width: 768px) {
-  .cv {
-    font-size: 1.2rem;
-  }
-  .cv__entry {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-  }
-  .cv__edate {
-    flex: 1;
-    text-align: left;
-  }
-  .cv__etitle {
-    flex: 1;
-    text-align: right;
-  }
-}
-
-.experience__container1, .experience__container2 {
-  margin-bottom: 2rem;
-  display: flex;
-  gap: 1rem;
-}
-.experience__title {
-  text-align: right;
-}
-
-footer {
-  text-align: center;
-  padding: 4rem 2rem 4rem 2rem;
-  font-size: 0.875rem;
-  color: #888;
-  font-weight: 400;
-  max-width: 17rem;
-  margin: 0 auto;
-}
-@media screen and (min-width: 768px) {
-  footer {
-    margin: 0 auto;
-    max-width: none;
-  }
-}/*# sourceMappingURL=about.css.map */
+.hero__intro {
+  padding-top: 2rem;
+  max-width: 25rem;
+  margin: 0rem auto;
+  line-height: 1.6;
+  text-align: justify;
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 300;
+}/*# sourceMappingURL=landing.css.map */

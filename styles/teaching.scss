@@ -1,65 +1,62 @@
-@use "partials/colors" as *;
-@use "partials/variables" as *;
-@use "partials/mixins" as *;
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
+@use "./partials/resets" as *;
+@use "./partials/variables" as *;
+@use "./partials/fonts" as *;
+@use "./partials/mixins" as *;
+@use "sass:map";
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-body);
-  background-color: var(--accent-color);
-  color: var(--bg-color);
+  font-family: $font-secondary;
+  font-weight: map.get($font-secondary-weights, regular);
+  background-color: #3f612d;
+  color: $orange;
 }
 
 a {
   text-decoration: none;
-  color: var(--bg-color);
 }
 
 a:hover {
-  text-decoration: underline;
-  color: var(--bg-color);
+  color: white;
+  text-decoration: underline white;
+  /*   transform: scale(1.4); */
 }
 
 .header {
-  padding: 2rem;
+  padding: 1.5rem;
 
   &__content {
-    max-width: 1000px;
-    margin: 0 auto;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    gap: 1rem;
   }
 
   &__title {
-    /*   font-size: 1.5rem;
-    font-weight: 100; */
-    margin-bottom: 2rem;
-
-    a {
-      text-decoration: none;
-    }
+    font-family: $font-primary;
+    font-weight: map.get($font-primary-weights, light);
+    margin: 0;
   }
 
   &__nav {
     display: flex;
-    gap: 3rem;
-    margin-bottom: 2rem;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    /*     font-size: 1.5rem; */
   }
 
   &__link {
-    margin-top: 0.5rem;
+    font-family: $font-secondary;
+    font-weight: map.get($font-secondary-weights, regular);
+    font-size: 1rem;
   }
 
-  &__CVbtn {
-    color: var(--accent-color);
-    background-color: var(--bg-color);
-    border: solid 1px var(--bg-color);
+  &__cv-btn {
+    font-family: $font-secondary;
+    font-weight: map.get($font-secondary-weights, medium);
+    color: $bg-color;
+    background-color: $orange;
+    border: solid 1px $orange;
     border-radius: 1rem;
     padding: 0.5rem 1rem;
     transition: all 0.2s ease;
@@ -67,12 +64,55 @@ a:hover {
 
     &:hover {
       transform: scale(1.05);
-      color: #e35b00;
-      background-color: #fff;
+      color: $orange;
+      background-color: $bg-color;
     }
     &.active {
-      color: #e35b00;
-      background-color: #fff;
+      color: $orange;
+      background-color: $bg-color;
     }
   }
+
+  @include tablet {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 1rem;
+
+    &__content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__link {
+      font-size: 1.2rem;
+    }
+
+    &__nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+    }
+  }
+}
+
+.main {
+  &__body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 6rem 2rem 2rem 2rem;
+  font-size: 0.875rem;
+  color: white;
+  font-weight: map.get($font-secondary-weights, regular);
 }

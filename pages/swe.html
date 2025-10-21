@@ -24,112 +24,113 @@
     </div>
   </header>
   <main>
+
+    <!-- Skills Section -->
     <section class="skills">
-      <div class="skills__line-container">
-        <h2 class="skills__title">Skills</h2>
-        <hr />
-      </div>
-      <div class="skills__wrapper">
-        <div class="skills__container">
-          <h3 class="skills__subtitle">Frontend</h3>
-          <ul class="skills__list-container">
-            <li class="skills__list-item">HTML</li>
-            <li class="skills__list-item">CSS</li>
-            <li class="skills__list-item">SASS</li>
-            <li class="skills__list-item">Javascript</li>
-            <li class="skills__list-item">React</li>
-            <li class="skills__list-item">Responsive Design</li>
-            <li class="skills__list-item">BEM</li>
+      <h2 class="skills__title">Skills</h2>
+      <hr class="skills__divider" />
+      <div class="skills__grid">
+        <div class="skills__card">
+          <h3>Frontend</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SASS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Responsive Design</li>
+            <li>BEM</li>
           </ul>
         </div>
-        <div class="skills__container">
-          <h3 class="skills__subtitle">Backend</h3>
-          <ul class="skills__list-container">
-            <li class="skills__list-item">MySQL/PostgreSQL</li>
-            <li class="skills__list-item">Express</li>
-            <li class="skills__list-item">Node.js</li>
-            <li class="skills__list-item">Knex</li>
-            <li class="skills__list-item">Vite</li>
-            <li class="skills__list-item">REST APIs</li>
+        <div class="skills__card">
+          <h3>Backend</h3>
+          <ul>
+            <li>MySQL/PostgreSQL</li>
+            <li>Express</li>
+            <li>Node.js</li>
+            <li>Knex</li>
+            <li>Vite</li>
+            <li>REST APIs</li>
           </ul>
         </div>
-        <div class="skills__container">
-          <h3 class="skills__subtitle">Other</h3>
-          <ul class="skills__list-container">
-            <li class="skills__list-item">Git</li>
-            <li class="skills__list-item">Command Line</li>
-            <li class="skills__list-item">Postman</li>
-            <li class="skills__list-item">Jira</li>
-            <li class="skills__list-item">Heroku/Vercel/Netlify</li>
-            <li class="skills__list-item">C#/Unity</li>
-            <li class="skills__list-item">p5JS/Processing</li>
-            <li class="skills__list-item">Figma/Adobe CC</li>
-            <li class="skills__list-item">UX Design</li>
+        <div class="skills__card">
+          <h3>Other</h3>
+          <ul>
+            <li>Git</li>
+            <li>Command Line</li>
+            <li>Postman</li>
+            <li>Jira</li>
+            <li>Heroku / Vercel / Netlify</li>
+            <li>C#/Unity</li>
+            <li>p5JS/Processing</li>
+            <li>Figma / Adobe CC</li>
+            <li>UX Design</li>
           </ul>
         </div>
       </div>
     </section>
+
+    <!-- Work Section -->
     <section class="work">
-      <div class="work__line-container">
-        <h2 class="work__title">Select Works</h2>
-        <hr />
-      </div>
-      <div class="work__container">
-        <div class="work__casestudy">
-          <img class="work__img" src="../assets/images/swe/snaps.jpg" alt="Screenshot of Snaps app" />
-          <div class="work__header">
+      <h2 class="work__title">Select Works</h2>
+      <hr class="work__divider" />
+      <div class="work__grid">
+        <div class="work__card">
+          <img src="../assets/images/swe/snaps.jpg" alt="Screenshot of Snaps app" />
+          <div class="work__info">
             <h3>Snaps</h3>
+            <p>React | Node | Express | APIs | Responsive Design</p>
             <a href="https://github.com/hopeaaaa/snaps">Code</a>
           </div>
-          <p>React | Node | Express | APIs | Responsive Design</p>
         </div>
-        <div class="work__casestudy">
-          <img class="work__img" src="../assets/images/swe/instock.svg" alt="Screenshot of Instock app" />
-          <div class="work__header">
+
+        <div class="work__card">
+          <img src="../assets/images/swe/instock.svg" alt="Screenshot of Instock app" />
+          <div class="work__info">
             <h3>Instock</h3>
+            <p>MySQL | Figma | Git | Jira | Scrum</p>
             <a href="https://github.com/hopeaaaa/instock-frontend">Code</a>
           </div>
-          <p>MySQL | Figma | Git | Jira | Scrum</p>
         </div>
-        <div class="work__casestudy">
-          <a
-            href="https://www.canva.com/design/DAGh0V4EhEs/T9Pdmh_nZ4A32sgH7ah5uQ/view?utm_content=DAGh0V4EhEs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0eab37c1eb">
-            <img class="work__img-microsoft" src="../assets/images/swe/autopilot.png" alt="gradient image" />
-          </a>
 
-          <div class="work__header">
+        <div class="work__card">
+          <img src="../assets/images/swe/autopilot.png" alt="AutoPilot project" />
+          <div class="work__info">
             <h3>AutoPilot</h3>
+            <p>Brainstation x Microsoft Hackathon | Jira | APIs | React</p>
             <a href="https://github.com/afcanavera/microsoft-hackathon-frontend">Code</a>
           </div>
-
-          <p>Brainstation x Microsoft Hackathon | Jira | APIs | React</p>
         </div>
-        <div class="work__casestudy">
-          <img class="work__img-coffee" src="../assets/images/swe/coffeeshop-2.jpg" alt="coffeebag" />
-          <div class="work__header">
+
+        <div class="work__card">
+          <img src="../assets/images/swe/coffeeshop-2.jpg" alt="Nitro Coffee project" />
+          <div class="work__info">
             <h3>Nitro Coffee</h3>
+            <p>HTML | CSS | CSS Animations | SASS | BEM</p>
             <a href="https://github.com/hopeaaaa/hope-akello-coffeeshop">Code</a>
           </div>
-          <p>HTML | CSS | CSS Animations | SASS | Bem</p>
         </div>
-        <div class="work__casestudy">
-          <img class="work__casestudy-img" src="../assets/images/swe/bandsite screenshot.jpg" alt="coffeebag" />
-          <div class="work__header">
+
+        <div class="work__card">
+          <img src="../assets/images/swe/bandsite screenshot.jpg" alt="Band Website project" />
+          <div class="work__info">
             <h3>Band Website</h3>
+            <p>HTML | CSS | SASS | BEM | Responsive Design</p>
             <a href="https://github.com/hopeaaaa/hope-akello-bandsite">Code</a>
           </div>
-          <p>HTML | CSS | SASS | Bem | Responsive Design</p>
         </div>
-        <div class="work__casestudy">
-          <img class="work__casestudy-img" src="../assets/images/swe/dictionary screenshot.jpg" alt="coffeebag" />
-          <div class="work__header">
+
+        <div class="work__card">
+          <img src="../assets/images/swe/dictionary screenshot.jpg" alt="Dictionary App project" />
+          <div class="work__info">
             <h3>Dictionary App</h3>
+            <p>React | Web APIs</p>
             <a href="https://github.com/hopeaaaa/hope-akello-coffeeshop">Code</a>
           </div>
-          <p>React | Web APIs</p>
         </div>
       </div>
     </section>
+
 
     <!--     <section class="contact">
       <div class="contact__line-container">

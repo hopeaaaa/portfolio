@@ -58,22 +58,20 @@ a:hover {
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: #e35b00; /* Set a background color */
+  background-color: $orange; /* Set a background color */
   opacity: 100%;
-  color: white; /* Text color */
+  color: $bg-color; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
+  padding: 0.5rem 1rem; /* Some padding */
+  border-radius: 1rem; /* Rounded corners */
   font-size: 18px; /* Increase font size */
 }
-
 #myBtn:hover {
-  /*   background-color: #555; */
   opacity: 100%;
 }
 
 .header {
-  padding: 1.5rem;
+  padding: 1.5rem 0rem 1.5rem 1.5rem;
 
   &__content {
     display: flex;
@@ -84,7 +82,7 @@ a:hover {
 
   &__title {
     font-family: $font-primary;
-    font-weight: map.get($font-primary-weights, light);
+    font-weight: map.get($font-primary-weights, medium);
     margin: 0;
     color: $orange;
   }
@@ -108,7 +106,7 @@ a:hover {
     font-weight: map.get($font-secondary-weights, medium);
     color: $bg-color;
     background-color: $orange;
-    border: solid 1px $orange;
+    border: solid 2px $orange;
     border-radius: 1rem;
     padding: 0.5rem 1rem;
     transition: all 0.2s ease;
@@ -158,29 +156,18 @@ a:hover {
   padding: 1.5rem;
 
   &__intro-text-container {
-    /*     max-width: 1050px;
-    margin: 0 auto;
-    padding: 2rem;
-    margin-bottom: 6rem;
-    margin-top: 10rem; */
-    margin: 4rem auto 3rem auto;
+    padding: 4rem auto 3rem auto;
     text-align: left;
   }
 
   &__title {
-    /*     font-size: 2.5rem;
-    font-weight: 700; */
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
   }
 
   &__subtitle {
-    /*     font-size: 28px;
-    margin-top: 1rem;
-    margin-bottom: 1rem; */
     font-size: 1.25rem;
-
     margin-top: 0.75rem;
     margin-bottom: 1rem;
   }
@@ -191,52 +178,30 @@ a:hover {
   }
 
   &__img {
-    /*     width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-    border-radius: 0.5rem; */
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
-    border-radius: 0.5rem;
+    border: 2px solid;
+    border-radius: 1rem;
   }
 
   &__context {
-    /*     font-size: 0.8rem;
-    font-weight: 700;
-    color: #7f8380;
-    letter-spacing: 0.08rem;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem; */
     font-size: 0.75rem;
     font-weight: 600;
-    color: #7f8380;
+    color: #707070;
     letter-spacing: 0.08rem;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
   }
 
   &__context-megawrapper {
-    /*     max-width: 1050px;
-    margin: 0 auto;
-    padding: 2rem;
-    margin-top: 2rem; */
     margin: 2rem auto;
     padding-top: 2rem;
     max-width: 100%;
   }
 
   &__context-wrapper {
-    /*     margin-top: 4rem;
-    margin-bottom: 4rem;
-    display: flex;
-    justify-content: space-between;
-    gap: 0 4rem;
-    flex-wrap: wrap;
-    max-width: 1050px;
-    margin: 0 auto; */
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -248,17 +213,7 @@ a:hover {
     min-width: 0;
   }
 
-  /*   &__intro {
-    margin-bottom: 2rem;
-    font-size: 20px;
-  } */
-
   &__deliverables {
-    /*     display: flex;
-    gap: 1rem;
-    font-size: 0.75rem;
-    margin-bottom: 4rem;
-    font-weight: 700; */
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
@@ -307,13 +262,6 @@ a:hover {
     &__intro {
       font-size: 1.25rem;
     }
-    /* 
-    &__context-megawrapper {
-      max-width: 1050px;
-      margin: 0 auto;
-      padding: 2rem;
-      margin-top: 2rem;
-    } */
 
     &__context-wrapper {
       flex-direction: row;
@@ -346,33 +294,29 @@ a:hover {
     margin-bottom: 1rem;
   }
 
-  &__img {
-    width: 100%;
-    height: 40rem;
-    display: block;
-    object-fit: cover;
-    border-radius: 0.5rem;
-  }
-
-  &__img-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4rem;
-    justify-content: center;
-  }
-
-  &__intro-img {
-    width: 45%;
-    height: 10rem;
-    object-fit: cover;
-    object-position: 10% center;
-    border-radius: 0.5rem;
-  }
-
   &__body {
     margin-bottom: 4rem;
     line-height: 2rem;
-    font-size: 20px;
+    font-size: 1.25rem;
+  }
+
+  &__intro-img-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  &__intro-img {
+    width: auto;
+    height: 15rem;
+    object-fit: contain;
+    object-position: 10% center;
+    border: 2px solid;
+    border-radius: 1rem;
+  }
+
+  &__projects-container {
+    padding-top: 4rem;
   }
 
   &__co-img {
@@ -380,8 +324,106 @@ a:hover {
     height: 10rem;
     object-fit: cover;
     object-position: 10% center;
-    border-radius: 0.5rem;
+    border: 2px solid;
+    border-radius: 1rem;
     cursor: zoom-in;
+  }
+}
+
+.accordion {
+  padding-bottom: 8rem;
+
+  //PROJECT WRAPPER DIV
+  &__item {
+    border-bottom: 2px solid #ccc;
+
+    &.accordion__item--active .accordion__content {
+      padding: 1rem;
+      max-height: max-content;
+    }
+  }
+
+  // BUTTON
+  &__trigger {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    &[aria-expanded="true"] {
+      .accordion__line--vertical,
+      .accordion__line--horizontal {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  // +
+  &__icon {
+    float: right;
+    transition: transform 0.3s ease;
+  }
+
+  //LINE
+  &__line {
+    stroke: currentColor;
+    stroke-width: 2;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+  }
+
+  //ALL PROJECTS
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 2rem;
+  }
+
+  //EACH PROJECT
+  &__context-container,
+  &__outcomes-container,
+  &__approaches-container,
+  &__objectives-container,
+  &__results-container {
+    padding: 1rem 0;
+  }
+
+  &__title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #707070;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+  }
+
+  &__body {
+    font-size: 1.25rem;
+  }
+
+  &__list {
+    padding-left: 1.25rem;
+    font-size: 20px;
+  }
+
+  &__li {
+    line-height: 1.3rem;
+    margin-bottom: 1rem;
+    list-style-type: "✱ ";
+  }
+
+  &__img-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 0 1rem 0;
   }
 }
 
@@ -390,98 +432,4 @@ footer {
   padding: 2rem;
   font-size: 0.875rem;
   color: #888;
-}
-
-.accordion__item {
-  border-bottom: 1px solid #ccc;
-}
-
-.accordion__trigger {
-  /*   background: none;
-  border: none;
-  padding: 1rem;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  font-size: 28px; */
-  /*     margin-top: 1rem;
-    margin-bottom: 1rem; */
-  background: none;
-  border: none;
-  width: 100%;
-  text-align: left;
-  padding: 1rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: inherit;
-  font-size: 1.1rem;
-
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-
-.accordion__icon {
-  /*   margin-left: 0.5rem; */
-  float: right;
-  transition: transform 0.3s ease;
-}
-
-.accordion__line {
-  stroke: currentColor;
-  stroke-width: 2;
-  transition: transform 0.3s ease;
-  transform-origin: center;
-}
-
-.accordion__trigger[aria-expanded="true"] .accordion__line--horizontal {
-  transform: rotate(45deg);
-}
-.accordion__trigger[aria-expanded="true"] .accordion__line--vertical {
-  transform: rotate(45deg);
-}
-
-.accordion__content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  padding: 0 1rem;
-}
-
-.accordion__item--active .accordion__content {
-  padding: 1rem;
-  max-height: 1000px;
-}
-
-.accordion__title {
-  /*   line-height: 2rem; */
-  font-size: 20px;
-}
-.accordion__body {
-  /*   line-height: 2rem; */
-  font-size: 20px;
-}
-
-.accordion__text,
-.accordion__list,
-.accordion__image {
-  margin: 0.5rem 0;
-}
-
-.accordion__list {
-  padding-left: 1.25rem;
-  font-size: 20px;
-}
-
-.accordion__li {
-  line-height: 1.3rem;
-  margin-bottom: 1rem;
-  list-style-type: "✱ ";
-}
-
-.accordion__outcomes-container,
-.accordion__approaches-container,
-.accordion__objectives-container,
-.accordion__results-container {
-  padding: 2rem 0 0 0;
 }

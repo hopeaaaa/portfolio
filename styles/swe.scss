@@ -245,3 +245,109 @@ footer {
   font-size: 0.875rem;
   color: #888;
 }
+
+/* --- General --- */
+main {
+  padding: 2rem;
+  font-family: "Arial", sans-serif;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background: #ccc;
+  margin-bottom: 2rem;
+}
+
+/* --- Skills Section --- */
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.skills__card {
+  background: #f7f7f7;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skills__card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.skills__card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills__card li {
+  padding: 0.25rem 0;
+  font-size: 1rem;
+}
+
+/* --- Work Section --- */
+.work__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.work__card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.work__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.work__card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.work__info {
+  padding: 1rem;
+}
+
+.work__info h3 {
+  margin-bottom: 0.5rem;
+}
+
+.work__info p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.work__info a {
+  color: #0077ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.work__info a:hover {
+  text-decoration: underline;
+}

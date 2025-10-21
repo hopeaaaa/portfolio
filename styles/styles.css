@@ -198,7 +198,7 @@ a:hover {
 }
 
 .header {
-  padding: 1.5rem;
+  padding: 2rem;
 }
 .header__content {
   display: flex;
@@ -208,8 +208,7 @@ a:hover {
 }
 .header__title {
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  margin: 0;
+  font-weight: 500;
   color: #e35b00;
 }
 .header__nav {
@@ -217,7 +216,6 @@ a:hover {
   flex-direction: row;
   gap: 1rem;
   align-items: center;
-  /*     font-size: 1.5rem; */
 }
 .header__link {
   font-family: "Inter", sans-serif;
@@ -225,10 +223,9 @@ a:hover {
   font-size: 1rem;
 }
 .header__cv-btn {
-  font-family: "Inter", sans-serif;
   color: #fefefc;
   background-color: #e35b00;
-  border: solid 1px #e35b00;
+  border: solid 2px #e35b00;
   border-radius: 1rem;
   padding: 0.5rem 1rem;
   transition: all 0.2s ease;
@@ -245,9 +242,9 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   .header {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    padding-left: 2rem;
+    /*     padding-top: 3rem;
+    padding-bottom: 8rem; */
+    padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
     font-size: 1rem;
@@ -276,17 +273,33 @@ a:hover {
   padding: 2rem;
 }
 .hero__intro {
-  font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 100;
   text-align: left;
+  padding-bottom: 2rem;
+  color: #707070;
+  /*     opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 1.5s ease forwards 1.2s;
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  } */
 }
 .hero__section {
   padding-bottom: 2rem;
+  display: flex;
+  flex-direction: row-reverse;
 }
 @media screen and (min-width: 768px) {
   .hero__intro {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding-bottom: 4rem;
+    text-align: left;
+    max-width: 25rem;
   }
   .hero__container {
     flex-direction: row;
@@ -327,7 +340,7 @@ a:hover {
 .casestudies__preview:hover .casestudies__img, .casestudies__preview:hover .casestudies__img-ubc {
   opacity: 0;
 }
-.casestudies__img, .casestudies__img-ubc, .casestudies__img-hover {
+.casestudies__img, .casestudies__img-ubc, .casestudies__img-code, .casestudies__img-hover {
   width: 100%;
   aspect-ratio: 16/9;
   -o-object-fit: cover;
@@ -381,8 +394,16 @@ a:hover {
 
 footer {
   text-align: center;
-  padding: 2rem;
+  padding: 6rem 2rem 2rem 2rem;
   font-size: 0.875rem;
   color: #888;
   font-weight: 400;
+  max-width: 17rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    margin: 0 auto;
+    max-width: none;
+  }
 }/*# sourceMappingURL=styles.css.map */

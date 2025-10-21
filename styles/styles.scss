@@ -21,7 +21,7 @@ a:hover {
 }
 
 .header {
-  padding: 1.5rem;
+  padding: 2rem;
 
   &__content {
     display: flex;
@@ -32,8 +32,7 @@ a:hover {
 
   &__title {
     font-family: $font-primary;
-    font-weight: map.get($font-primary-weights, light);
-    margin: 0;
+    font-weight: map.get($font-primary-weights, medium);
     color: $orange;
   }
 
@@ -42,7 +41,6 @@ a:hover {
     flex-direction: row;
     gap: 1rem;
     align-items: center;
-    /*     font-size: 1.5rem; */
   }
 
   &__link {
@@ -52,11 +50,9 @@ a:hover {
   }
 
   &__cv-btn {
-    font-family: $font-secondary;
-    font-weight: map.get($font-secondary-weights, medium);
     color: $bg-color;
     background-color: $orange;
-    border: solid 1px $orange;
+    border: solid 2px $orange;
     border-radius: 1rem;
     padding: 0.5rem 1rem;
     transition: all 0.2s ease;
@@ -74,9 +70,9 @@ a:hover {
   }
 
   @include tablet {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    padding-left: 2rem;
+    /*     padding-top: 3rem;
+    padding-bottom: 8rem; */
+    padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
     font-size: 1rem;
@@ -108,19 +104,36 @@ a:hover {
   padding: 2rem;
 
   &__intro {
-    font-weight: map.get($font-primary-weights, medium);
-    font-size: 1rem;
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: 100;
     text-align: left;
+    padding-bottom: 2rem;
+    color: #707070;
+
+    /*     opacity: 0;
+    transform: translateY(10px);
+    animation: fadeUp 1.5s ease forwards 1.2s;
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    } */
   }
 
   &__section {
     padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row-reverse;
   }
 
   @include tablet {
     &__intro {
-      font-size: 1.5rem;
+      font-size: 1rem;
       padding-bottom: 4rem;
+      text-align: left;
+      max-width: 25rem;
     }
 
     &__container {
@@ -175,6 +188,7 @@ a:hover {
   // Base image styles
   &__img,
   &__img-ubc,
+  &__img-code,
   &__img-hover {
     width: 100%;
     aspect-ratio: 16 / 9; // keeps uniform height and width
@@ -185,7 +199,6 @@ a:hover {
     transition: opacity 0.4s ease;
   }
 
-  // Optional tweak for image cropping on UBC card
   &__img-ubc {
     object-position: 5% center;
   }
@@ -237,8 +250,14 @@ a:hover {
 
 footer {
   text-align: center;
-  padding: 2rem;
+  padding: 6rem 2rem 2rem 2rem;
   font-size: 0.875rem;
   color: #888;
   font-weight: map.get($font-secondary-weights, regular);
+  max-width: 17rem;
+  margin: 0 auto;
+  @include tablet {
+    margin: 0 auto;
+    max-width: none;
+  }
 }

@@ -1,0 +1,61 @@
+@use "./partials/resets" as *;
+@use "./partials/variables" as *;
+@use "./partials/fonts" as *;
+@use "./partials/mixins" as *;
+@use "sass:map";
+
+body {
+  font-family: $font-primary;
+  font-weight: map.get($font-primary-weights, medium);
+  background-color: $orange;
+  color: $bg-color;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+//BLOB
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30vh;
+
+  &__title a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 3rem;
+    font-weight: map.get($font-primary-weights, medium);
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__tagline {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+}
+
+.hero__intro {
+  padding-top: 2rem;
+  max-width: 25rem;
+  margin: 0rem auto;
+  line-height: 1.6;
+  text-align: justify;
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 300;
+}
