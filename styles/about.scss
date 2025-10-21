@@ -105,9 +105,9 @@ a:hover {
   padding: 2rem;
 
   &__headshot {
-    width: 100%;
+    width: auto;
     max-width: 25rem;
-    height: auto;
+    height: 20rem;
     border-radius: 1rem;
     border: solid 2px;
   }
@@ -129,8 +129,9 @@ a:hover {
     }
 
     &__headshot {
-      height: 25rem;
+      height: 28rem;
       width: auto;
+      max-width: 28rem;
     }
   }
 }

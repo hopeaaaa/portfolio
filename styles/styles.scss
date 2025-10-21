@@ -21,7 +21,7 @@ a:hover {
 }
 
 .header {
-  padding: 2rem;
+  padding: 1.5rem 0rem 1.5rem 1.5rem;
 
   &__content {
     display: flex;
@@ -70,9 +70,7 @@ a:hover {
   }
 
   @include tablet {
-    /*     padding-top: 3rem;
-    padding-bottom: 8rem; */
-    padding: 2rem;
+    padding: 3rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
     font-size: 1rem;

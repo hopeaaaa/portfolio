@@ -124,9 +124,7 @@ a:hover {
   }
 
   @include tablet {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    padding-left: 2rem;
+    padding: 3rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
     font-size: 1rem;

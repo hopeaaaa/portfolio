@@ -274,9 +274,9 @@ a:hover {
   padding: 2rem;
 }
 .hero__headshot {
-  width: 100%;
+  width: auto;
   max-width: 25rem;
-  height: auto;
+  height: 20rem;
   border-radius: 1rem;
   border: solid 2px;
 }
@@ -296,8 +296,9 @@ a:hover {
     text-align: left;
   }
   .hero__headshot {
-    height: 25rem;
+    height: 28rem;
     width: auto;
+    max-width: 28rem;
   }
 }
 
