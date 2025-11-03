@@ -153,6 +153,22 @@ a:hover {
   max-width: 100%;
   padding: 1.5rem;
 
+  &__tags-container {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    opacity: 60%;
+  }
+
+  &__tag {
+    background-color: $grey;
+    width: max-content;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    color: $bg-color;
+    font-size: 1rem;
+  }
+
   &__intro-text-container {
     padding: 4rem auto 3rem auto;
     text-align: left;
@@ -189,7 +205,6 @@ a:hover {
     font-weight: 600;
     color: #707070;
     letter-spacing: 0.08rem;
-    margin-top: 1rem;
     margin-bottom: 0.5rem;
   }
 
@@ -203,7 +218,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 2rem;
+    padding-top: 1.5rem;
   }
 
   &__container {
@@ -245,8 +260,11 @@ a:hover {
     margin: 0 auto;
 
     &__intro-text-container {
-      margin-top: 8rem;
-      margin-bottom: 6rem;
+      padding: 2rem 0rem 0rem 0rem;
+    }
+
+    &__tags-container {
+      padding: 1rem 0 2rem 0;
     }
 
     &__title {
@@ -265,7 +283,7 @@ a:hover {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 0 4rem;
+      gap: 2rem 4rem;
     }
 
     &__container {
@@ -339,6 +357,23 @@ a:hover {
       padding: 1rem;
       max-height: max-content;
     }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__tag {
+    background-color: $grey;
+    width: max-content;
+    padding: 0.5rem 0.75rem;
+    border-radius: 1rem;
+    color: $bg-color;
+    font-size: 1rem;
+    white-space: nowrap;
+    opacity: 60%;
   }
 
   // BUTTON

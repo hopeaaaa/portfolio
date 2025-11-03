@@ -237,11 +237,24 @@ a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 2.5rem;
+    gap: 2rem;
     padding: 0rem;
 
     &__preview-link {
-      flex: 0 0 calc(50% - 1.5rem);
+      flex: 0 0 calc(50% - 2rem);
+      padding-bottom: 2rem;
+    }
+
+    &__tag {
+      background-color: $grey;
+      width: max-content;
+      padding: 0.5rem 0.75rem;
+      border-radius: 1rem;
+      color: $bg-color;
+      font-size: 1rem;
+      white-space: nowrap;
+      opacity: 60%;
+      display: none;
     }
   }
 }

@@ -7,22 +7,21 @@
 body {
   font-family: $font-secondary;
   font-weight: map.get($font-secondary-weights, regular);
-  background-color: #3f612d;
-  color: $orange;
+  background-color: $bg-color;
+  color: $black;
 }
 
 a {
   text-decoration: none;
+  color: $black;
 }
 
 a:hover {
-  color: white;
-  text-decoration: underline white;
-  /*   transform: scale(1.4); */
+  color: $orange;
 }
 
 .header {
-  padding: 1.5rem;
+  padding: 1.5rem 0rem 1.5rem 1.5rem;
 
   &__content {
     display: flex;
@@ -33,8 +32,9 @@ a:hover {
 
   &__title {
     font-family: $font-primary;
-    font-weight: map.get($font-primary-weights, light);
+    font-weight: map.get($font-primary-weights, medium);
     margin: 0;
+    color: $orange;
   }
 
   &__nav {
@@ -56,7 +56,7 @@ a:hover {
     font-weight: map.get($font-secondary-weights, medium);
     color: $bg-color;
     background-color: $orange;
-    border: solid 1px $orange;
+    border: solid 2px $orange;
     border-radius: 1rem;
     padding: 0.5rem 1rem;
     transition: all 0.2s ease;
@@ -74,9 +74,7 @@ a:hover {
   }
 
   @include tablet {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    padding-left: 2rem;
+    padding: 3rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
     font-size: 1rem;
@@ -101,11 +99,122 @@ a:hover {
   }
 }
 
-.main {
-  &__body {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+/* .h2 {
+  padding-bottom: 2rem;
+}
+
+.p {
+  padding-bottom: 2rem;
+} */
+
+.teaching {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: solid;
+  border-radius: 1rem;
+  line-height: 1.5rem;
+
+  &__intro {
+    padding: 1rem 1rem 1rem 2rem;
+    border-bottom: solid;
+  }
+
+  &__example-last {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: stretch;
+  }
+  &__example {
+    border-bottom: solid;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: stretch;
+
+    &__header {
+      padding-bottom: 1rem;
+    }
+
+    &__text {
+      padding: 1rem 2rem;
+      box-sizing: border-box;
+      align-items: stretch;
+    }
+
+    &__courselist,
+    &__body {
+      padding-top: 0.5rem;
+    }
+
+    &__postsec {
+      padding-top: 1rem;
+    }
+
+    &__img-container {
+      flex: 0 0 40%;
+      border-right: solid;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      padding: 0.3rem;
+    }
+
+    &__img,
+    &__img-uni {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: solid;
+      /*     border-radius: 1rem; */
+    }
+    &__img-uni {
+      object-position: 65% center;
+    }
+
+    &__img-last {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: solid;
+      border-bottom-left-radius: 1rem;
+    }
+
+    /*
+      &:hover {
+        transform: rotateY(180deg);
+      }
+&__img-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+
+      &:hover {
+        transform: rotateY(180deg);
+      }
+    }
+
+    &__img-front,
+    &__img-back,
+    &__img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: solid;
+      border-radius: 1rem;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    &__img-back {
+      background-color: grey;
+      transform: rotateY(180deg);
+    }
+  } */
   }
 }
 
@@ -113,6 +222,6 @@ footer {
   text-align: center;
   padding: 6rem 2rem 2rem 2rem;
   font-size: 0.875rem;
-  color: white;
+  color: grey;
   font-weight: map.get($font-secondary-weights, regular);
 }

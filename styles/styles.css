@@ -382,11 +382,24 @@ a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 2.5rem;
+    gap: 2rem;
     padding: 0rem;
   }
   .casestudies__preview-link {
-    flex: 0 0 calc(50% - 1.5rem);
+    flex: 0 0 calc(50% - 2rem);
+    padding-bottom: 2rem;
+  }
+  .casestudies__tag {
+    background-color: #555;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 0.5rem 0.75rem;
+    border-radius: 1rem;
+    color: #fefefc;
+    font-size: 1rem;
+    white-space: nowrap;
+    opacity: 60%;
+    display: none;
   }
 }
 

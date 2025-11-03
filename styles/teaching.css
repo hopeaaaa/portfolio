@@ -184,23 +184,21 @@ a {
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  background-color: #3f612d;
-  color: #e35b00;
+  background-color: #fefefc;
+  color: #0c0c0c;
 }
 
 a {
   text-decoration: none;
+  color: #0c0c0c;
 }
 
 a:hover {
-  color: white;
-  -webkit-text-decoration: underline white;
-          text-decoration: underline white;
-  /*   transform: scale(1.4); */
+  color: #e35b00;
 }
 
 .header {
-  padding: 1.5rem;
+  padding: 1.5rem 0rem 1.5rem 1.5rem;
 }
 .header__content {
   display: flex;
@@ -210,8 +208,9 @@ a:hover {
 }
 .header__title {
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   margin: 0;
+  color: #e35b00;
 }
 .header__nav {
   display: flex;
@@ -229,7 +228,7 @@ a:hover {
   font-family: "Inter", sans-serif;
   color: #fefefc;
   background-color: #e35b00;
-  border: solid 1px #e35b00;
+  border: solid 2px #e35b00;
   border-radius: 1rem;
   padding: 0.5rem 1rem;
   transition: all 0.2s ease;
@@ -246,9 +245,7 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   .header {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    padding-left: 2rem;
+    padding: 3rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
     font-size: 1rem;
@@ -270,16 +267,119 @@ a:hover {
   }
 }
 
-.main__body {
+/* .h2 {
+  padding-bottom: 2rem;
+}
+
+.p {
+  padding-bottom: 2rem;
+} */
+.teaching {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  border: solid;
+  border-radius: 1rem;
+  line-height: 1.5rem;
+}
+.teaching__intro {
+  padding: 1rem 1rem 1rem 2rem;
+  border-bottom: solid;
+}
+.teaching__example-last {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: stretch;
+}
+.teaching__example {
+  border-bottom: solid;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: stretch;
+  /*
+        &:hover {
+          transform: rotateY(180deg);
+        }
+  &__img-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+
+        &:hover {
+          transform: rotateY(180deg);
+        }
+      }
+
+      &__img-front,
+      &__img-back,
+      &__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: solid;
+        border-radius: 1rem;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      &__img-back {
+        background-color: grey;
+        transform: rotateY(180deg);
+      }
+    } */
+}
+.teaching__example__header {
+  padding-bottom: 1rem;
+}
+.teaching__example__text {
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  align-items: stretch;
+}
+.teaching__example__courselist, .teaching__example__body {
+  padding-top: 0.5rem;
+}
+.teaching__example__postsec {
+  padding-top: 1rem;
+}
+.teaching__example__img-container {
+  flex: 0 0 40%;
+  border-right: solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0.3rem;
+}
+.teaching__example__img, .teaching__example__img-uni {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: solid;
+  /*     border-radius: 1rem; */
+}
+.teaching__example__img-uni {
+  -o-object-position: 65% center;
+     object-position: 65% center;
+}
+.teaching__example__img-last {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: solid;
+  border-bottom-left-radius: 1rem;
 }
 
 footer {
   text-align: center;
   padding: 6rem 2rem 2rem 2rem;
   font-size: 0.875rem;
-  color: white;
+  color: grey;
   font-weight: 400;
 }/*# sourceMappingURL=teaching.css.map */
