@@ -45,6 +45,13 @@ a {
 }
 
 @font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../../assets/fonts/IBMPlexMono-Regular.woff2") format("woff2"), url("../../assets/fonts/IBMPlexMono-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "Poppins";
   font-weight: 200;
   src: url("../../assets/fonts/poppins-extralight-webfont.woff2") format("woff2");
@@ -129,58 +136,137 @@ a {
   src: url("../../assets/fonts/poppins-blackitalic-webfont.woff") format("woff");
 }
 @font-face {
-  font-family: "Inter18pt";
-  font-weight: 400;
-  src: url("../../assets/fonts/Inter18pt-Regular.woff2") format("woff2");
-  src: url("../../assets/fonts/Inter18pt-Regular.woff") format("woff");
-}
-@font-face {
-  font-family: "Inter18pt";
+  font-family: "Lexend";
+  src: url("../../assets/fonts/Lexend-Light.woff2") format("woff2"), url("../../assets/fonts/Lexend-Light.woff") format("woff");
   font-weight: 300;
-  src: url("../../assets/fonts/Inter18pt-Light.woff2") format("woff2");
-  src: url("../../assets/fonts/Inter18pt-Light.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Inter18pt";
-  font-weight: 800;
-  src: url("../../assets/fonts/Inter18pt-ExtraBold.woff2") format("woff2");
-  src: url("../../assets/fonts/Inter18pt-ExtraBold.woff") format("woff");
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat-Bold.woff2") format("woff2"), url("../../assets/fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Inter24pt";
-  font-weight: 400;
-  src: url("../../assets/fonts/Inter24pt-Regular.woff2") format("woff2");
-  src: url("../../assets/fonts/Inter24pt-Regular.woff") format("woff");
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat-BoldItalic.woff2") format("woff2"), url("../../assets/fonts/Montserrat-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Inter24pt";
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat-Italic.woff2") format("woff2"), url("../../assets/fonts/Montserrat-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat-ExtraLightItalic.woff2") format("woff2"), url("../../assets/fonts/Montserrat-ExtraLightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat-ExtraLight.woff2") format("woff2"), url("../../assets/fonts/Montserrat-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat-Light.woff2") format("woff2"), url("../../assets/fonts/Montserrat-Light.woff") format("woff");
   font-weight: 300;
-  src: url("../../assets/fonts/Inter24pt-Light.woff2") format("woff2");
-  src: url("../../assets/fonts/Inter24pt-Light.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Inter24pt";
-  font-weight: 800;
-  src: url("../../assets/fonts/Inter24pt-ExtraBold.woff2") format("woff2");
-  src: url("../../assets/fonts/Inter24pt-ExtraBold.woff") format("woff");
-}
-@font-face {
-  font-family: "Inter28pt";
-  font-weight: 400;
-  src: url("../../assets/fonts/Inter28pt-Regular.woff2") format("woff2");
-  src: url("../../assets/fonts/Inter28pt-Regular.woff") format("woff");
-}
-@font-face {
-  font-family: "Inter28pt";
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat-LightItalic.woff2") format("woff2"), url("../../assets/fonts/Montserrat-LightItalic.woff") format("woff");
   font-weight: 300;
-  src: url("../../assets/fonts/Inter28pt-Light.woff2") format("woff2");
-  src: url("../../assets/fonts/Inter28pt-Light.woff") format("woff");
+  font-style: italic;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Inter28pt";
-  font-weight: 800;
-  src: url("../../assets/fonts/Inter28pt-ExtraBold.woff2") format("woff2");
-  src: url("../../assets/fonts/Inter28pt-ExtraBold.woff") format("woff");
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat-Medium.woff2") format("woff2"), url("../../assets/fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat-MediumItalic.woff2") format("woff2"), url("../../assets/fonts/Montserrat-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat-Regular.woff2") format("woff2"), url("../../assets/fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat-SemiBoldItalic.woff2") format("woff2"), url("../../assets/fonts/Montserrat-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../../assets/fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat-Thin.woff2") format("woff2"), url("../../assets/fonts/Montserrat-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat-ThinItalic.woff2") format("woff2"), url("../../assets/fonts/Montserrat-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Domine";
+  src: url("../../assets/fonts/Domine-Bold.woff2") format("woff2"), url("../../assets/fonts/Domine-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Domine";
+  src: url("../../assets/fonts/Domine-SemiBold.woff2") format("woff2"), url("../../assets/fonts/Domine-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Domine";
+  src: url("../../assets/fonts/Domine-Regular.woff2") format("woff2"), url("../../assets/fonts/Domine-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Domine";
+  src: url("../../assets/fonts/Domine-Medium.woff2") format("woff2"), url("../../assets/fonts/Domine-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 * {
   box-sizing: border-box;
@@ -188,9 +274,9 @@ a {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Montserrat";
   font-weight: 400;
-  background-color: #fefefc;
+  background-color: #fffaed;
   color: #0c0c0c;
 }
 
@@ -200,7 +286,7 @@ a {
 }
 
 a:hover {
-  color: #e35b00;
+  color: #c44d00;
 }
 
 hr {
@@ -223,7 +309,7 @@ hr {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   margin: 0;
-  color: #e35b00;
+  color: #c44d00;
 }
 .header__nav {
   display: flex;
@@ -233,15 +319,16 @@ hr {
   /*     font-size: 1.5rem; */
 }
 .header__link {
-  font-family: "Inter", sans-serif;
+  font-family: "Montserrat";
   font-weight: 400;
   font-size: 1rem;
 }
 .header__cv-btn {
-  font-family: "Inter", sans-serif;
-  color: #fefefc;
-  background-color: #e35b00;
-  border: solid 1px #e35b00;
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: #fffaed;
+  background-color: #c44d00;
+  border: solid 1px #c44d00;
   border-radius: 1rem;
   padding: 0.5rem 1rem;
   transition: all 0.2s ease;
@@ -249,12 +336,12 @@ hr {
 }
 .header__cv-btn:hover {
   transform: scale(1.05);
-  color: #e35b00;
-  background-color: #fefefc;
+  color: #c44d00;
+  background-color: #fffaed;
 }
 .header__cv-btn.active {
-  color: #e35b00;
-  background-color: #fefefc;
+  color: #c44d00;
+  background-color: #fffaed;
 }
 @media screen and (min-width: 768px) {
   .header {

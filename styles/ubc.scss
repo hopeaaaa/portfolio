@@ -6,7 +6,7 @@
 
 body {
   font-family: $font-secondary;
-  font-weight: map.get($font-secondary-weights, regular);
+  font-weight: map.get($font-secondary-weights, 400);
   background-color: $bg-color;
   color: $black;
 }

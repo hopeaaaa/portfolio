@@ -7,6 +7,7 @@
   <title>Hope Akello | UX Portfolio</title>
   <link rel="stylesheet" href="./styles/styles.css" />
   <link rel="icon" type="image/x-icon" href="./assets/images/about/asterisk.png" />
+  <script src="./scripts/homepage.js" defer></script>
   <script src="./scripts/main.js" defer></script>
 </head>
 
@@ -14,67 +15,105 @@
   <header class="header">
     <div class="header__content">
       <h1 class="header__title">
-        <a href="./landing.html">hope akello</a>
+        <a href="./index.html">hope akello</a>
       </h1>
       <nav class="header__nav">
         <a href="./index.html" class="header__link">work</a>
         <a href="./pages/about.html" class="header__link">info</a>
         <a href="../assets/pdfs/Hope_AkelloResume.pdf" class="header__cv-btn" target="_blank"
-          rel="noopener noreferrer">CV</a>
+          rel="noopener noreferrer">cv</a>
       </nav>
     </div>
   </header>
 
-  <main class="hero">
-    <!--  <section class="hero__section">
+  <main>
+    <section class="hero">
       <p class="hero__intro">
-        At the intersection of design, technology, & collective wellbeing, I
-        create tools that support learning, access, and meaningful connection. -->
-
-    <!-- At the intersection of design, technology, and collective wellbeing, I design systems that invite people to play, learn, and connect. -->
-    </p>
+        At the intersection of design, technology, and collective well-being, I design systems that invite people
+        to
+        <span class="hero__intro--bold">play, learn, and connect.</span>
+      </p>
     </section>
     <section class="casestudies">
       <div class="casestudies__preview-link">
         <a href="./pages/ubc.html">
           <div class="casestudies__preview">
-            <img src="./assets/images/ubc/ubc-homepage.jpg" class="casestudies__img-ubc"
-              alt="Several screenshots of digital forms created for the UBC Pharmacists Clinic" />
-            <img src="./assets/images/ubc/Screenshot 2025-06-03 095438.png" class="casestudies__img-hover"
+            <img src="./assets/images/ubc/ubc-appt-homepage.svg" class="casestudies__img-ubc"
               alt="Patient journey map for the UBC Pharmacists Clinic" />
+            <div class="casestudies__tags">
+              <span class="casestudies__tag"> Service Design</span>
+              <span class="casestudies__tag"> UX/UI</span>
+            </div>
             <div class="casestudies__text-container">
-              <h2 class="casestudies__title">UBC Pharmacists Clinic</h2>
+              <h2 class="casestudies__title">UBC Appt Booking Process</h2>
               <p>
                 Service design to streamline operations and enhance care
                 delivery at a university healthcare clinic.🡭
               </p>
-              <span class="casestudies__tag"> Service Design</span>
-              <span class="casestudies__tag"> UX/UI</span>
             </div>
           </div>
         </a>
       </div>
+      <div class="casestudies__preview-link">
+        <a href="./pages/ubc.html">
+          <div class="casestudies__preview">
+            <img src="./assets/images/ubc/ubc-dtp-homepage.svg" class="casestudies__img-ubc"
+              alt="Several screenshots of digital forms created for the UBC Pharmacists Clinic" />
+
+            <div class="casestudies__tags">
+            </div>
+            <div class="casestudies__text-container">
+              <h2 class="casestudies__title">UBC DTP Tracker</h2>
+              <p>
+                Service design to streamline operations and enhance care
+                delivery at a university healthcare clinic.🡭
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!--       <div class="casestudies__preview-link">
+        <a href="./pages/ubc.html">
+          <div class="casestudies__preview">
+            <img src="./assets/images/ubc/ubc-homepage.jpg" class="casestudies__img-ubc"
+              alt="Several screenshots of digital forms created for the UBC Pharmacists Clinic" />
+            <div class="casestudies__tags">
+              <span class="casestudies__tag"> UX/UI</span>
+              <span class="casestudies__tag"> Service Design</span>
+            </div>
+            <div class="casestudies__text-container">
+              <h2 class="casestudies__title">UBC EMR UI Design</h2>
+              <p>
+                Service design to streamline operations and enhance care
+                delivery at a university healthcare clinic.🡭
+              </p>
+            </div>
+          </div>
+        </a>
+      </div> -->
 
       <div class="casestudies__preview-link">
         <a href="./pages/creativecareers.html">
           <div class="casestudies__preview">
-            <img src="./assets/images/creative careers/cdwil.png" class="casestudies__img"
-              alt="Home screen for the Creative Careers website" />
-            <img src="./assets/images/creative careers/career-pathway.gif" class="casestudies__img-hover"
+            <img src="./assets/images/creative careers/career-pathway.gif" class="casestudies__img"
               alt="Looping gif of word bubbles being clicked and moved around in the Career Pathways tool" />
-            <div class="casestudies__text-container">
+            <div class="casestudies__tags">
+              <span class="casestudies__tag"> Information Design</span>
+              <span class="casestudies__tag"> UX/UI</span>
+              <span class="casestudies__tag"> Interaction</span>
+            </div>
+            <div class="casestudies__text-container casestudies__text-container--cc">
               <h2 class="casestudies__title">Creative Careers</h2>
               <p>
                 Interactive career tools developed to improve advising and
                 student engagement.🡭
               </p>
-              <span class="casestudies__tag"> UX/UI</span>
             </div>
           </div>
         </a>
       </div>
 
-      <!--       <div class="casestudies__preview-link">
+      <!-- <div class="casestudies__preview-link">
         <a href="./pages/creativecareers.html">
           <div class="casestudies__preview">
             <img src="./assets/images/creative careers/cdwil.png" class="casestudies__img"
@@ -112,13 +151,12 @@
         </a>
       </div> -->
 
-      <!--  <div class="casestudies__preview-link">
+      <div class="casestudies__preview-link">
         <a href="./pages/swe.html">
           <div class="casestudies__preview">
-            <img src="./assets/images/swe/instock.svg" class="casestudies__img-code"
+            <img src="./assets/images/swe/instock-homepage.svg" class="casestudies__img-code"
               alt="Still image of the dictonary app" />
-            <img src="./assets//images/swe/Dictionary Web App-larger.gif" class="casestudies__img-hover"
-              alt="Looping gif of the dictionary app providing a definition for the word 'consternation'" />
+
             <div class="casestudies__text-container">
               <h2 class="casestudies__title">InStock</h2>
               <p>
@@ -128,13 +166,13 @@
             </div>
           </div>
         </a>
-      </div> -->
+      </div>
 
       <!--      
       Built with React and Node.js, as a full-stack
                 React app with responsive layouts and custom components.-->
 
-      <div class="casestudies__preview-link">
+      <!--       <div class="casestudies__preview-link">
         <a href="./pages/swe.html">
           <div class="casestudies__preview">
             <img src="./assets/images/swe/Dictionary-Web-App-10-15-2025_03_29_PM.jpg" class="casestudies__img-code"
@@ -149,9 +187,9 @@
             </div>
           </div>
         </a>
-      </div>
+      </div> -->
 
-      <div class="casestudies__preview-link">
+      <!--       <div class="casestudies__preview-link">
         <a href="./pages/teaching.html">
           <div class="casestudies__preview">
             <img src="./assets/images/teaching/paperfolding.png" class="casestudies__img"
@@ -166,7 +204,7 @@
             </div>
           </div>
         </a>
-      </div>
+      </div> -->
     </section>
   </main>
 

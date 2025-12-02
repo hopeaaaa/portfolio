@@ -7,9 +7,9 @@ $laptop-breakpoint: 1024px;
 $desktop-breakpoint: 1200px;
 
 //Colors
-$bg-color: #fefefc;
+$bg-color: #fffaed;
 $black: #0c0c0c;
-$orange: #e35b00;
+$orange: #c44d00;
 $grey: #555;
 $light-grey: #d1d5db;
 
@@ -31,10 +31,23 @@ $font-primary-weights: (
   black-italic: 900,
 );
 
-$font-secondary: "Inter", sans-serif;
+$font-secondary: "Montserrat";
 $font-secondary-weights: (
+  thin: 100,
+  extra-light: 200,
   light: 300,
   light-italic: 300,
   regular: 400,
-  extra-bold: 800,
+  medium: 500,
+  semi-bold: 600,
+);
+
+$font-third: "Lexend";
+$font-third-weights: (
+  thin: 300,
+);
+
+$font-fourth: "IBM Plex Mono";
+$font-fourth-weights: (
+  regular: 400,
 );
