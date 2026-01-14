@@ -5,19 +5,15 @@
 @use "sass:map";
 
 body {
-  font-family: $font-secondary;
-  font-weight: map.get($font-secondary-weights, 400);
-  background-color: $bg-color;
-  color: $black;
-}
-
-a {
-  text-decoration: none;
+  font-family: $font-third;
+  font-weight: map.get($font-third-weights, medium);
+  background-color: #f2f2f2;
   color: $black;
 }
 
 a:hover {
   color: $orange;
+  font-style: italic;
 }
 
 .lightbox {
@@ -71,20 +67,21 @@ a:hover {
 }
 
 .header {
-  padding: 1.5rem 0rem 1.5rem 1.5rem;
+  padding: 1rem;
+  font-size: 0.625rem;
 
   &__content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #ccc;
   }
 
-  &__title {
+  &__wordmark {
     font-family: $font-primary;
-    font-weight: map.get($font-primary-weights, medium);
-    margin: 0;
-    color: $orange;
+    font-weight: 500;
   }
 
   &__nav {
@@ -92,42 +89,16 @@ a:hover {
     flex-direction: row;
     gap: 1rem;
     align-items: center;
-    /*     font-size: 1.5rem; */
   }
 
+  &__tagline,
   &__link {
-    font-family: $font-secondary;
-    font-weight: map.get($font-secondary-weights, regular);
-    font-size: 1rem;
-  }
-
-  &__cv-btn {
-    font-family: $font-secondary;
-    font-weight: map.get($font-secondary-weights, medium);
-    color: $bg-color;
-    background-color: $orange;
-    border: solid 2px $orange;
-    border-radius: 1rem;
-    padding: 0.5rem 1rem;
-    transition: all 0.2s ease;
-    cursor: pointer;
-
-    &:hover {
-      transform: scale(1.05);
-      color: $orange;
-      background-color: $bg-color;
-    }
-    &.active {
-      color: $orange;
-      background-color: $bg-color;
-    }
+    font-family: $font-fourth;
+    font-weight: 400;
   }
 
   @include tablet {
-    padding: 3rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    font-size: 1rem;
+    padding: 1rem;
 
     &__content {
       flex-direction: row;
@@ -135,8 +106,10 @@ a:hover {
       align-items: center;
     }
 
-    &__link {
-      font-size: 1.2rem;
+    &__link,
+    &__tagline,
+    &__wordmark {
+      font-size: 0.875rem;
     }
 
     &__nav {
@@ -365,7 +338,7 @@ a:hover {
     gap: 2rem;
   }
 
-  &__tag {
+  /*   &__tag {
     background-color: $grey;
     width: max-content;
     padding: 0.5rem 0.75rem;
@@ -374,7 +347,7 @@ a:hover {
     font-size: 1rem;
     white-space: nowrap;
     opacity: 60%;
-  }
+  } */
 
   // BUTTON
   &__trigger {
@@ -384,8 +357,7 @@ a:hover {
     text-align: left;
     padding: 1rem 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 2rem;
     font-size: 1.25rem;
     cursor: pointer;
     transition: color 0.2s ease;
@@ -400,7 +372,6 @@ a:hover {
 
   // +
   &__icon {
-    float: right;
     transition: transform 0.3s ease;
   }
 

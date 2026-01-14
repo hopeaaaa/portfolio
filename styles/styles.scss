@@ -5,42 +5,34 @@
 @use "sass:map";
 
 body {
-  font-family: $font-secondary;
-  font-weight: map.get($font-secondary-weights, regular);
-  background-color: $bg-color;
-  color: $black;
-}
-
-a {
-  text-decoration: none;
+  font-family: $font-third;
+  font-weight: map.get($font-third-weights, medium);
+  background-color: #f2f2f2;
   color: $black;
 }
 
 a:hover {
   color: $orange;
+  font-style: italic;
 }
 
 .header {
-  padding: 2rem;
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 99;
-  background: $bg-color;
+  padding: 1rem;
+  font-size: 0.625rem;
 
   &__content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: baseline;
     gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #ccc;
   }
 
-  &__title {
+  &__wordmark {
     font-family: $font-primary;
-    font-weight: map.get($font-primary-weights, medium);
-    color: $orange;
-    font-size: 1rem;
+    font-weight: 500;
   }
 
   &__nav {
@@ -48,45 +40,83 @@ a:hover {
     flex-direction: row;
     gap: 1rem;
     align-items: center;
-    font-size: 0.8rem;
-    font-family: $font-third;
-    font-weight: map.get($font-third-weights, medium);
   }
 
-  &__cv-btn {
-    color: $bg-color;
-    background-color: $orange;
-    border: solid 2px $orange;
-    border-radius: 1rem;
-    padding: 0.5rem 1rem;
-    transition: all 0.2s ease;
-    cursor: pointer;
+  &__tagline,
+  &__link {
+    font-family: $font-fourth;
+    font-weight: 400;
+  }
 
-    &:hover {
-      transform: scale(1.05);
-      color: $orange;
-      background-color: $bg-color;
+  &__tagline {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+
+    & ::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      width: 2rem;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
     }
-    &.active {
-      color: $orange;
-      background-color: $bg-color;
+
+    &::before {
+      left: 0;
+      background: linear-gradient(
+        to right,
+        #f2f2f2 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(
+        to left,
+        #f2f2f2 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 14s linear infinite;
+    }
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .header__tagline span {
+      animation: none;
+      padding-left: 0;
     }
   }
 
   @include tablet {
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    font-size: 1rem;
-
-    &__title {
-      font-size: 1.875rem;
-    }
+    padding: 1rem;
 
     &__content {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+    }
+
+    &__link,
+    &__tagline,
+    &__wordmark {
+      font-size: 0.875rem;
     }
 
     &__nav {
@@ -95,22 +125,35 @@ a:hover {
       justify-content: center;
       align-items: center;
       gap: 3rem;
-      font-size: 1rem;
+    }
+
+    &__tagline {
+      overflow: visible;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      span {
+        animation: none;
+        padding-left: 0;
+        transform: none;
+      }
     }
   }
 }
 
 .hero {
   margin: 0 auto;
-  position: relative;
-  padding: 2rem;
-  width: 100%;
-  max-width: 100%;
+  padding: 2rem 1rem 1rem 2rem;
 
   &__intro {
     font-size: 1.8rem;
     font-family: $font-third;
-    line-height: 3rem;
+    font-weight: 300;
+    line-height: 2.6rem;
+    color: #202020;
 
     &--bold {
       font-family: $font-primary;
@@ -123,65 +166,53 @@ a:hover {
     &__intro {
       max-width: 1200px;
       width: 100%;
-      position: fixed;
-      top: calc(20%);
-      padding-left: 10rem;
-      font-size: 4.25rem;
-      line-height: 7rem;
-      z-index: 1;
+      /*   font-size: 4.25rem;
+      line-height: 5rem; */
+      font-size: 2.1875rem;
+      line-height: 2.8rem;
+      padding-top: 2rem;
+      width: 52ch;
     }
   }
 }
 
 .casestudies {
-  display: grid;
+  /*   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
-  padding: 2rem;
+  gap: 1.5rem;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
+  padding: 2rem; */
 
-  @include tablet {
-    max-width: 1200px;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    margin-top: 45vh;
+  column-count: 1;
+  column-gap: 1.5rem;
+  padding: 2rem;
 
-    //Staggered layout
-    &__preview-link:nth-child(odd) {
-      margin-top: 16rem;
-    }
-  }
-
-  //The hyperlink wrapper
+  // Link wrapper
   &__preview-link {
+    display: block;
     text-decoration: none;
     color: inherit;
-    display: block;
     width: 100%;
-    opacity: 1;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    break-inside: avoid;
+    margin-bottom: 2rem;
+  }
 
-    //Reveal on scroll
-    &.show {
+  // Card
+  &__preview {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    opacity: 0.01;
+    transform: translateY(8px);
+
+    transition: opacity 0.9s ease-out,
+      transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+
+    &.is-visible {
+      opacity: 1;
       transform: translateY(0);
     }
-  }
-
-  //Reveal on page load
-  &.casestudies--loaded &__preview-link {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  // The card
-  &__preview {
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    cursor: pointer;
 
     &:hover {
       transform: translateY(-6px);
@@ -201,83 +232,71 @@ a:hover {
     }
   }
 
+  // Images
   &__img,
   &__img-ubc,
   &__img-code {
     width: 100%;
-    object-fit: cover;
-    border-radius: 1rem;
+    height: auto;
     display: block;
-    transition: transform 0.4s ease;
+    transition: transform 0.6s ease;
   }
 
   &__img-ubc {
     object-position: 5% center;
   }
 
+  // Text
   &__text-container {
-    position: absolute;
-    z-index: 2;
-    inset: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 1rem;
-    gap: 0.25rem;
-    color: white;
-    background: rgba(24, 29, 85, 0.8);
-    border-radius: 1rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-
-    &--cc {
-      background: rgba(0, 128, 79, 0.8);
-    }
+    padding-top: 0.75rem;
   }
 
   &__title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.3rem;
   }
 
-  &__subtitle {
-    font-size: 1rem;
-    opacity: 0.7;
-  }
-
-  &__tags {
-    position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
-    display: flex;
-    gap: 0.5rem;
-    opacity: 0;
-    z-index: 5;
-    transition: opacity 0.3s ease;
-  }
-
+  &__subtitle,
   &__tag {
-    background: rgb(217, 217, 217);
-    color: rgb(94, 94, 118);
-    padding: 0.25rem 0.6rem;
-    border-radius: 0.75rem;
-    font-size: 0.8rem;
-    white-space: nowrap;
+    font-family: $font-fourth;
+    font-size: 0.6875rem;
+  }
+
+  &__subtitle {
+    padding-bottom: 0.375rem;
+  }
+
+  @include tablet {
+    /*   grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 2rem 4rem; */
+    column-count: 3;
+    column-gap: 2rem;
   }
 }
 
-footer {
-  text-align: center;
-  padding: 6rem 2rem 2rem 2rem;
-  font-size: 0.875rem;
-  color: #888;
-  font-weight: map.get($font-secondary-weights, regular);
-  max-width: 17rem;
-  margin: 0 auto;
+.footer {
+  padding: 0 1rem;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    font-family: $font-fourth;
+    font-size: 0.75rem;
+    color: #888;
+    border-top: solid 2px #888;
+  }
+
+  &__topbtn {
+    color: #888;
+    cursor: pointer;
+  }
+
   @include tablet {
-    margin: 0 auto;
-    max-width: none;
+    font-size: 0.875rem;
   }
 }

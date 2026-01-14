@@ -5,36 +5,34 @@
 @use "sass:map";
 
 body {
-  font-family: $font-secondary;
-  font-weight: map.get($font-secondary-weights, regular);
-  background-color: $bg-color;
-  color: $black;
-}
-
-a {
-  text-decoration: none;
+  font-family: $font-third;
+  font-weight: map.get($font-third-weights, medium);
+  background-color: #f2f2f2;
   color: $black;
 }
 
 a:hover {
-  text-decoration: none;
   color: $orange;
+  font-style: italic;
 }
 
 .header {
-  padding: 2rem;
+  padding: 1rem;
+  font-size: 0.625rem;
 
   &__content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: baseline;
     gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #ccc;
   }
 
-  &__title {
+  &__wordmark {
     font-family: $font-primary;
-    font-weight: map.get($font-primary-weights, medium);
-    color: $orange;
+    font-weight: 500;
   }
 
   &__nav {
@@ -44,39 +42,70 @@ a:hover {
     align-items: center;
   }
 
+  &__tagline,
   &__link {
-    font-family: $font-secondary;
-    font-weight: map.get($font-secondary-weights, regular);
-    font-size: 1rem;
+    font-family: $font-fourth;
+    font-weight: 400;
   }
 
-  &__cv-btn {
-    color: $bg-color;
-    background-color: $orange;
-    border: solid 2px $orange;
-    border-radius: 1rem;
-    padding: 0.5rem 1rem;
-    transition: all 0.2s ease;
-    cursor: pointer;
+  &__tagline {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
 
-    &:hover {
-      transform: scale(1.05);
-      color: $orange;
-      background-color: $bg-color;
+    & ::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      width: 2rem;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
     }
-    &.active {
-      color: $orange;
-      background-color: $bg-color;
+
+    &::before {
+      left: 0;
+      background: linear-gradient(
+        to right,
+        #f2f2f2 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(
+        to left,
+        #f2f2f2 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 14s linear infinite;
+    }
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .header__tagline span {
+      animation: none;
+      padding-left: 0;
     }
   }
 
   @include tablet {
-    /*     padding-top: 3rem;
-    padding-bottom: 8rem; */
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    font-size: 1rem;
+    padding: 1rem;
 
     &__content {
       flex-direction: row;
@@ -84,8 +113,10 @@ a:hover {
       align-items: center;
     }
 
-    &__link {
-      font-size: 1.2rem;
+    &__link,
+    &__tagline,
+    &__wordmark {
+      font-size: 0.875rem;
     }
 
     &__nav {
@@ -95,21 +126,36 @@ a:hover {
       align-items: center;
       gap: 3rem;
     }
+
+    &__tagline {
+      overflow: visible;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      span {
+        animation: none;
+        padding-left: 0;
+        transform: none;
+      }
+    }
   }
 }
 
 .hero {
-  max-width: 1200px;
   margin: 0 auto;
-  font-size: 1rem;
-  padding: 2rem;
+  padding: 4rem 2rem;
+  color: #202020;
+  line-height: 2rem;
+  border-bottom: 2px solid #ccc;
 
-  &__headshot {
-    width: auto;
-    max-width: 25rem;
-    height: 20rem;
-    border-radius: 1rem;
-    border: solid 2px;
+  &__bio {
+    font-family: $font-third;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 2rem;
   }
 
   &__container {
@@ -120,123 +166,99 @@ a:hover {
   }
 
   @include tablet {
+    max-width: 1200px;
     font-size: 1.2rem;
 
     &__container {
       flex-direction: row;
       align-items: flex-start;
       text-align: left;
+      padding: 0 8rem;
     }
 
-    &__headshot {
-      height: 28rem;
-      width: auto;
-      max-width: 28rem;
+    &__bio {
+      font-size: 1.875rem;
+      line-height: 2.5rem;
+      font-weight: 400;
     }
-  }
-}
-
-.expandedcv {
-  &__skills {
-    margin-bottom: 8rem;
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-  }
-
-  &__designcontainer,
-  &__devcontainer {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__title {
-    margin-bottom: 1rem;
-  }
-
-  &__icon {
-    width: 30px;
-  }
-
-  &__iconscontainer {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
   }
 }
 
 .cv {
-  font-size: 0.9rem;
-  padding-top: 5rem;
+  padding: 2rem;
 
   &__entry {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding: 1rem 0;
-    border-bottom: 1px solid #ccc;
+    padding: 0.5rem 0;
     text-align: left;
-    justify-content: space-between;
   }
 
-  &__edate {
-    margin-bottom: 0.5rem;
-    color: $grey;
+  &__title {
+    font-weight: 500;
+    font-size: 0.75rem;
   }
 
+  &__edate,
   &__etitle {
     margin: 0;
     color: $grey;
+    font-family: $font-fourth;
+    font-size: 0.625rem;
   }
 
-  &__educationcontainer {
+  &__educationcontainer,
+  &__awardscontainer {
     margin-top: 2rem;
   }
 
   @include tablet {
-    font-size: 1.2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    gap: 12rem;
 
     &__entry {
       flex-direction: row;
-      justify-content: space-between;
-      text-align: left;
+      gap: 1rem;
+      align-items: baseline;
+    }
+
+    &__title {
+      font-size: 0.875rem;
     }
 
     &__edate {
-      flex: 1;
-      text-align: left;
+      flex: 0 0 12ch;
+      font-size: 0.75rem;
     }
 
     &__etitle {
-      flex: 1;
-      text-align: right;
+      font-size: 0.75rem;
+    }
+
+    &__tools-icons {
+      width: 50rem;
     }
   }
 }
 
-.experience {
-  &__container1,
-  &__container2 {
-    margin-bottom: 2rem;
+.footer {
+  padding: 0 1rem;
+
+  &__content {
     display: flex;
-    gap: 1rem;
-  }
+    justify-content: space-between;
+    padding: 1rem;
+    font-family: $font-fourth;
+    font-size: 0.75rem;
+    color: #888;
+    border-top: solid 2px #888;
 
-  &__title {
-    text-align: right;
-  }
-}
-
-footer {
-  text-align: center;
-  padding: 4rem 2rem 4rem 2rem;
-  font-size: 0.875rem;
-  color: #888;
-  font-weight: map.get($font-secondary-weights, regular);
-  max-width: 17rem;
-  margin: 0 auto;
-  @include tablet {
-    margin: 0 auto;
-    max-width: none;
+    @include tablet {
+      font-size: 0.875rem;
+    }
   }
 }

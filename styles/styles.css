@@ -51,6 +51,97 @@ a {
   font-display: swap;
 }
 @font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-Bold.woff2") format("woff2"), url("IBMPlexMono-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-Italic.woff2") format("woff2"), url("IBMPlexMono-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-ExtraLight.woff2") format("woff2"), url("IBMPlexMono-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-BoldItalic.woff2") format("woff2"), url("IBMPlexMono-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-ExtraLightItalic.woff2") format("woff2"), url("IBMPlexMono-ExtraLightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-Medium.woff2") format("woff2"), url("IBMPlexMono-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-LightItalic.woff2") format("woff2"), url("IBMPlexMono-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-Light.woff2") format("woff2"), url("IBMPlexMono-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-MediumItalic.woff2") format("woff2"), url("IBMPlexMono-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-SemiBold.woff2") format("woff2"), url("IBMPlexMono-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-ThinItalic.woff2") format("woff2"), url("IBMPlexMono-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-SemiBoldItalic.woff2") format("woff2"), url("IBMPlexMono-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-Thin.woff2") format("woff2"), url("IBMPlexMono-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "Poppins";
   font-weight: 200;
   src: url("../../assets/fonts/poppins-extralight-webfont.woff2") format("woff2");
@@ -103,247 +194,137 @@ a {
   src: url("../../assets/fonts/poppins-mediumitalic-webfont.woff") format("woff");
 }
 @font-face {
-  font-family: "Poppins";
-  font-weight: 700;
-  src: url("../../assets/fonts/poppins-bold-webfont.woff2") format("woff2");
-  src: url("../../assets/fonts/poppins-bold-webfont.woff") format("woff");
-}
-@font-face {
-  font-family: "Poppins";
-  font-weight: 700;
-  font-style: italic;
-  src: url("../../assets/fonts/poppins-bolditalic-webfont.woff2") format("woff2");
-  src: url("../../assets/fonts/poppins-bolditalic-webfont.woff") format("woff");
-}
-@font-face {
-  font-family: "Poppins";
-  font-weight: 800;
-  src: url("../../assets/fonts/poppins-extrabold-webfont.woff2") format("woff2");
-  src: url("../../assets/fonts/poppins-extrabold-webfont.woff") format("woff");
-}
-@font-face {
-  font-family: "Poppins";
-  font-weight: 900;
-  src: url("../../assets/fonts/poppins-black-webfont.woff2") format("woff2");
-  src: url("../../assets/fonts/poppins-black-webfont.woff") format("woff");
-}
-@font-face {
-  font-family: "Poppins";
-  font-weight: 900;
-  font-style: italic;
-  src: url("../../assets/fonts/poppins-blackitalic-webfont.woff2") format("woff2");
-  src: url("../../assets/fonts/poppins-blackitalic-webfont.woff") format("woff");
+  font-family: "Lexend";
+  src: url("Lexend-ExtraLight.woff2") format("woff2"), url("Lexend-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Lexend";
-  src: url("../../assets/fonts/Lexend-Light.woff2") format("woff2"), url("../../assets/fonts/Lexend-Light.woff") format("woff");
+  src: url("Lexend-Light.woff2") format("woff2"), url("Lexend-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-Bold.woff2") format("woff2"), url("../../assets/fonts/Montserrat-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-BoldItalic.woff2") format("woff2"), url("../../assets/fonts/Montserrat-BoldItalic.woff") format("woff");
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-Italic.woff2") format("woff2"), url("../../assets/fonts/Montserrat-Italic.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-ExtraLightItalic.woff2") format("woff2"), url("../../assets/fonts/Montserrat-ExtraLightItalic.woff") format("woff");
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-ExtraLight.woff2") format("woff2"), url("../../assets/fonts/Montserrat-ExtraLight.woff") format("woff");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-Light.woff2") format("woff2"), url("../../assets/fonts/Montserrat-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-LightItalic.woff2") format("woff2"), url("../../assets/fonts/Montserrat-LightItalic.woff") format("woff");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-Medium.woff2") format("woff2"), url("../../assets/fonts/Montserrat-Medium.woff") format("woff");
+  font-family: "Lexend";
+  src: url("Lexend-Medium.woff2") format("woff2"), url("Lexend-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-MediumItalic.woff2") format("woff2"), url("../../assets/fonts/Montserrat-MediumItalic.woff") format("woff");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-Regular.woff2") format("woff2"), url("../../assets/fonts/Montserrat-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-SemiBoldItalic.woff2") format("woff2"), url("../../assets/fonts/Montserrat-SemiBoldItalic.woff") format("woff");
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../../assets/fonts/Montserrat-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-Thin.woff2") format("woff2"), url("../../assets/fonts/Montserrat-Thin.woff") format("woff");
+  font-family: "Lexend";
+  src: url("Lexend-Thin.woff2") format("woff2"), url("Lexend-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-ThinItalic.woff2") format("woff2"), url("../../assets/fonts/Montserrat-ThinItalic.woff") format("woff");
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Domine";
-  src: url("../../assets/fonts/Domine-Bold.woff2") format("woff2"), url("../../assets/fonts/Domine-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Domine";
-  src: url("../../assets/fonts/Domine-SemiBold.woff2") format("woff2"), url("../../assets/fonts/Domine-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Domine";
-  src: url("../../assets/fonts/Domine-Regular.woff2") format("woff2"), url("../../assets/fonts/Domine-Regular.woff") format("woff");
+  font-family: "Lexend";
+  src: url("Lexend-Regular.woff2") format("woff2"), url("Lexend-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Domine";
-  src: url("../../assets/fonts/Domine-Medium.woff2") format("woff2"), url("../../assets/fonts/Domine-Medium.woff") format("woff");
-  font-weight: 500;
+  font-family: "Lexend";
+  src: url("Lexend-SemiBold.woff2") format("woff2"), url("Lexend-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 body {
-  font-family: "Montserrat";
-  font-weight: 400;
-  background-color: #fffaed;
-  color: #0c0c0c;
-}
-
-a {
-  text-decoration: none;
+  font-family: "Lexend";
+  font-weight: 500;
+  background-color: #f2f2f2;
   color: #0c0c0c;
 }
 
 a:hover {
   color: #c44d00;
+  font-style: italic;
 }
 
 .header {
-  padding: 2rem;
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 99;
-  background: #fffaed;
+  padding: 1rem;
+  font-size: 0.625rem;
 }
 .header__content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: baseline;
   gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #ccc;
 }
-.header__title {
+.header__wordmark {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  color: #c44d00;
-  font-size: 1rem;
 }
 .header__nav {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   align-items: center;
-  font-size: 0.8rem;
-  font-family: "Lexend";
 }
-.header__cv-btn {
-  color: #fffaed;
-  background-color: #c44d00;
-  border: solid 2px #c44d00;
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
-  transition: all 0.2s ease;
-  cursor: pointer;
+.header__tagline, .header__link {
+  font-family: "IBM Plex Mono";
+  font-weight: 400;
 }
-.header__cv-btn:hover {
-  transform: scale(1.05);
-  color: #c44d00;
-  background-color: #fffaed;
+.header__tagline {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
 }
-.header__cv-btn.active {
-  color: #c44d00;
-  background-color: #fffaed;
+.header__tagline ::before, .header__tagline::after {
+  position: absolute;
+  top: 0;
+  width: 2rem;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.header__tagline::before {
+  left: 0;
+  background: linear-gradient(to right, #f2f2f2 0%, rgba(255, 255, 255, 0) 100%);
+}
+.header__tagline::after {
+  right: 0;
+  background: linear-gradient(to left, #f2f2f2 0%, rgba(255, 255, 255, 0) 100%);
+}
+.header__tagline span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 14s linear infinite;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .header .header__tagline span {
+    animation: none;
+    padding-left: 0;
+  }
 }
 @media screen and (min-width: 768px) {
   .header {
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    font-size: 1rem;
-  }
-  .header__title {
-    font-size: 1.875rem;
+    padding: 1rem;
   }
   .header__content {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+  .header__link, .header__tagline, .header__wordmark {
+    font-size: 0.875rem;
   }
   .header__nav {
     display: flex;
@@ -351,21 +332,30 @@ a:hover {
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    font-size: 1rem;
+  }
+  .header__tagline {
+    overflow: visible;
+  }
+  .header__tagline::before, .header__tagline::after {
+    display: none;
+  }
+  .header__tagline span {
+    animation: none;
+    padding-left: 0;
+    transform: none;
   }
 }
 
 .hero {
   margin: 0 auto;
-  position: relative;
-  padding: 2rem;
-  width: 100%;
-  max-width: 100%;
+  padding: 2rem 1rem 1rem 2rem;
 }
 .hero__intro {
   font-size: 1.8rem;
   font-family: "Lexend";
-  line-height: 3rem;
+  font-weight: 300;
+  line-height: 2.6rem;
+  color: #202020;
 }
 .hero__intro--bold {
   font-family: "Poppins", sans-serif;
@@ -376,56 +366,47 @@ a:hover {
   .hero__intro {
     max-width: 1200px;
     width: 100%;
-    position: fixed;
-    top: 20%;
-    padding-left: 10rem;
-    font-size: 4.25rem;
-    line-height: 7rem;
-    z-index: 1;
+    /*   font-size: 4.25rem;
+    line-height: 5rem; */
+    font-size: 2.1875rem;
+    line-height: 2.8rem;
+    padding-top: 2rem;
+    width: 52ch;
   }
 }
 
 .casestudies {
-  display: grid;
+  /*   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
-  padding: 2rem;
+  gap: 1.5rem;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-@media screen and (min-width: 768px) {
-  .casestudies {
-    max-width: 1200px;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    margin-top: 45vh;
-  }
-  .casestudies__preview-link:nth-child(odd) {
-    margin-top: 16rem;
-  }
+  padding: 2rem; */
+  -moz-column-count: 1;
+       column-count: 1;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+  padding: 2rem;
 }
 .casestudies__preview-link {
+  display: block;
   text-decoration: none;
   color: inherit;
-  display: block;
   width: 100%;
-  opacity: 1;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.casestudies__preview-link.show {
-  transform: translateY(0);
-}
-.casestudies.casestudies--loaded .casestudies__preview-link {
-  opacity: 1;
-  transform: translateY(0);
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  margin-bottom: 2rem;
 }
 .casestudies__preview {
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
+  opacity: 0.01;
+  transform: translateY(8px);
+  transition: opacity 0.9s ease-out, transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.casestudies__preview.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .casestudies__preview:hover {
   transform: translateY(-6px);
@@ -442,75 +423,61 @@ a:hover {
 }
 .casestudies__img, .casestudies__img-ubc, .casestudies__img-code {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 1rem;
+  height: auto;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.6s ease;
 }
 .casestudies__img-ubc {
   -o-object-position: 5% center;
      object-position: 5% center;
 }
 .casestudies__text-container {
-  position: absolute;
-  z-index: 2;
-  inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 1rem;
-  gap: 0.25rem;
-  color: white;
-  background: rgba(24, 29, 85, 0.8);
-  border-radius: 1rem;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-.casestudies__text-container--cc {
-  background: rgba(0, 128, 79, 0.8);
+  padding-top: 0.75rem;
 }
 .casestudies__title {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.3rem;
 }
+.casestudies__subtitle, .casestudies__tag {
+  font-family: "IBM Plex Mono";
+  font-size: 0.6875rem;
+}
 .casestudies__subtitle {
-  font-size: 1rem;
-  opacity: 0.7;
-}
-.casestudies__tags {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  display: flex;
-  gap: 0.5rem;
-  opacity: 0;
-  z-index: 5;
-  transition: opacity 0.3s ease;
-}
-.casestudies__tag {
-  background: rgb(217, 217, 217);
-  color: rgb(94, 94, 118);
-  padding: 0.25rem 0.6rem;
-  border-radius: 0.75rem;
-  font-size: 0.8rem;
-  white-space: nowrap;
-}
-
-footer {
-  text-align: center;
-  padding: 6rem 2rem 2rem 2rem;
-  font-size: 0.875rem;
-  color: #888;
-  font-weight: 400;
-  max-width: 17rem;
-  margin: 0 auto;
+  padding-bottom: 0.375rem;
 }
 @media screen and (min-width: 768px) {
-  footer {
-    margin: 0 auto;
-    max-width: none;
+  .casestudies {
+    /*   grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 2rem 4rem; */
+    -moz-column-count: 3;
+         column-count: 3;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+}
+
+.footer {
+  padding: 0 1rem;
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-family: "IBM Plex Mono";
+  font-size: 0.75rem;
+  color: #888;
+  border-top: solid 2px #888;
+}
+.footer__topbtn {
+  color: #888;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    font-size: 0.875rem;
   }
 }/*# sourceMappingURL=styles.css.map */

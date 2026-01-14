@@ -22,7 +22,7 @@ lightbox.addEventListener("click", function (e) {
 });
 
 ///Back to top
-window.onscroll = function () {
+/* window.onscroll = function () {
   scrollFunction();
 };
 
@@ -40,4 +40,23 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} */
+
+let topbtn = document.getElementsByClassName("topbtn");
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topbtn.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
