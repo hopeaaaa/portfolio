@@ -6,8 +6,8 @@
 
 body {
   font-family: $font-third;
-  font-weight: map.get($font-third-weights, medium);
-  background-color: #f2f2f2;
+  font-weight: 400;
+  background-color: #ffff;
   color: $black;
 }
 
@@ -150,36 +150,38 @@ a:hover {
   color: #202020;
   line-height: 2rem;
   border-bottom: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
 
+  &__welcome {
+    font-size: 2rem;
+  }
   &__bio {
-    font-family: $font-third;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
     font-weight: 400;
-    font-size: 1.25rem;
-    line-height: 2rem;
+  }
+
+  &__contact {
+    font-family: $font-fourth;
+    font-size: 0.75rem;
   }
 
   &__container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+    text-align: left;
+    gap: 1rem;
+    max-width: 60ch;
   }
 
   @include tablet {
     max-width: 1200px;
     font-size: 1.2rem;
 
-    &__container {
-      flex-direction: row;
-      align-items: flex-start;
-      text-align: left;
-      padding: 0 8rem;
-    }
-
-    &__bio {
-      font-size: 1.875rem;
-      line-height: 2.5rem;
-      font-weight: 400;
+    &__contact {
+      font-family: $font-fourth;
+      font-size: 1rem;
     }
   }
 }
@@ -203,9 +205,10 @@ a:hover {
   &__edate,
   &__etitle {
     margin: 0;
-    color: $grey;
+    color: $black;
     font-family: $font-fourth;
-    font-size: 0.625rem;
+    font-weight: 350;
+    font-size: 0.875rem;
   }
 
   &__educationcontainer,
@@ -216,7 +219,7 @@ a:hover {
   @include tablet {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 10rem 2rem 4rem 2rem;
     display: flex;
     gap: 12rem;
 
@@ -255,10 +258,15 @@ a:hover {
     font-family: $font-fourth;
     font-size: 0.75rem;
     color: #888;
-    border-top: solid 2px #888;
+    border-top: solid 2px #ccc;
+  }
 
-    @include tablet {
-      font-size: 0.875rem;
-    }
+  &__topbtn {
+    color: #888;
+    cursor: pointer;
+  }
+
+  @include tablet {
+    font-size: 0.875rem;
   }
 }

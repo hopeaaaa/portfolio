@@ -1,0 +1,487 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  border-style: none;
+  resize: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../../assets/fonts/IBMPlexMono-Regular.woff2") format("woff2"), url("../../assets/fonts/IBMPlexMono-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-Bold.woff2") format("woff2"), url("IBMPlexMono-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-Italic.woff2") format("woff2"), url("IBMPlexMono-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-ExtraLight.woff2") format("woff2"), url("IBMPlexMono-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-BoldItalic.woff2") format("woff2"), url("IBMPlexMono-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-ExtraLightItalic.woff2") format("woff2"), url("IBMPlexMono-ExtraLightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-Medium.woff2") format("woff2"), url("IBMPlexMono-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-LightItalic.woff2") format("woff2"), url("IBMPlexMono-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-Light.woff2") format("woff2"), url("IBMPlexMono-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-MediumItalic.woff2") format("woff2"), url("IBMPlexMono-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-SemiBold.woff2") format("woff2"), url("IBMPlexMono-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-ThinItalic.woff2") format("woff2"), url("IBMPlexMono-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-SemiBoldItalic.woff2") format("woff2"), url("IBMPlexMono-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("IBMPlexMono-Thin.woff2") format("woff2"), url("IBMPlexMono-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 200;
+  src: url("../../assets/fonts/poppins-extralight-webfont.woff2") format("woff2");
+  src: url("../../assets/fonts/poppins-extralight-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 200;
+  font-style: italic;
+  src: url("../../assets/fonts/poppins-extralightitalic-webfont.woff2") format("woff2");
+  src: url("../../assets/fonts/poppins-extralightitalic-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 300;
+  src: url("../../assets/fonts/poppins-light-webfont.woff2") format("woff2");
+  src: url("../../assets/fonts/poppins-light-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 300;
+  font-style: italic;
+  src: url("../../assets/fonts/poppins-lightitalic-webfont.woff2") format("woff2");
+  src: url("../../assets/fonts/poppins-lightitalic-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  src: url("../../assets/fonts/poppins-black-webfont.woff2") format("woff2");
+  src: url("../../assets/fonts/poppins-black-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-style: italic;
+  src: url("../../assets/fonts/poppins-italic-webfont.woff2") format("woff2");
+  src: url("../../assets/fonts/poppins-italic-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  src: url("../../assets/fonts/poppins-medium-webfont.woff2") format("woff2");
+  src: url("../../assets/fonts/poppins-medium-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-style: italic;
+  src: url("../../assets/fonts/poppins-mediumitalic-webfont.woff2") format("woff2");
+  src: url("../../assets/fonts/poppins-mediumitalic-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Lexend";
+  src: url("../../assets/fonts/Lexend-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "Lexend";
+  font-weight: 500;
+  background-color: #f2f2f2;
+  color: #5a5a5a;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #c44d00;
+  font-style: italic;
+}
+
+.header {
+  padding: 1rem;
+  font-size: 0.625rem;
+}
+.header__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #ccc;
+}
+.header__wordmark {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #0c0c0c;
+  text-decoration: none;
+}
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+.header__tagline, .header__link {
+  font-family: "IBM Plex Mono";
+  font-weight: 400;
+  text-decoration: none;
+}
+.header__tagline {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+.header__tagline ::before, .header__tagline::after {
+  position: absolute;
+  top: 0;
+  width: 2rem;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.header__tagline::before {
+  left: 0;
+  background: linear-gradient(to right, #f2f2f2 0%, rgba(255, 255, 255, 0) 100%);
+}
+.header__tagline::after {
+  right: 0;
+  background: linear-gradient(to left, #f2f2f2 0%, rgba(255, 255, 255, 0) 100%);
+}
+.header__tagline span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 14s linear infinite;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .header .header__tagline span {
+    animation: none;
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+  .header__content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__link, .header__tagline, .header__wordmark {
+    font-size: 0.875rem;
+  }
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+  .header__tagline {
+    overflow: visible;
+  }
+  .header__tagline::before, .header__tagline::after {
+    display: none;
+  }
+  .header__tagline span {
+    animation: none;
+    padding-left: 0;
+    transform: none;
+  }
+}
+
+.hero {
+  max-width: 100%;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+.hero__section {
+  margin: 4rem auto 2rem auto;
+  text-align: left;
+}
+.hero__title {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #0c0c0c;
+}
+.hero__oneLiner {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #646866;
+  padding-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .hero__title {
+    font-size: 2.125rem;
+  }
+  .hero__oneLiner {
+    font-size: 1.75rem;
+    width: 55ch;
+  }
+}
+
+.overview__section {
+  margin: 2rem auto;
+  max-width: 100%;
+}
+.overview__subtitle {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #0c0c0c;
+}
+.overview__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.overview__container {
+  flex: 1 1 40%;
+  min-width: 18.75rem;
+}
+.overview__title {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #646866;
+  letter-spacing: 0.08rem;
+  margin-top: 0;
+}
+.overview__body {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+@media (min-width: 768px) {
+  .overview {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .overview__subtitle {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #0c0c0c;
+  }
+  .overview__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0 4rem;
+  }
+  .overview__container {
+    flex: 1 1 40%;
+    min-width: 18.75rem;
+  }
+  .overview__title {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: #646866;
+    letter-spacing: 0.08rem;
+  }
+  .overview__body {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+}
+
+.objectives__section {
+  margin: 2rem auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+.objectives__textWrapper {
+  flex: 1;
+}
+.objectives__title {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #0c0c0c;
+}
+.objectives__body {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 0.8rem;
+}
+.objectives__img {
+  width: 120%;
+  height: auto;
+  display: block;
+}
+.objectives__caption {
+  font-family: "IBM Plex Mono";
+  font-size: 0.875rem;
+  font-style: italic;
+  padding-top: 1rem;
+}
+.objectives__imgWrapper {
+  flex: 1;
+  overflow: visible;
+}
+@media (min-width: 768px) {
+  .objectives__section {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .objectives__body {
+    font-size: 0.875rem;
+  }
+  .objectives__textWrapper {
+    margin-top: 4rem;
+  }
+}
+
+.footer {
+  padding: 0 1rem;
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-family: "IBM Plex Mono";
+  font-size: 0.75rem;
+  color: #888;
+  border-top: solid 2px #ccc;
+}
+.footer__topbtn {
+  color: #888;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    font-size: 0.875rem;
+  }
+}/*# sourceMappingURL=instock.css.map */

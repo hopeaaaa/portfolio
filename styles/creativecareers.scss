@@ -6,11 +6,16 @@
 
 body {
   font-family: $font-third;
-  font-weight: map.get($font-third-weights, medium);
-  background-color: #f2f2f2;
-  color: #5a5a5a;
-  /*   color: #7f8380; */
+  font-weight: 350;
+  background-color: #ffff;
+  color: #767676;
   overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 a:hover {
@@ -36,6 +41,9 @@ a:hover {
     font-family: $font-primary;
     font-weight: 500;
     color: $black;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   &__nav {
@@ -49,6 +57,7 @@ a:hover {
   &__link {
     font-family: $font-fourth;
     font-weight: 400;
+    text-decoration: none;
   }
 
   &__tagline {
@@ -216,7 +225,7 @@ a:hover {
 
   &__oneLiner {
     font-size: 1.75rem;
-    font-weight: 400;
+    font-weight: 300;
     color: #646866;
     padding-bottom: 2rem;
   }
@@ -237,37 +246,40 @@ a:hover {
 }
 
 .overview {
-  &__Section {
+  &__section {
     margin: 2rem auto;
     max-width: 100%;
   }
 
-  &__Subtitle {
+  &__subtitle {
     font-size: 1.75rem;
-    font-weight: 400;
+    font-weight: 300;
     color: $black;
   }
 
-  &__Wrapper {
+  &__wrapper {
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
   }
 
-  &__Container {
+  &__container {
     flex: 1 1 40%;
     min-width: 18.75rem;
   }
 
-  &__Title {
+  &__title {
     font-size: 0.6875rem;
-    font-weight: 600;
-    color: #646866;
+    color: $black;
     letter-spacing: 0.08rem;
     margin-top: 0;
   }
 
-  &__Body {
+  .arrow-icon {
+    vertical-align: middle;
+  }
+
+  &__body {
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
@@ -278,89 +290,141 @@ a:hover {
     max-width: 1200px;
     margin: 0 auto;
 
-    &__Subtitle {
+    &__subtitle {
       font-size: 1.75rem;
-      font-weight: 400;
-      color: $black;
     }
 
-    &__Wrapper {
+    &__wrapper {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 0 4rem;
     }
 
-    &__Container {
+    &__container {
       flex: 1 1 40%;
       min-width: 18.75rem;
     }
 
-    &__Title {
+    &__title {
       font-size: 0.6875rem;
-      font-weight: 600;
-      color: #646866;
-      letter-spacing: 0.08rem;
-    }
-
-    &__Body {
-      font-size: 0.875rem;
-      font-weight: 500;
     }
   }
 }
 
 .context {
-  &__Section {
+  &__section {
     margin: 2rem auto;
-    max-width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+  &__textWrapper {
+    flex: 1;
   }
 
-  &__Title {
+  &__title {
     font-size: 1.75rem;
-    font-weight: 400;
+    font-weight: 300;
     color: $black;
   }
 
-  &__Container {
+  //
+  &__container {
     flex: 1 1 40%;
     min-width: 18.75rem;
   }
 
-  &__Body {
+  &__body {
     font-size: 1rem;
-    font-weight: 400;
-    margin: 0.8rem 0;
     line-height: 1.6;
+    margin-top: 0.8rem;
   }
 
   @media (min-width: 768px) {
     max-width: 1200px;
     margin: 0 auto;
 
-    &__Title {
+    &__title {
       font-size: 1.75rem;
       font-weight: 400;
       color: $black;
     }
 
-    &__Container {
+    &__container {
       flex: 1 1 40%;
       min-width: 18.75rem;
     }
 
-    &__Body {
-      font-size: 0.875rem;
-      font-weight: 500;
+    &__body {
+      font-weight: 350;
     }
   }
 }
 
 .background {
-  margin: 2rem auto;
-  max-width: 1200px;
-
   &__section {
+    margin: 2rem auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__textWrapper {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: $black;
+    padding-bottom: 0.5rem;
+  }
+
+  &__body {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 0.8rem;
+  }
+
+  &__img {
+    width: 120%;
+    height: auto;
+    display: block;
+  }
+
+  &__caption {
+    font-family: $font-fourth;
+    font-weight: 500;
+    font-size: 0.875rem;
+    font-style: italic;
+    padding-top: 1rem;
+    text-align: center;
+  }
+
+  &__imgWrapper {
+    flex: 1;
+    overflow: visible;
+  }
+
+  @media (min-width: 768px) {
+    &__section {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    &__textWrapper {
+      margin-top: 4rem;
+    }
+  }
+}
+
+.objectives {
+  &__section {
+    margin: 2rem auto;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -391,8 +455,11 @@ a:hover {
 
   &__caption {
     font-family: $font-fourth;
+    font-weight: 500;
     font-size: 0.875rem;
+    font-style: italic;
     padding-top: 1rem;
+    text-align: center;
   }
 
   &__imgWrapper {
@@ -406,76 +473,8 @@ a:hover {
       align-items: flex-start;
     }
 
-    &__body {
-      font-size: 0.875rem;
-    }
-
     &__textWrapper {
       margin-top: 4rem;
-    }
-  }
-}
-
-.objectives {
-  &__Section {
-    margin: 2rem auto;
-    max-width: 100%;
-  }
-
-  &__Title {
-    font-size: 1.75rem;
-    font-weight: 400;
-    color: $black;
-  }
-
-  &__Body {
-    font-size: 1rem;
-    font-weight: 400;
-    margin: 0.8rem 0;
-    line-height: 1.6;
-  }
-
-  &__img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-  }
-
-  &__caption {
-    font-family: $font-fourth;
-    font-size: 0.875rem;
-    padding-top: 1rem;
-  }
-
-  @media (min-width: 768px) {
-    max-width: 1200px;
-    margin: 0 auto;
-
-    &__Section {
-      display: flex;
-      flex-direction: row;
-      gap: 2rem;
-    }
-
-    &__Title {
-      font-size: 1.75rem;
-      font-weight: 400;
-      color: $black;
-    }
-
-    &__Body {
-      font-size: 0.875rem;
-      font-weight: 500;
-    }
-
-    &__Wrapper {
-      width: 55ch;
-    }
-
-    &__imgWrapper {
-      display: flex;
-      flex-direction: column;
     }
   }
 }
@@ -497,7 +496,7 @@ a:hover {
   &__section {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0rem;
   }
 
   &__orange {
@@ -510,18 +509,39 @@ a:hover {
 
   &__imgcontainer1 {
     display: flex;
-    gap: 10rem;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  &__imgcontainer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__img {
-    padding-left: 12rem;
+    width: 48%;
+    max-width: 520px;
+  }
+  &__img3 {
+    /*     width: 80%;
+    max-width: 600px; */
+    max-width: 900px;
   }
 
   &__noorange {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
-    padding: 2rem;
+    padding: 4rem;
+  }
+  &__noorange2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem;
   }
 
   &__callouts_container {
@@ -532,8 +552,110 @@ a:hover {
   &__callouts_caption {
     margin-top: 6rem;
     font-family: $font-fourth;
+    font-weight: 500;
     width: 40ch;
+  }
+
+  &__gallery_container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 80vh;
+    overflow: hidden;
+  }
+
+  &__gallery_img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding-top: 2rem;
+  }
+
+  &__gallery_img.is-active {
+    opacity: 1;
+  }
+
+  &__gallery_controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    background: #e08033;
+    cursor: pointer;
+  }
+
+  .dot.is-active {
+    background: $orange;
+  }
+}
+
+.impact {
+  margin: 2rem auto;
+  max-width: 1200px;
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 0;
+  }
+
+  &__textWrapper {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    font-weight: 400;
     color: $black;
+  }
+
+  &__body {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 0.8rem;
+  }
+
+  &__img {
+    width: 120%;
+    height: auto;
+    display: block;
+  }
+
+  &__caption {
+    font-family: $font-fourth;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding-top: 1rem;
+    text-align: center;
+  }
+
+  &__imgWrapper {
+    flex: 1;
+    overflow: visible;
+  }
+
+  @media (min-width: 768px) {
+    &__section {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    &__body {
+      width: 50ch;
+    }
   }
 }
 

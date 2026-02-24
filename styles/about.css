@@ -195,50 +195,15 @@ a {
 }
 @font-face {
   font-family: "Lexend";
-  src: url("Lexend-ExtraLight.woff2") format("woff2"), url("Lexend-ExtraLight.woff") format("woff");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Lexend";
-  src: url("Lexend-Light.woff2") format("woff2"), url("Lexend-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Lexend";
-  src: url("Lexend-Medium.woff2") format("woff2"), url("Lexend-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Lexend";
-  src: url("Lexend-Thin.woff2") format("woff2"), url("Lexend-Thin.woff") format("woff");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Lexend";
-  src: url("Lexend-Regular.woff2") format("woff2"), url("Lexend-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Lexend";
-  src: url("Lexend-SemiBold.woff2") format("woff2"), url("Lexend-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../../assets/fonts/Lexend-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 body {
   font-family: "Lexend";
-  font-weight: 500;
-  background-color: #f2f2f2;
+  font-weight: 400;
+  background-color: white;
   color: #0c0c0c;
 }
 
@@ -352,34 +317,36 @@ a:hover {
   color: #202020;
   line-height: 2rem;
   border-bottom: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
+}
+.hero__welcome {
+  font-size: 2rem;
 }
 .hero__bio {
-  font-family: "Lexend";
+  font-size: 0.875rem;
+  line-height: 1.5rem;
   font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 2rem;
+}
+.hero__contact {
+  font-family: "IBM Plex Mono";
+  font-size: 0.75rem;
 }
 .hero__container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+  text-align: left;
+  gap: 1rem;
+  max-width: 60ch;
 }
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 1200px;
     font-size: 1.2rem;
   }
-  .hero__container {
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: left;
-    padding: 0 8rem;
-  }
-  .hero__bio {
-    font-size: 1.875rem;
-    line-height: 2.5rem;
-    font-weight: 400;
+  .hero__contact {
+    font-family: "IBM Plex Mono";
+    font-size: 1rem;
   }
 }
 
@@ -399,9 +366,10 @@ a:hover {
 }
 .cv__edate, .cv__etitle {
   margin: 0;
-  color: #555;
+  color: #0c0c0c;
   font-family: "IBM Plex Mono";
-  font-size: 0.625rem;
+  font-weight: 350;
+  font-size: 0.875rem;
 }
 .cv__educationcontainer, .cv__awardscontainer {
   margin-top: 2rem;
@@ -410,7 +378,7 @@ a:hover {
   .cv {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 10rem 2rem 4rem 2rem;
     display: flex;
     gap: 12rem;
   }
@@ -444,10 +412,14 @@ a:hover {
   font-family: "IBM Plex Mono";
   font-size: 0.75rem;
   color: #888;
-  border-top: solid 2px #888;
+  border-top: solid 2px #ccc;
+}
+.footer__topbtn {
+  color: #888;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
-  .footer__content {
+  .footer {
     font-size: 0.875rem;
   }
 }/*# sourceMappingURL=about.css.map */

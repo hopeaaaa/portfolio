@@ -195,43 +195,8 @@ a {
 }
 @font-face {
   font-family: "Lexend";
-  src: url("Lexend-ExtraLight.woff2") format("woff2"), url("Lexend-ExtraLight.woff") format("woff");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Lexend";
-  src: url("Lexend-Light.woff2") format("woff2"), url("Lexend-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Lexend";
-  src: url("Lexend-Medium.woff2") format("woff2"), url("Lexend-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Lexend";
-  src: url("Lexend-Thin.woff2") format("woff2"), url("Lexend-Thin.woff") format("woff");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Lexend";
-  src: url("Lexend-Regular.woff2") format("woff2"), url("Lexend-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Lexend";
-  src: url("Lexend-SemiBold.woff2") format("woff2"), url("Lexend-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../../assets/fonts/Lexend-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
@@ -348,12 +313,12 @@ a:hover {
 
 .hero {
   margin: 0 auto;
-  padding: 2rem 1rem 1rem 2rem;
+  padding: 2rem 1rem 6rem 2rem;
 }
 .hero__intro {
   font-size: 1.8rem;
-  font-family: "Lexend";
-  font-weight: 300;
+  font-family: "IBM Plex Mono";
+  font-weight: 400;
   line-height: 2.6rem;
   color: #202020;
 }
@@ -470,7 +435,7 @@ a:hover {
   font-family: "IBM Plex Mono";
   font-size: 0.75rem;
   color: #888;
-  border-top: solid 2px #888;
+  border-top: solid 2px #ccc;
 }
 .footer__topbtn {
   color: #888;

@@ -7,213 +7,156 @@
   <title>hope akello | ubc pharmacists clinic</title>
   <link rel="stylesheet" href="../styles/ubc.css" />
   <link rel="icon" type="image/x-icon" href="../assets/images/about/asterisk.png" />
+  <script defer src="../scripts/accordion.js"></script>
 </head>
 
 <body>
   <header class="header">
     <div class="header__content">
-      <h1 class="header__title">
-        <a href="../index.html">hope akello</a>
-      </h1>
-      <nav class="header__nav">
+      <a href="../index.html" class="header__wordmark">hope akello</a>
+      <p class="header__tagline"><span>experience designer / systems thinking / facilitation</span> </p>
+      <nav aria-label="Primary navigation" class="header__nav">
         <a href="./about.html" class="header__link">info</a>
       </nav>
     </div>
   </header>
-
-  <section class="hero">
-    <div class="hero__intro-text-container">
-      <h2 class="hero__title">UBC Pharmacists Clinic test</h2>
-      <p class="hero__subtitle">
+  <main class="hero">
+    <section class="hero__section">
+      <h1 class="hero__title">UBC Pharmacists Clinic Minor Ailments & Contraceptives (MAC) Service Design</h1>
+      <p class="hero__oneLiner">
         <!--           Improving communication systems in a high-trust environment. -->
         <!--           Streamlining information flow in a collaborative care ecosystem. -->
         Designing services and interfaces <!-- that streamline information flow --> to support
         patient-centered care.
       </p>
-    </div>
+      <img src="../assets/images/ubc/Group 1597880414 (2).svg" alt="hero image" class="hero__img" />
+    </section>
 
-    <img src="../assets/images/ubc/Screenshot 2025-06-03 095438.png" alt="hero image" class="hero__img" />
-    <div class="hero__context-megawrapper">
-      <p class="hero__outcomes_title">Overview</p>
-      <div class="hero__context-wrapper">
-        <div class="hero__container">
-          <h3 class="hero__context">CLIENT</h3>
-          <p class="hero__intro">
-            <a href="https://pharmsci.ubc.ca/pharmacists-clinic"> The UBC Pharmacists Clinic🡭</a>
+    <section class="overview__section">
+      <h2 class="overview__subtitle">Overview</h2>
+      <div class="overview__wrapper">
+        <div class="overview__container">
+          <h3 class="overview__title">CLIENT</h3>
+          <p class="overview__body">
+            <a href="https://pharmsci.ubc.ca/pharmacists-clinic">UBC Pharmacists Clinic <svg
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 15 15" fill="none"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                class="arrow-icon">
+                <line x1="4" y1="14" x2="14" y2="4" />
+                <polyline points="4 4 14 4 14 14" />
+              </svg></a>
           </p>
         </div>
-        <div class="hero__container">
-          <h3 class="hero__context">ROLE</h3>
-          <p class="hero__intro">
-            Service Designer and UX Lead; I facilitated stakeholder
-            engagement, led the research and prototyping process, and
-            supported the clinic through technology integration.
+        <div class="overview__container">
+          <h3 class="overview__title">OUTPUTS</h3>
+          <p class="overview__body">
+            Appointment Booking Process <br>
+            Appointment Booking Portal <br>
+            Billing Process <br>
+            Website <br>
           </p>
         </div>
-        <div class="hero__container">
-          <h3 class="hero__context">PROBLEMS</h3>
-          <p class="hero__intro">
-            The clinic’s digital tools were not fully aligned with the evolving needs of the pharmacists or the range of
-            services offered, leading to workarounds and added administrative load.
+        <div class="overview__container">
+          <h3 class="overview__title">ROLE</h3>
+          <p class="overview__body">
+            Service Designer and UX Lead
           </p>
         </div>
-        <div class="hero__container">
-          <h3 class="hero__context">SOLUTIONS</h3>
-          <p class="hero__intro">
-            A suite of digital tools and service improvements to reduce
-            administrative workload, improve communication, and enhance the
-            overall patient care experience.
+        <div class="overview__container">
+          <h3 class="overview__title">TIMEFRAME</h3>
+          <p class="overview__body">
+            1 month
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- IMPACT -->
-    <!--     <div class="hero__outcomes">
-      <p class="hero__outcomes_title">Impact</p>
-      <ul class="hero__outcomes_container">
-        <li class="hero__outcomes_li">
-          Led redesign of 5+ core clinical processes, including appointment
-          booking, patient communication, and EMR workflows; improving
-          efficiency and reducing administrative load.
-        </li>
+    <section class="context__section">
+      <div class="context__textWrapper">
+        <h3 class="context__title">Context</h3>
+        <p class="context__body">The UBC Pharmacists Clinic is a university-affiliated, pharmacist-led
+          patient care clinic. At the clinic, the clinicians use their specialized
+          knowledge in medication to support the care of medically complex
+          patients. <br> <br> In 2023, a provincial initiative enabled pharmacists in British Columbia to prescribe
+          medications
+          for
+          21 minor
+          ailments and contraceptives (MAC). The clinic needed to adapt its appointment booking process to accommodate
+          these new services.</p>
+      </div>
+      <figure class="context__imgWrapper">
+        <img src="../assets/images/ubc/PharmacistsClinic_Location_Hero.webp" alt="" class="context__img">
+        <figcaption class="context__caption">The front desk of the UBC Pharmacists Clinic.</figcaption>
+      </figure>
+    </section>
 
-        <li class="hero__outcomes_li">
-          Developed and implemented a new patient intake system that decreased
-          appointment booking time by 30% and minimized back-and-forth between
-          staff and patients.
-        </li>
+    <!-- Process/Approach Section -->
+    <section class="process__section">
+      <h3 class="process__title">Approach</h3>
 
-        <li class="hero__outcomes_li">
-          Reduced appointment no-show rates by 25% through implementation of
-          improved reminder and confirmation workflows.
-        </li>
-
-        <li class="hero__outcomes_li">
-          Introduced 3 new tools for virtual patient support, video
-          conferencing, and appointment confirmations, improving continuity of
-          care during remote visits.
-        </li>
-        <li class="hero__outcomes_li">
-          Redesigned clinic website architecture and content flow, resulting in a 45% increase in user engagement and
-          improved accessibility for patients.
-        </li>
-        <li class="hero__outcomes_li">
-          Integrated WCAG 2.1 AA accessibility standards into all digital
-          touchpoints to support inclusive access for patients with
-          disabilities.
-        </li>
-        <li class="hero__outcomes_li">
-          Mentored pharmacy students and clinical staff on human-centered
-          design practices to support long-term innovation in care delivery.
-        </li>
-      </ul>
-    </div> -->
-  </section>
-  <section class="final-design">
-
-    <div class="final-body__context-container">
-      <p class="final-design__title">Context</p>
-      <p class="final-design__body">
-        The UBC Pharmacists Clinic is a university-affiliated, pharmacist-led
-        patient care clinic. At the clinic, the clinicians use their specialized
-        knowledge in medication to support the care of medically complex
-        patients. <br />
-        <br />
-        As Healthcare Service Designer for the clinic, I worked to improve the clinical
-        processes and patient experience by integrating new technologies and
-        streamlining digital interactions. I led the service and UX design
-        processes, collaborating closely with clinicians, administrators, developers, and
-        external stakeholders to deliver solutions. My contributions spanned
-        research, design, implementation, and mentorship, resulting in a more
-        efficient and user-friendly experience for patients and staff alike. <br> Below is a snapshot of a few projects
-        I
-        worked on.
-      </p>
-    </div>
-
-    <div class="final-design__intro-img-container">
-      <img class="final-design__intro-img" src="../assets/images/ubc/PharmacistsClinic_Location_Hero.webp" alt="" />
-    </div>
-
-    <div class="final-design__projects-container">
-      <p class="final-design__title">Major Projects</p>
       <div class="accordion">
         <div class="accordion__item">
-
           <button class="accordion__trigger" aria-expanded="false">
             <svg class="accordion__icon" width="20" height="20" viewBox="0 0 16 16" aria-hidden="true">
               <line x1="2" y1="8" x2="14" y2="8" class="accordion__line accordion__line--horizontal" />
               <line x1="8" y1="2" x2="8" y2="14" class="accordion__line accordion__line--vertical" />
             </svg>
-            <span class="accordion__label">Appointment Booking Process
+            <span class="accordion__label">Requirements Gathering
             </span>
           </button>
-
           <div class="accordion__content">
-            <div class="accordion__context-container">
-              <p class="accordion__title">Context</p>
-              <p class="accordion__body">In 2023, a provincial initiative enabled pharmacists in British Columbia to
-                prescribe medications for 21 minor ailments and contraceptives (MAC). The clinic needed to adapt its
-                appointment booking process to accommodate these new services.</p>
-            </div>
-            <div class="accordion__objectives-container">
-              <p class="accordion__title">Objective</p>
-              <p class="accordion__body"> Enable patients to book MAC appointments online and indicate which of the 21
-                minor ailments or contraceptives they need support with.</p>
-            </div>
-            <div class="accordion__approaches-container">
-              <p class="accordion__title">Approach</p>
-              <p class="accordion__body">Service Blueprint: collaborated with clinicians to determine which ailments
-                required
-                in-person versus
-                virtual diagnosis. Developed a service blueprint of both the patient-facing and admin processes to
-                identify which information needed to be documented for government billing.</p><br>
-              <p class="accordion__body">Journey Mapping: created journey maps of patient, clinician, and admin
-                workflows to identify pain points and opportunities in the new booking process.</p>
-              <div class="accordion__img-container">
-                <img src="../assets/images/ubc/Copy of Pharm Clinic Journey Mapping - MOA Journey Mapping.jpg" alt=""
-                  class="final-design__co-img">
-                <img src="../assets/images/ubc/Copy of Pharm Clinic Journey Mapping - Clinician Journey Map.jpg" alt=""
-                  class="final-design__co-img">
-                <img src="../assets/images/ubc/Copy of Pharm Clinic Journey Mapping - Patient Journey Mapping.jpg"
-                  alt="" class="final-design__co-img">
-              </div> <br>
-              <p class="accordion__body">Information Architecture: visualized the information architecture of the new
-                booking tool and prototyped an online form with conditional logic and
-                accessibility best practices (e.g. label clarity, keyboard navigation)</p><br>
-              <p class="accordion__body">Wireframing: designed wireframes for the new booking screens and collaborated
-                with leadership to refine language, ensuring patients clearly understood the minor ailments and service
-                offerings.</p><br>
-              <p class="accordion__body">Testing & Iteration: presented the Figma prototype to the team and refined
-                based on their feedback.</p>
-
-              <div class="accordion__img-container">
-                <img src="../assets/images/ubc/Cortico Workflow - Flow 1.jpg" alt="" class="final-design__co-img">
-                <img src="../assets/images/ubc/Cortico Workflow - Flow 2.jpg" alt="" class="final-design__co-img">
-                <img src="../assets/images/ubc/Cortico Workflow - Flow 3.jpg" alt="" class="final-design__co-img">
+            <div class="accordion__layout">
+              <div class="accordion__text_container">
+                <p class="accordion__body">Working with the clinical leadership team, I determined which ailments
+                  required
+                  in-person vs virtual diagnosis. Then I worked with clinicians and administrative staff to define the
+                  required
+                  intake data for:
+                </p>
+                <ul class="accordion__list">
+                  <li class="accordion__li">patient charts (name, contact information, PHN, MAC type, etc.)</li>
+                  <li class="accordion__li">government billing and reporting (MACs specific identification numbers)
+                  </li>
+                </ul>
+                <p class="accordion__body">Once this information was confirmed, I
+                  communicated upcoming changes to the developers to prepare them.
+                </p>
               </div>
+              <img class="accordion__img" src="../assets/images/ubc/MACs whiteboarding.png"
+                alt="whiteboard diagram of current-state mapping">
+              <p class="accordion__body--aside">
             </div>
-            <div class="accordion__outcomes-container">
-              <p class="accordion__title">Outcomes</p>
-              <p class="accordion__body">Service blueprint showing existing pain points.</p>
-              <p class="accordion__body">Figma prototypes of booking process with documented rationale for IT
-                department and developers.</p>
-              <p class="accordion__body">Documentation of the new billing process for the clinic's administration
-                team.</p>
-            </div>
-            <div class="accordion__results-container">
-              <p class="accordion__title">Results</p>
-              <p class="accordion__body">A streamlined online booking process that enabled patients to
-                specify their reason for appointment. This reduced administrative workload, specifically back-and-forth
-                between
-                staff and patients, with the clinic reporting
-                fewer front desk phone calls in the first quarter. </p>
-              <div class="accordion__img-container">
-                <img src="../assets/images/ubc/Frame 12.png" alt="" class="final-design__co-img">
-                <img src="../assets/images/ubc/Choose MAC Type +symptoms.png" alt="" class="final-design__co-img">
-                <img src="../assets/images/ubc/Minor ailments booking.png" alt="" class="final-design__co-img">
+          </div>
+        </div>
+        <div class="accordion__item">
+          <button class="accordion__trigger">
+            <svg class="accordion__icon" width="20" height="20" viewBox="0 0 16 16" aria-hidden="true">
+              <line x1="2" y1="8" x2="14" y2="8" class="accordion__line accordion__line--horizontal" />
+              <line x1="8" y1="2" x2="8" y2="14" class="accordion__line accordion__line--vertical" />
+            </svg>
+            <span class="accordion__label">Journey and Current-State Mapping
+            </span>
+          </button>
+          <div class="accordion__content accordion__content--feature">
+            <div class="accordion__feature-inner">
+              <div class="accordion__text_container">
+                <p class="accordion__body">Using
+                  journey mapping and a service blueprint lens, I documented both frontstage patient interactions and
+                  backstage administrative and clinical processes. I mapped the clinic’s existing booking, intake,
+                  clinical, and billing workflows
+                  to understand how patients, administrative staff, and clinicians interacted across the service.
+                </p>
+                <p class="accordion__body">I then identified where the new MAC services: </p>
+                <ul class="accordion__list">
+                  <li class="accordion__li">introduced friction with existing appointment types, intake forms, and
+                    billing
+                    processes.</li>
+                  <li class="accordion__li">required changes around appointment routing, eligibility, and information
+                    handoff between systems.</li>
+                </ul>
               </div>
+              <img class="accordion__img--large" src="../assets/images/ubc/Group 1597880422.svg"
+                alt="whiteboard diagram of current-state mapping">
             </div>
           </div>
         </div>
@@ -224,155 +167,125 @@
               <line x1="2" y1="8" x2="14" y2="8" class="accordion__line accordion__line--horizontal" />
               <line x1="8" y1="2" x2="8" y2="14" class="accordion__line accordion__line--vertical" />
             </svg>
-            <span class="accordion__label">OSCAR EMR UI Modifications
+            <span class="accordion__label">Service Design
             </span>
           </button>
-
           <div class="accordion__content">
-            <div class="accordion__context-container">
-              <p class="accordion__title">Context</p>
-              <p class="accordion__body">Staff at the UBC Pharmacists Clinic relied on OSCAR, an open-source electronic
-                medical records system (EMR), but often faced usability issues that slowed down their workflow.
+            <img class="accordion__img--large" src="../assets/images/ubc/Cortico Workflow - Flow 3.jpg" alt="">
+            <div class="accordion__text_container">
+              <p class="accordion__body">Designed updated service logic to support MAC appointments, including:
               </p>
-            </div>
-            <div class="accordion__objectives-container">
-              <p class="accordion__title">Objectives</p>
-              <p class="accordion__body">Identify key pain points in day-to-day operations, redesign EMR interface
-                components, and provide leadership on technology integration and process improvement initiatives.</p>
-            </div>
-            <div class="accordion__approaches-container">
-              <p class="accordion__title">Approach</p>
-              <p class="accordion__body">User Shadowing: observed clinician and medical office assistants' use of OSCAR
-                during appointments, noting
-                navigation issues.</p><br>
-              <p class="accordion__body">User Interviews: conducted interviews with clinicians after appointments to
-                have them map
-                their daily
-                EMR workflows, capture frustrations, and collaboratively sketch ideas.</p><br>
-              <p class="accordion__body">Interface Redesign: ideated and refined solutions in Figma; simplified
-                cluttered layouts,
-                improved
-                visual hierarchy, and proposed clearer navigation for key clinical tasks.</p>
-              <div class="accordion__img-container">
-                <img src="../assets/images/ubc/OSCAR-enhancement-userresearch.png" alt="" class="final-design__co-img">
-                <img src="../assets/images/ubc/OSCAR-dashboard.png" alt="" class="final-design__co-img">
-              </div><br>
-              <p class="accordion__body">User Testing & Feedback: gathered clinician and developer feedback through
-                prototype
-                walkthroughs, refined designs based on insights. Acted as a bridge between clinicians and
-                developers; advocated for clinician
-                needs while also communicating technical constraints.</p><br>
-              <p class="accordion__body">Design Handoff: finalized mockups, delivered design handoff documentation,
-                and reviewed implementation details with developers.
-              </p><br>
-              <p class="accordion__body">Project Coordination: communicated progress and system updates with the team
-                and
-                coordinated with
-                developers to
-                track and resolve reported issues.
+              <ul class="accordion__list">
+                <li class="accordion__li">How patients identify their condition</li>
+                <li class="accordion__li">How appointment types are routed (virtual vs in-person)</li>
+                <li class="accordion__li">How intake data flows into clinical and billing systems</li>
+              </ul>
+              <p class="accordion__body">Defined what information needed to be collected:
               </p>
-            </div>
-            <div class="accordion__outcomes-container">
-              <p class="accordion__title">Outcomes</p>
-              <p class="accordion__body">Design rationales <br> Concept sketches <br>Figma mock ups </p>
-              <div class="accordion__img-container">
-                <img src="../assets/images/ubc/OSCAR-enhancement-request-fax1.jpg" alt="" class="final-design__co-img">
-                <img src="../assets/images/ubc/OSCAR-enhancement-request-fax2.jpg" alt="" class="final-design__co-img">
-                <img src="../assets/images/ubc/OSCAR-enhancement-request-fax3.jpg" alt="" class="final-design__co-img">
-              </div>
-            </div>
-            <div class="accordion__results-container">
-              <p class="accordion__title">Results</p>
-              <p class="accordion__body">Eight major UI enhancements to the OSCAR EMR system over two years,
-                directly informed by clinic staff and developer feedback.
-              </p>
-              <div class="accordion__img-container">
-                <img src="../assets/images/ubc/1761008759871-c8c38443-4d9f-4315-bd13-345a800c4af0_4.jpg" alt=""
-                  class="final-design__co-img">
-
-              </div>
+              <ul class="accordion__list">
+                <li class="accordion__li">During intake</li>
+                <li class="accordion__li">At the point of care</li>
+                <li class="accordion__li">During billing</li>
+              </ul>
             </div>
           </div>
         </div>
-
+        <!--         <div class="accordion__item">
+          <button class="accordion__trigger">
+            <svg class="accordion__icon" width="20" height="20" viewBox="0 0 16 16" aria-hidden="true">
+              <line x1="2" y1="8" x2="14" y2="8" class="accordion__line accordion__line--horizontal" />
+              <line x1="8" y1="2" x2="8" y2="14" class="accordion__line accordion__line--vertical" />
+            </svg>
+            <span class="accordion__label">Implementation and Coordination
+            </span>
+          </button>
+          <div class="accordion__content">
+            <img class="accordion__img" src="../assets/images/ubc/Group 1597880423.svg" alt="">
+            <div class="accordion__text_container">
+              <p class="accordion__body">Collaborated with the admin team and developers to align:
+              </p>
+              <ul class="accordion__list">
+                <li class="accordion__li">Website entry points</li>
+                <li class="accordion__li">Appointment booking tools</li>
+                <li class="accordion__li">Intake forms and EMR workflows</li>
+              </ul>
+              <p class="accordion__body">Communicated upcoming service changes and requirements to developers to support
+                implementation
+              </p>
+            </div>
+          </div>
+        </div> -->
         <div class="accordion__item">
           <button class="accordion__trigger">
             <svg class="accordion__icon" width="20" height="20" viewBox="0 0 16 16" aria-hidden="true">
               <line x1="2" y1="8" x2="14" y2="8" class="accordion__line accordion__line--horizontal" />
               <line x1="8" y1="2" x2="8" y2="14" class="accordion__line accordion__line--vertical" />
             </svg>
-            <span class="accordion__label">DTP Tracker
+            <span class="accordion__label">Service Rollout and Maintenance
             </span>
           </button>
           <div class="accordion__content">
-            <div class="accordion__context-container">
-              <p class="accordion__title">Context</p>
-              <p class="accordion__body">The OSCAR EMR was built for physicians, whose workflow
-                differs significantly from pharmacists. As a result, pharmacists at the clinic lacked a dedicated way to
-                record, track, and resolve drug therapy problems (DTPs)—issues that compremise patient outcomes.</p>
-              <!-- To support pharmacists’ expertise in identifying and resolving drug therapy
-                problems (DTPs)—issues that arise when medication use leads to less-than-optimal outcomes—the clinic
-                needed a new tool to assist in documenting and managing DTPs. -->
-            </div>
-            <div class="accordion__objectives-container">
-              <p class="accordion__title">Objective</p>
-              <p class="accordion__body">Design an integrated digital tool that extends OSCAR’s capabilities to support
-                pharmacists in efficiently identifying, documenting, and managing DTPs throughout patient care.</p>
-            </div>
-            <div class="accordion__approaches-container">
-              <p class="accordion__title">Approach</p>
-              <p class="accordion__body">User Shadowing and Task Analysis</p><br>
-              <p class="accordion__body">Environment Scan and System Audit</p><br>
-              <p class="accordion__body">Research Synthesis</p><br>
-              <p class="accordion__body">Journey Mapping</p><br>
-              <p class="accordion__body">Lo-fi Wireframing</p><br>
-              <p class="accordion__body">Think-Aloud User Testing</p><br>
-              <p class="accordion__body">Documentation</p>
-            </div>
 
-            <div class="accordion__outcomes-container">
-              <p class="accordion__title">Outcomes</p>
-            </div>
-            <div class="accordion__results-container">
-              <p class="accordion__title">Results</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion__item">
-          <button class="accordion__trigger">
-            <svg class="accordion__icon" width="20" height="20" viewBox="0 0 16 16" aria-hidden="true">
-              <line x1="2" y1="8" x2="14" y2="8" class="accordion__line accordion__line--horizontal" />
-              <line x1="8" y1="2" x2="8" y2="14" class="accordion__line accordion__line--vertical" />
-            </svg>
-            <span class="accordion__label">Clinic Website Redesign
-            </span>
-          </button>
-          <div class="accordion__content">
-            <div class="accordion__img-container">
-              <img src="../assets/images/ubc/ubc-pharmsci-website-old.jpg" alt="" class="final-design__co-img">
-              <img src="../assets/images/ubc/ubc-pharmsci-website-new.jpg" alt="" class="final-design__co-img">
+            <div class="accordion__text_container">
+              <p class="accordion__body">The updated MAC service was piloted by initially offering
+                appointments two days per week and supporting a subset of 10 out of the 21 eligible minor ailments. This
+                phased approach allowed the clinic to test new workflows and assess capacity
+                before expanding the service. <br> <br>
+                During this phase, I acted as the primary point of coordination between
+                clinicians, MOAs, and developers, advocating for clinical and patient needs in technical discussions
+                while also communicating system constraints and implementation considerations back to clinic staff. I
+                led decision-making around service updates and workflow changes, ensuring feedback from the clinic was
+                translated into actionable, human-centred improvements.
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-  </section>
-  <footer>
-    <p> design and code by me &copy; 2025.</p>
+    </section>
+    <section class="finaldesign">
+      <h3 class="finaldesign__title">Final Design</h3>
+      <div class="finaldesign__orange">
+        <div class="finaldesign__gallery_container">
+          <img src="../assets/images/ubc/ubc-final1.png" alt="" class="finaldesign__gallery_img">
+          <img src="../assets/images/ubc/ubc-final2.png" alt="" class="finaldesign__gallery_img">
+          <img src="../assets/images/ubc/ubc-final3.png" alt="" class="finaldesign__gallery_img">
+        </div>
+    </section>
+    <section class="impact">
+      <div class="impact__section">
+        <div class="impact__textWrapper">
+          <h3 class="impact__title">Impact</h3>
+          <p class="impact__body">Developed and implemented a new patient intake system that decreased
+            appointment booking time by 30% and minimized back-and-forth between
+            staff and patients. <br> <br>
+            Redesigned clinic website architecture and content flow, resulting in a 45% increase in user engagement and
+            improved accessibility for patients.
+        </div>
+        <figure class="impact__imgWrapper">
+          <img src="../assets/images/ubc/Group 1597880424.jpg" alt="" class="impact__img">
+          <figcaption class="impact__caption">A clinician with a patient who booked their appointment through the new
+            process.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__content">
+      <p class="footer__copyright">© 2025 design + code <!-- This site reflects ongoing exploration and growth. --></p>
+      <button class="footer__topbtn" onclick="topFunction()" title="Up up to the top">↑ TOP</button>
+      <p class="socials">
+        <a href="https://github.com/hopeaaaa">github</a> /
+        <a href="https://www.linkedin.com/in/hope-akello/">linkedin</a>
+      </p>
+    </div>
   </footer>
 
   <div id="lightbox" class="lightbox">
     <span class="lightbox__close">&times;</span>
     <img class="lightbox__img" id="lightbox-img" src="" alt="Expanded image" />
   </div>
-  <button id="myBtn" title="Go to top" aria-label="Scroll to top" onclick="topFunction()">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" stroke="currentColor" fill="none"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 22V5M12 5L6 11M12 5L18 11" />
-    </svg>
-  </button>
 
   <script src="../scripts/main.js">
     const accordionTriggers = document.querySelectorAll('.accordion__trigger');

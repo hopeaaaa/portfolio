@@ -1,33 +1,28 @@
-const accordionTriggers = document.querySelectorAll(".accordion__trigger");
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".accordion__item");
 
-document.querySelectorAll(".accordion__trigger").forEach((trigger) => {
-  trigger.addEventListener("click", () => {
-    const item = trigger.parentElement;
-    item.classList.toggle("accordion__item--active");
-  });
-});
+  items.forEach((item) => {
+    const trigger = item.querySelector(".accordion__trigger");
+    const content = item.querySelector(".accordion__content");
 
-document.querySelectorAll(".accordion__trigger").forEach((trigger) => {
-  trigger.addEventListener("click", () => {
-    const isExpanded = trigger.getAttribute("aria-expanded") === "true";
-    trigger.setAttribute("aria-expanded", String(!isExpanded));
-    const content = trigger.parentElement.querySelector(".accordion__content");
-    content.classList.toggle("accordion__content--open");
-  });
-});
+    trigger.addEventListener("click", () => {
+      const isOpen = item.classList.contains("accordion__item--active");
 
-accordionTriggers.forEach((trigger) => {
-  trigger.addEventListener("click", () => {
-    const content = trigger.nextElementSibling;
-    const icon = trigger.querySelector(".accordion__icon");
+      // Close all
+      items.forEach((otherItem) => {
+        const otherContent = otherItem.querySelector(".accordion__content");
+        const otherTrigger = otherItem.querySelector(".accordion__trigger");
 
-    trigger.classList.toggle("active");
-    content.classList.toggle("open");
+        otherItem.classList.remove("accordion__item--active");
+        otherContent.style.maxHeight = null;
+        otherTrigger.setAttribute("aria-expanded", "false");
+      });
 
-    accordionTriggers.forEach((other) => {
-      if (other !== trigger) {
-        other.classList.remove("active");
-        other.nextElementSibling.classList.remove("open");
+      // Open current if it wasn't already open
+      if (!isOpen) {
+        item.classList.add("accordion__item--active");
+        content.style.maxHeight = content.scrollHeight + "px";
+        trigger.setAttribute("aria-expanded", "true");
       }
     });
   });

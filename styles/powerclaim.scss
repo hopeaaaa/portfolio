@@ -1,0 +1,628 @@
+@use "./partials/resets" as *;
+@use "./partials/variables" as *;
+@use "./partials/fonts" as *;
+@use "./partials/mixins" as *;
+@use "sass:map";
+
+body {
+  font-family: $font-third;
+  font-weight: map.get($font-third-weights, medium);
+  background-color: #f2f2f2;
+  color: #5a5a5a;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: underline;
+}
+a:hover {
+  color: $orange;
+  font-style: italic;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+
+  &__img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.header {
+  padding: 1rem;
+  font-size: 0.625rem;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #ccc;
+  }
+
+  &__wordmark {
+    font-family: $font-primary;
+    font-weight: 500;
+    color: $black;
+    text-decoration: none;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  &__tagline,
+  &__link {
+    font-family: $font-fourth;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  &__tagline {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+
+    & ::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      width: 2rem;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(
+        to right,
+        #f2f2f2 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(
+        to left,
+        #f2f2f2 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 14s linear infinite;
+    }
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .header__tagline span {
+      animation: none;
+      padding-left: 0;
+    }
+  }
+
+  @include tablet {
+    padding: 1rem;
+
+    &__content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__link,
+    &__tagline,
+    &__wordmark {
+      font-size: 0.875rem;
+    }
+
+    &__nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    &__tagline {
+      overflow: visible;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      span {
+        animation: none;
+        padding-left: 0;
+        transform: none;
+      }
+    }
+  }
+}
+
+.hero {
+  max-width: 100%;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+
+  &__section {
+    margin: 4rem auto 2rem auto;
+    text-align: left;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 400;
+    color: $black;
+  }
+
+  &__oneLiner {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #646866;
+    padding-bottom: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__title {
+      font-size: 2.125rem;
+    }
+
+    &__oneLiner {
+      font-size: 1.75rem;
+      width: 55ch;
+    }
+  }
+}
+
+.overview {
+  &__section {
+    margin: 2rem auto;
+    max-width: 100%;
+  }
+
+  &__subtitle {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: $black;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  &__container {
+    flex: 1 1 40%;
+    min-width: 18.75rem;
+  }
+
+  &__title {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: #646866;
+    letter-spacing: 0.08rem;
+    margin-top: 0;
+  }
+
+  &__body {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__subtitle {
+      font-size: 1.75rem;
+      font-weight: 400;
+      color: $black;
+    }
+
+    &__wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0 4rem;
+    }
+
+    &__container {
+      flex: 1 1 40%;
+      min-width: 18.75rem;
+    }
+
+    &__title {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: #646866;
+      letter-spacing: 0.08rem;
+    }
+
+    &__body {
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.context {
+  &__section {
+    margin: 2rem auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  &__textWrapper {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: $black;
+  }
+
+  &__body {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 0.8rem;
+  }
+
+  &__img {
+    width: 120%;
+    height: auto;
+    display: block;
+  }
+
+  &__caption {
+    font-family: $font-fourth;
+    font-size: 0.875rem;
+    font-style: italic;
+    padding-top: 1rem;
+  }
+
+  &__imgWrapper {
+    flex: 1;
+    overflow: visible;
+  }
+
+  @media (min-width: 768px) {
+    &__section {
+      flex-direction: row;
+      align-items: flex-start;
+      padding-top: 4rem;
+    }
+
+    &__body {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+//Approach
+.process {
+  &__section {
+    margin: 2rem auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: $black;
+  }
+
+  &__body {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 0.8rem;
+  }
+
+  &__img {
+    width: 120%;
+    height: auto;
+    display: block;
+  }
+
+  &__caption {
+    font-family: $font-fourth;
+    font-size: 0.875rem;
+    font-style: italic;
+    padding-top: 1rem;
+  }
+
+  &__imgWrapper {
+    flex: 1;
+    overflow: visible;
+  }
+}
+
+.accordion {
+  //PROJECT WRAPPER DIV
+  &__item {
+    border-bottom: 2px solid #ccc;
+    /*  &:hover {
+         border: 4px solid $orange;
+        background-color: $orange; 
+    } */
+
+    &--active .accordion__content {
+      padding: 1rem;
+      max-height: max-content;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  // BUTTON
+  &__trigger {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 1rem 0;
+    display: flex;
+    gap: 2rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #f2f2f2;
+      background-color: #383838;
+    }
+
+    &[aria-expanded="true"] {
+      .accordion__line--vertical,
+      .accordion__line--horizontal {
+        transform: rotate(45deg);
+      }
+    }
+    &:focus-visible {
+      outline: 2px solid #000;
+      outline-offset: 2px;
+    }
+  }
+
+  // +
+  &__icon {
+    transition: transform 0.3s ease;
+  }
+
+  //LINE
+  &__line {
+    stroke: currentColor;
+    stroke-width: 2;
+    transition: transform 0.25s ease;
+    transform-origin: center;
+  }
+
+  //ALL PROJECTS
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  //EACH PROJECT
+  &__context-container,
+  &__outcomes-container,
+  &__approaches-container,
+  &__objectives-container,
+  &__results-container {
+    padding: 1rem 0;
+  }
+
+  &__text_container {
+    max-width: 67ch;
+    text-align: left;
+    padding: 2rem 0 0 0;
+  }
+
+  &__body {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    padding-bottom: 0.5rem;
+  }
+
+  &__li {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    list-style-type: disc;
+  }
+
+  &__list {
+    padding: 0 2rem 1rem 2rem;
+  }
+
+  &__img-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 0 1rem 0;
+  }
+}
+
+.finaldesign {
+  padding-top: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__title {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: $black;
+    padding-bottom: 2rem;
+  }
+
+  &__orange {
+    background-color: $orange;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 4rem 0;
+  }
+
+  &__gallery_container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    height: 80vh;
+    scroll-behavior: smooth;
+    gap: 10px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__gallery_img {
+    height: 100%;
+    scroll-snap-align: start;
+    object-fit: contain;
+  }
+}
+
+.impact {
+  margin: 2rem auto;
+  max-width: 1200px;
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 0;
+  }
+
+  &__textWrapper {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: $black;
+  }
+
+  &__body {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 0.8rem;
+  }
+
+  &__img {
+    width: 120%;
+    height: auto;
+    display: block;
+  }
+
+  &__caption {
+    font-family: $font-fourth;
+    font-style: italic;
+    font-size: 0.875rem;
+    padding-top: 1rem;
+    justify-content: center;
+  }
+
+  &__imgWrapper {
+    flex: 1;
+    overflow: visible;
+  }
+
+  @media (min-width: 768px) {
+    &__section {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    &__body {
+      font-size: 0.875rem;
+      width: 50ch;
+    }
+  }
+}
+
+.footer {
+  padding: 0 1rem;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    font-family: $font-fourth;
+    font-size: 0.75rem;
+    color: #888;
+    border-top: solid 2px #ccc;
+  }
+
+  &__topbtn {
+    color: #888;
+    cursor: pointer;
+  }
+
+  @include tablet {
+    font-size: 0.875rem;
+  }
+}

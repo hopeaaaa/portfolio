@@ -195,53 +195,23 @@ a {
 }
 @font-face {
   font-family: "Lexend";
-  src: url("Lexend-ExtraLight.woff2") format("woff2"), url("Lexend-ExtraLight.woff") format("woff");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Lexend";
-  src: url("Lexend-Light.woff2") format("woff2"), url("Lexend-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Lexend";
-  src: url("Lexend-Medium.woff2") format("woff2"), url("Lexend-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Lexend";
-  src: url("Lexend-Thin.woff2") format("woff2"), url("Lexend-Thin.woff") format("woff");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Lexend";
-  src: url("Lexend-Regular.woff2") format("woff2"), url("Lexend-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Lexend";
-  src: url("Lexend-SemiBold.woff2") format("woff2"), url("Lexend-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../../assets/fonts/Lexend-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 body {
   font-family: "Lexend";
-  font-weight: 500;
-  background-color: #f2f2f2;
-  color: #5a5a5a;
-  /*   color: #7f8380; */
+  font-weight: 350;
+  background-color: white;
+  color: #767676;
   overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 a:hover {
@@ -266,6 +236,9 @@ a:hover {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: #0c0c0c;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .header__nav {
   display: flex;
@@ -276,6 +249,7 @@ a:hover {
 .header__tagline, .header__link {
   font-family: "IBM Plex Mono";
   font-weight: 400;
+  text-decoration: none;
 }
 .header__tagline {
   white-space: nowrap;
@@ -414,7 +388,7 @@ a:hover {
 }
 .hero__oneLiner {
   font-size: 1.75rem;
-  font-weight: 400;
+  font-weight: 300;
   color: #646866;
   padding-bottom: 2rem;
 }
@@ -432,32 +406,34 @@ a:hover {
   }
 }
 
-.overview__Section {
+.overview__section {
   margin: 2rem auto;
   max-width: 100%;
 }
-.overview__Subtitle {
+.overview__subtitle {
   font-size: 1.75rem;
-  font-weight: 400;
+  font-weight: 300;
   color: #0c0c0c;
 }
-.overview__Wrapper {
+.overview__wrapper {
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
 }
-.overview__Container {
+.overview__container {
   flex: 1 1 40%;
   min-width: 18.75rem;
 }
-.overview__Title {
+.overview__title {
   font-size: 0.6875rem;
-  font-weight: 600;
-  color: #646866;
+  color: #0c0c0c;
   letter-spacing: 0.08rem;
   margin-top: 0;
 }
-.overview__Body {
+.overview .arrow-icon {
+  vertical-align: middle;
+}
+.overview__body {
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
@@ -468,89 +444,82 @@ a:hover {
     max-width: 1200px;
     margin: 0 auto;
   }
-  .overview__Subtitle {
+  .overview__subtitle {
     font-size: 1.75rem;
-    font-weight: 400;
-    color: #0c0c0c;
   }
-  .overview__Wrapper {
+  .overview__wrapper {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 0 4rem;
   }
-  .overview__Container {
+  .overview__container {
     flex: 1 1 40%;
     min-width: 18.75rem;
   }
-  .overview__Title {
+  .overview__title {
     font-size: 0.6875rem;
-    font-weight: 600;
-    color: #646866;
-    letter-spacing: 0.08rem;
-  }
-  .overview__Body {
-    font-size: 0.875rem;
-    font-weight: 500;
   }
 }
 
-.context__Section {
+.context__section {
   margin: 2rem auto;
-  max-width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 2rem;
 }
-.context__Title {
+.context__textWrapper {
+  flex: 1;
+}
+.context__title {
   font-size: 1.75rem;
-  font-weight: 400;
+  font-weight: 300;
   color: #0c0c0c;
 }
-.context__Container {
+.context__container {
   flex: 1 1 40%;
   min-width: 18.75rem;
 }
-.context__Body {
+.context__body {
   font-size: 1rem;
-  font-weight: 400;
-  margin: 0.8rem 0;
   line-height: 1.6;
+  margin-top: 0.8rem;
 }
 @media (min-width: 768px) {
   .context {
     max-width: 1200px;
     margin: 0 auto;
   }
-  .context__Title {
+  .context__title {
     font-size: 1.75rem;
     font-weight: 400;
     color: #0c0c0c;
   }
-  .context__Container {
+  .context__container {
     flex: 1 1 40%;
     min-width: 18.75rem;
   }
-  .context__Body {
-    font-size: 0.875rem;
-    font-weight: 500;
+  .context__body {
+    font-weight: 350;
   }
 }
 
-.background {
+.background__section {
   margin: 2rem auto;
   max-width: 1200px;
-}
-.background__section {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding-bottom: 2rem;
 }
 .background__textWrapper {
   flex: 1;
 }
 .background__title {
   font-size: 1.75rem;
-  font-weight: 400;
+  font-weight: 300;
   color: #0c0c0c;
+  padding-bottom: 0.5rem;
 }
 .background__body {
   font-size: 1rem;
@@ -564,8 +533,11 @@ a:hover {
 }
 .background__caption {
   font-family: "IBM Plex Mono";
+  font-weight: 500;
   font-size: 0.875rem;
+  font-style: italic;
   padding-top: 1rem;
+  text-align: center;
 }
 .background__imgWrapper {
   flex: 1;
@@ -576,66 +548,56 @@ a:hover {
     flex-direction: row;
     align-items: flex-start;
   }
-  .background__body {
-    font-size: 0.875rem;
-  }
   .background__textWrapper {
     margin-top: 4rem;
   }
 }
 
-.objectives__Section {
+.objectives__section {
   margin: 2rem auto;
-  max-width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 2rem;
 }
-.objectives__Title {
+.objectives__textWrapper {
+  flex: 1;
+}
+.objectives__title {
   font-size: 1.75rem;
   font-weight: 400;
   color: #0c0c0c;
 }
-.objectives__Body {
+.objectives__body {
   font-size: 1rem;
-  font-weight: 400;
-  margin: 0.8rem 0;
   line-height: 1.6;
+  margin-top: 0.8rem;
 }
 .objectives__img {
-  width: 100%;
+  width: 120%;
   height: auto;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .objectives__caption {
   font-family: "IBM Plex Mono";
+  font-weight: 500;
   font-size: 0.875rem;
+  font-style: italic;
   padding-top: 1rem;
+  text-align: center;
+}
+.objectives__imgWrapper {
+  flex: 1;
+  overflow: visible;
 }
 @media (min-width: 768px) {
-  .objectives {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .objectives__Section {
-    display: flex;
+  .objectives__section {
     flex-direction: row;
-    gap: 2rem;
+    align-items: flex-start;
   }
-  .objectives__Title {
-    font-size: 1.75rem;
-    font-weight: 400;
-    color: #0c0c0c;
-  }
-  .objectives__Body {
-    font-size: 0.875rem;
-    font-weight: 500;
-  }
-  .objectives__Wrapper {
-    width: 55ch;
-  }
-  .objectives__imgWrapper {
-    display: flex;
-    flex-direction: column;
+  .objectives__textWrapper {
+    margin-top: 4rem;
   }
 }
 
@@ -655,7 +617,7 @@ a:hover {
 .finaldesign__section {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0rem;
 }
 .finaldesign__orange {
   background-color: #c44d00;
@@ -666,16 +628,37 @@ a:hover {
 }
 .finaldesign__imgcontainer1 {
   display: flex;
-  gap: 10rem;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.finaldesign__imgcontainer2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .finaldesign__img {
-  padding-left: 12rem;
+  width: 48%;
+  max-width: 520px;
+}
+.finaldesign__img3 {
+  /*     width: 80%;
+  max-width: 600px; */
+  max-width: 900px;
 }
 .finaldesign__noorange {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
-  padding: 2rem;
+  padding: 4rem;
+}
+.finaldesign__noorange2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem;
 }
 .finaldesign__callouts_container {
   display: flex;
@@ -684,8 +667,96 @@ a:hover {
 .finaldesign__callouts_caption {
   margin-top: 6rem;
   font-family: "IBM Plex Mono";
+  font-weight: 500;
   width: 40ch;
+}
+.finaldesign__gallery_container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 80vh;
+  overflow: hidden;
+}
+.finaldesign__gallery_img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding-top: 2rem;
+}
+.finaldesign__gallery_img.is-active {
+  opacity: 1;
+}
+.finaldesign__gallery_controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.finaldesign .dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  background: #e08033;
+  cursor: pointer;
+}
+.finaldesign .dot.is-active {
+  background: #c44d00;
+}
+
+.impact {
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+.impact__section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem 0;
+}
+.impact__textWrapper {
+  flex: 1;
+}
+.impact__title {
+  font-size: 1.75rem;
+  font-weight: 400;
   color: #0c0c0c;
+}
+.impact__body {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 0.8rem;
+}
+.impact__img {
+  width: 120%;
+  height: auto;
+  display: block;
+}
+.impact__caption {
+  font-family: "IBM Plex Mono";
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+.impact__imgWrapper {
+  flex: 1;
+  overflow: visible;
+}
+@media (min-width: 768px) {
+  .impact__section {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .impact__body {
+    width: 50ch;
+  }
 }
 
 .footer {
