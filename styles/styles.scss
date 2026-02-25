@@ -33,6 +33,10 @@ a:hover {
   &__wordmark {
     font-family: $font-primary;
     font-weight: 500;
+    color: $black;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   &__nav {
@@ -46,6 +50,7 @@ a:hover {
   &__link {
     font-family: $font-fourth;
     font-weight: 400;
+    text-decoration: none;
   }
 
   &__tagline {

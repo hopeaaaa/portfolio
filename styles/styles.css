@@ -228,6 +228,10 @@ a:hover {
 .header__wordmark {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+  color: #0c0c0c;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .header__nav {
   display: flex;
@@ -238,6 +242,7 @@ a:hover {
 .header__tagline, .header__link {
   font-family: "IBM Plex Mono";
   font-weight: 400;
+  text-decoration: none;
 }
 .header__tagline {
   white-space: nowrap;
