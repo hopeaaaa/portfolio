@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hope Akello | UX Portfolio</title>
   <link rel="stylesheet" href="./styles/styles.css" />
-  <link rel="icon" type="image/x-icon" href="./assets/images/about/asterisk.png" />
+  <link rel="icon" type="image/x-icon" href="./assets/images/about/favicon.svg" />
   <script src="./scripts/homepage.js" defer></script>
   <script src="./scripts/main.js" defer></script>
 </head>
@@ -15,9 +15,11 @@
   <header class="header">
     <div class="header__content">
       <a href="../index.html" class="header__wordmark">hope akello</a>
-      <p class="header__tagline"><span>experience designer / systems thinking / facilitation</span> </p>
+      <p class="header__tagline"><span>experience design / systems thinking / facilitation</span> </p>
       <nav aria-label="Primary navigation" class="header__nav">
-        <a href="./pages/about.html" class="header__link">info</a>
+        <a href="./pages/about.html" class="header__link">about</a>
+        <a href="../assets/pdfs/HopeAkelloResume.pdf" class="header__cv-btn" target="_blank"
+          rel="noopener noreferrer">cv</a>
       </nav>
     </div>
   </header>
@@ -27,11 +29,12 @@
       <h1 class="hero__intro">
         At the intersection of design, technology, and collective well-being, I design systems that invite people
         to
-        <span class="hero__intro--bold">play, learn, and connect.</span>
+        <a class="hero__squiggle" href="#">play</a>,
+        <a class="hero__squiggle" href="#">learn</a>, and
+        <a class="hero__squiggle" href="#">connect</a>.
       </h1>
     </section>
     <section class="casestudies">
-
       <a href="./pages/ubc.html" class="casestudies__preview-link">
         <article class="casestudies__preview">
           <img src="./assets/images/ubc/MACS homepage.png" class="casestudies__img-ubc"
@@ -42,7 +45,7 @@
               Service design to streamline operations and enhance care
               delivery at a university healthcare clinic.
             </p>
-            <p class="casestudies__tag">Service Design / Information Design / UX</p>
+            <p class="casestudies__tag">Service Architecture / Information Design / UX</p>
           </div>
         </article>
       </a>
@@ -114,7 +117,7 @@
             <p class="casestudies__subtitle">
               Prototyping an internal tracking system to help pharmacists track and manage drug therapy problems.
             </p>
-            <p class="casestudies__tag">Service Design / Research / Information Design / UX</p>
+            <p class="casestudies__tag">Service Design / Research / Information Design / UX/UI</p>
           </div>
         </article>
       </a>
@@ -187,9 +190,9 @@
     <div class="footer__content">
       <p class="footer__copyright">© 2025 <!-- This site reflects ongoing exploration and growth. --></p>
       <button class="footer__topbtn" onclick="topFunction()" title="Up up to the top">↑ TOP</button>
-      <p class="socials">
-        <a href="https://github.com/hopeaaaa">github</a> /
-        <a href="https://www.linkedin.com/in/hope-akello/">linkedin</a>
+      <p class="footer__socials">
+        <a class="footer__social" href="https://github.com/hopeaaaa">github</a> /
+        <a class="footer__social" href="https://www.linkedin.com/in/hope-akello/">linkedin</a>
       </p>
     </div>
   </footer>

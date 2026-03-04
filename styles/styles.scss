@@ -6,19 +6,14 @@
 
 body {
   font-family: $font-third;
-  font-weight: map.get($font-third-weights, medium);
-  background-color: #f2f2f2;
+  font-weight: 400;
+  background-color: $bg-color;
   color: $black;
 }
 
-a:hover {
-  color: $orange;
-  font-style: italic;
-}
-
 .header {
-  padding: 1rem;
-  font-size: 0.625rem;
+  padding: 2rem;
+  font-size: 0.75rem;
 
   &__content {
     display: flex;
@@ -26,8 +21,6 @@ a:hover {
     justify-content: space-between;
     align-items: baseline;
     gap: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid #ccc;
   }
 
   &__wordmark {
@@ -42,23 +35,44 @@ a:hover {
   &__nav {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 2rem;
     align-items: center;
   }
+  &__cv-btn {
+    background-color: #feea00;
+    padding: 0.2rem;
+    cursor: pointer;
+  }
 
-  &__tagline,
+  &__cv-btn,
   &__link {
     font-family: $font-fourth;
-    font-weight: 400;
-    text-decoration: none;
+    &:hover {
+      color: $orange;
+    }
+    &.active {
+      color: $orange;
+    }
+  }
+
+  &__wordmark {
+    &:hover {
+      font-style: italic;
+      color: $orange;
+    }
   }
 
   &__tagline {
+    font-family: $font-fourth;
+    font-weight: 500;
+    color: #6c6c6c;
+    font-size: 0.6875rem;
+    text-decoration: none;
     white-space: nowrap;
     overflow: hidden;
     position: relative;
 
-    & ::before,
+    &::before,
     &::after {
       position: absolute;
       top: 0;
@@ -110,30 +124,34 @@ a:hover {
   }
 
   @include tablet {
-    padding: 1rem;
+    padding: 4rem;
 
     &__content {
-      flex-direction: row;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      grid-template-rows: auto auto;
       align-items: center;
+      row-gap: 0.0625rem;
     }
 
     &__link,
-    &__tagline,
     &__wordmark {
       font-size: 0.875rem;
     }
 
+    &__wordmark {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
     &__nav {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 3rem;
+      grid-column: 3;
+      grid-row: 1;
     }
 
     &__tagline {
-      overflow: visible;
+      grid-column: 1;
+      grid-row: 2;
 
       &::before,
       &::after {
@@ -155,26 +173,49 @@ a:hover {
 
   &__intro {
     font-size: 1.8rem;
-    font-family: $font-fourth;
     font-weight: 400;
     line-height: 2.6rem;
-    color: #202020;
+  }
 
-    &--bold {
-      font-family: $font-primary;
-      font-weight: map.get($font-primary-weights, bold);
-      color: $orange;
+  &__squiggle {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: $orange;
+    z-index: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 7px;
+      bottom: -19px;
+      width: calc(100% - 5px);
+      height: calc(100% - 5px);
+      background: rgba($orange, 0.25);
+      z-index: -1;
+      transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
+    }
+
+    &:hover::after {
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 100%;
     }
   }
 
+  /*   &__squiggle:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 8'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .6s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-15px);}}%3C/style%3E%3Cpath fill='none' stroke='%23F26A2E' stroke-width='3' class='squiggle' d='M0,4 c 5,0,5,-4,10,-4 s 5,4,10,4 c 5,0,5,-4,10,-4 s 5,4,10,4'/%3E%3C/svg%3E");
+    background-size: auto 15px;
+  } */
+
   @include tablet {
+    padding: 4rem;
     &__intro {
       max-width: 1200px;
       width: 100%;
-      /*   font-size: 4.25rem;
-      line-height: 5rem; */
-      font-size: 2.1875rem;
-      line-height: 2.8rem;
+      font-size: 3.125rem;
+      line-height: 3.75rem;
       padding-top: 2rem;
       width: 52ch;
     }
@@ -207,10 +248,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-
     opacity: 0.01;
     transform: translateY(8px);
-
     transition:
       opacity 0.9s ease-out,
       transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
@@ -246,6 +285,7 @@ a:hover {
     height: auto;
     display: block;
     transition: transform 0.6s ease;
+    border-radius: 0.3rem;
   }
 
   &__img-ubc {
@@ -276,6 +316,7 @@ a:hover {
   }
 
   @include tablet {
+    padding: 4rem;
     /*   grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding: 2rem 2rem 4rem; */
@@ -285,24 +326,30 @@ a:hover {
 }
 
 .footer {
-  padding: 0 1rem;
+  padding: 0 2rem;
+  font-family: $font-fourth;
+  font-weight: 400;
 
   &__content {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    font-family: $font-fourth;
     font-size: 0.75rem;
-    color: #888;
-    border-top: solid 2px #ccc;
+    color: #5e5e5e;
   }
-
+  &__social {
+    &:hover {
+      font-style: italic;
+      color: $orange;
+    }
+  }
   &__topbtn {
-    color: #888;
+    color: #5e5e5e;
     cursor: pointer;
   }
 
   @include tablet {
+    padding: 4rem 4rem 1.5rem 4rem;
     font-size: 0.875rem;
   }
 }

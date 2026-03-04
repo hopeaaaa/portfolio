@@ -1,8 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const allCases = document.querySelectorAll(".casestudies__preview-link");
-
-  allCases.forEach((card) => observer.observe(card));
-
   // ---- Case studies rise on load ----
   setTimeout(() => {
     const section = document.querySelector(".casestudies");
@@ -25,9 +21,9 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.15,
+    threshold: 0.05,
     rootMargin: "0px 0px -10% 0px",
-  }
+  },
 );
 
 cards.forEach((card) => observer.observe(card));

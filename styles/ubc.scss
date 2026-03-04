@@ -352,6 +352,59 @@ a:hover {
     }
   }
 }
+.objectives {
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 0;
+  }
+
+  &__textWrapper {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: $black;
+  }
+
+  &__body {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 0.8rem;
+  }
+
+  /*   &__img {
+    width: 120%;
+    height: auto;
+    display: block;
+  }
+
+  &__caption {
+    font-family: $font-fourth;
+    font-size: 0.875rem;
+    font-style: italic;
+    padding-top: 1rem;
+  }
+
+  &__imgWrapper {
+    flex: 1;
+    overflow: visible;
+  } */
+
+  @media (min-width: 768px) {
+    &__section {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    &__body {
+      width: 50ch;
+    }
+  }
+}
 
 //Approach
 .process {

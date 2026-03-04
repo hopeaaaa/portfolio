@@ -10,8 +10,8 @@
 }
 
 body {
-  font-family: $font-secondary;
-  font-weight: map.get($font-secondary-weights, regular);
+  font-family: $font-third;
+  font-weight: map.get($font-third-weights, regular);
   background-color: $bg-color;
   color: $black;
 }
@@ -59,14 +59,14 @@ hr {
   }
 
   &__link {
-    font-family: $font-secondary;
-    font-weight: map.get($font-secondary-weights, regular);
+    font-family: $font-third;
+    font-weight: map.get($font-third-weights, regular);
     font-size: 1rem;
   }
 
   &__cv-btn {
-    font-family: $font-secondary;
-    font-weight: map.get($font-secondary-weights, medium);
+    font-family: $font-third;
+    font-weight: map.get($font-third-weights, medium);
     color: $bg-color;
     background-color: $orange;
     border: solid 1px $orange;
@@ -219,7 +219,9 @@ main {
     margin-right: 0.5rem;
     display: inline-block;
     vertical-align: middle;
-    transition: fill 0.3s ease, transform 0.3s ease;
+    transition:
+      fill 0.3s ease,
+      transform 0.3s ease;
 
     &:hover {
       transform: translateY(-10px);
@@ -231,7 +233,9 @@ main {
     display: inline-block;
     vertical-align: middle;
     transform: translateY(8px);
-    transition: fill 0.3s ease, transform 0.3s ease;
+    transition:
+      fill 0.3s ease,
+      transform 0.3s ease;
 
     &:hover {
       transform: translateY(6px);
@@ -278,7 +282,9 @@ hr {
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 /* .skills__card:hover {
@@ -314,7 +320,9 @@ hr {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .work__card:hover {

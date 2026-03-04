@@ -5,8 +5,8 @@
 @use "sass:map";
 
 body {
-  font-family: $font-secondary;
-  font-weight: map.get($font-secondary-weights, regular);
+  font-family: $font-third;
+  font-weight: map.get($font-third-weights, regular);
   background-color: $bg-color;
   color: $black;
 }
@@ -46,14 +46,14 @@ a:hover {
   }
 
   &__link {
-    font-family: $font-secondary;
-    font-weight: map.get($font-secondary-weights, regular);
+    font-family: $font-third;
+    font-weight: map.get($font-third-weights, regular);
     font-size: 1rem;
   }
 
   &__cv-btn {
-    font-family: $font-secondary;
-    font-weight: map.get($font-secondary-weights, medium);
+    font-family: $font-third;
+    font-weight: map.get($font-third-weights, medium);
     color: $bg-color;
     background-color: $orange;
     border: solid 2px $orange;
@@ -223,5 +223,5 @@ footer {
   padding: 6rem 2rem 2rem 2rem;
   font-size: 0.875rem;
   color: grey;
-  font-weight: map.get($font-secondary-weights, regular);
+  font-weight: map.get($font-third-weights, regular);
 }
