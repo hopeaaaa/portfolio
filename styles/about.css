@@ -144,6 +144,13 @@ a {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "PT Serif";
+  src: url("../../assets/fonts/PTSerif-Bold.woff2") format("woff2"), url("../../assets/fonts/PTSerif-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 /* #da8b5e */
 body {
   font-family: "Lexend";

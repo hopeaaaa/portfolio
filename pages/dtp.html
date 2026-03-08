@@ -8,26 +8,29 @@
   <link rel="stylesheet" href="../styles/dtp.css" />
   <link rel="icon" type="image/x-icon" href="../assets/images/about/favicon.svg" />
   <script defer src="../scripts/accordion.js"></script>
+  <script src="../scripts/dtp.js" defer></script>
 </head>
 
 <body>
   <header class="header">
     <div class="header__content">
       <a href="../index.html" class="header__wordmark">hope akello</a>
-      <p class="header__tagline"><span>experience designer / systems thinking / facilitation</span> </p>
+      <p class="header__tagline"><span>experience design / systems thinking / facilitation</span> </p>
       <nav aria-label="Primary navigation" class="header__nav">
-        <a href="./about.html" class="header__link">info</a>
+        <a href="./pages/about.html" class="header__link">about</a>
+        <a href="../assets/pdfs/HopeAkelloResume.pdf" class="header__cv-btn" target="_blank"
+          rel="noopener noreferrer">cv</a>
       </nav>
     </div>
   </header>
   <main class="hero">
     <section class="hero__section">
+      <img src="../assets/images/ubc/DTP Hero.png" alt="Two EMR interfaces" class="hero__img" />
       <h1 class="hero__title">Drug Therapy Problem Tracker </h1>
       <p class="hero__oneLiner">
         <!--  Redesigning a clinical tool around how pharmacists actually think. -->
         Designing a tool for pharmacists to track, manage, and resolve patient care issues.
       </p>
-      <img src="../assets/images/ubc/DTP Hero.jpg" alt="Two EMR interfaces" class="hero__img" />
     </section>
 
     <section class="overview__section">
@@ -49,9 +52,19 @@
         <div class="overview__container">
           <h3 class="overview__title">OUTPUTS</h3>
           <p class="overview__body">
-            Research documentation<br>
-            Figma prototypes <br>
-            Design system
+            Research Documentation<br>
+            OSCAR-constrained Prototype<br>
+            Concept Prototype<br>
+            <a href="../assets/pdfs/Design System & Component Reference Guide.pdf" target="_blank">Design System &
+              Component Reference
+              Guide
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 15 15" fill="none"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                class="arrow-icon">
+                <line x1="4" y1="14" x2="14" y2="4" />
+                <polyline points="4 4 14 4 14 14" />
+              </svg>
+            </a>
           </p>
         </div>
         <div class="overview__container">
@@ -63,7 +76,7 @@
         <div class="overview__container">
           <h3 class="overview__title">TIMEFRAME</h3>
           <p class="overview__body">
-            6 months
+            10 months
           </p>
         </div>
       </div>
@@ -161,7 +174,7 @@
                   prioritize, track, and resolve DTPs over time.
                 </p>
               </div>
-              <img class="accordion__img--large" src="../assets/images/ubc/DTP Task Analysis.jpg"
+              <img class="accordion__img--large" src="../assets/images/ubc/DTP Task Analysis.png"
                 alt="Screenshots of DTP dashboard with callouts">
             </div>
           </div>
@@ -201,17 +214,17 @@
                 <h4 class="accordion__heading">Design Principles
                 </h4>
                 <ul class="accordion__principles">
+                  <li class="accordion__li--principle"><span class="accordion__highlight">Reflect clinical
+                      reality.</span>
+                    The tracker must
+                    accommodate the variability and nuance of real-world DTPs, rather than forcing clinicians into rigid
+                    categories. </li>
                   <li class="accordion__li--principle">
                     <span class="accordion__highlight">Support consistency while allowing customization.</span> The
                     tracker
                     should
                     enable more consistent documentation while respecting individual clinical judgment and workflows.
                   </li>
-                  <li class="accordion__li--principle"><span class="accordion__highlight">Reflect clinical
-                      reality.</span>
-                    The tracker must
-                    accommodate the variability and nuance of real-world DTPs, rather than forcing clinicians into rigid
-                    categories. </li>
                   <li class="accordion__li--principle"><span class="accordion__highlight">Fit into existing workflows
                       with minimal friction.</span>
                     Any
@@ -249,43 +262,141 @@
     </section>
     <section class="finaldesign">
       <h3 class="finaldesign__title">Final Design</h3>
-      <div class="finaldesign__orange">
-        <div class="finaldesign__gallery_container">
-          <img src="../assets/images/ubc/OSCAR-constrained-dashboard 1.jpg" alt="" class="finaldesign__gallery_img">
-          <img src="../assets/images/ubc/OSCAR-constrained-dashboard-add issue 1.jpg" alt=""
-            class="finaldesign__gallery_img">
-          <img src="../assets/images/ubc/OSCAR-constrained-dashboard-edit 3.jpg" alt=""
-            class="finaldesign__gallery_img">
-          <img src="../assets/images/ubc/OSCAR-constrained-dashboard-edit2 1.jpg" alt=""
-            class="finaldesign__gallery_img">
-          <img src="../assets/images/ubc/OSCAR-constrained-dashboard-full open 1.jpg" alt=""
-            class="finaldesign__gallery_img">
+      <p class="finaldesign__subtitle">One system, two implementations</p>
+      <div class="slider-section">
+        <div class="slider-wrapper">
+          <div class="slider-container">
+            <img src="../assets/images/ubc/Concept Prototype.png" class="slider-img slider-img--bottom" alt="">
+            <img src="../assets/images/ubc/OSCAR-constrained Prototype.png" class="slider-img slider-img--top" alt="">
+            <input type="range" id="image-slider" aria-label="Compare OSCAR-constrained and Concept prototypes"
+              aria-describedby="slider-description" min="0" max="100" value="50" class="slider-input">
+            <div class="slider-divider">
+              <div class="slider-handle"></div>
+            </div>
+          </div>
+          <div class="slider-text">
+            <div class="slider-text__panel visible">
+              <p class="slider-text__label">Concept Prototype</p>
+              <p class="slider-text__body">Extends the live version with a refined visual system and expanded
+                functionality unconstrained by OSCAR</p>
+            </div>
+            <div class="slider-text__panel ">
+              <p class="slider-text__label">OSCAR-constrained Prototype</p>
+              <p class="slider-text__body">Live and integrated within the clinic</p>
+            </div>
+          </div>
         </div>
-        <div class="finaldesign__gallery_container">
-          <img src="../assets/images/ubc/DTP Table.png" alt="" class="finaldesign__gallery_img">
-          <img src="../assets/images/ubc/DTP Timeline1.png" alt="" class="finaldesign__gallery_img">
-          <img src="../assets/images/ubc/DTP Timeline2.png" alt="" class="finaldesign__gallery_img">
+        <p class="slider-text__body">Drag to see both prototypes</p>
+      </div>
+      <div class="design-detail">
+        <div class="design-detail__textWrapper">
+          <p class="design-detail__subtitle">Improved Scannability</p>
+          <ul>
+            <li>Collapsible Cards</li>
+            <li> Hover States</li>
+            <li> Status Badges</li>
+            <li>Colour system to communicate urgency</li>
+          </ul>
         </div>
+        <img class="design-detail__img" src="../assets/images/ubc/OSCAR constrained scannability.png" alt="">
+        <img class="design-detail__img" src="../assets/images/ubc/Concept prototype scannability.png" alt="">
+      </div>
+      <div class="design-detail">
+        <div class="design-detail__textWrapper">
+          <p class="design-detail__subtitle">Standardized Input with Less Friction</p>
+          <p>Form structure ensures consistent data entry across the clinical team. Appointment date
+            auto-populates on creation.</p>
+        </div>
+        <img class="design-detail__img" src="../assets/images/ubc/placeholder.png" alt="">
+        <img class="design-detail__img" src="../assets/images/ubc/placeholder.png" alt="">
+      </div>
+      <div class="research-to-design">
+        <h3 class="finaldesign__title">Research → Design</h3>
+        <p class="finaldesign__subtitle">How research shaped the interface</p>
+        <div class="design-detail__megaWrapper">
+          <div class="design-detail">
+            <img class="design-detail__img2" src="../assets/images/ubc/OSCAR-constrained-form-add cropped.png" alt="">
+            <div class="design-detail__textWrapper">
+              <p class="design-detail__subtitle">Reflect Clinical Reality</p>
+              <p class="design-detail__body">In clinical practice, why a medication was prescribed and why a patient
+                remains on
+                it or how they
+                experience it over time are two different things and both matter. This form captures both.
+              </p>
+              <ul class="design-detail__list">
+                <li class="design-detail__list-item">
+                  Indication field for
+                  <span class="accordion__highlight">the clinical rationale</span>
+                  behind a prescription.
+                </li>
+                <li class="design-detail__list-item">
+                  Notes field for
+                  <span class="accordion__highlight">patient reported context </span>
+                  and observations.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="design-detail">
+            <img class="design-detail__img2" src="../assets/images/ubc/OSCAR-constrained-form-update cropped.png"
+              alt="">
+            <div class="design-detail__textWrapper">
+              <p class="design-detail__subtitle">Support consistency while allowing customization.</p>
+              <p class="design-detail__body">The forms provide a structured template for shared clinical language. The
+                notes fields give clinicians space to document in their own words. In short, structure and
+                flexibility.</p>
+            </div>
+          </div>
+          <div class="design-detail">
+            <img class="design-detail__img3" src="../assets/images/ubc/OSCAR-constrained-dashboard-update.png" alt="">
+            <div class="design-detail__textWrapper">
+              <p class="design-detail__subtitle">Fit into existing workflows with minimal friction.</p>
+              <p class="design-detail__body">Built within OSCAR's native interface. View
+                <a href="../assets/pdfs/Design System & Component Reference Guide.pdf">
+                  <span class="accordion__highlight">The Design System & Component
+                    Reference Guide,</span>
+                </a>created to support the developers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--   <div class="conceptprototype">
+        <h3 class="finaldesign__title">Concept Prototype</h3>
+      </div> -->
     </section>
     <section class="impact">
       <div class="impact__section">
         <div class="impact__textWrapper">
-          <h3 class="impact__title">Scope and Constraints</h3>
-          <p class="impact__body">The Issue Tracker is currently used internally at the UBC Pharmacists Clinic.
-            This work was completed in a live clinic setting, with existing tools and
-            workflows. The OSCAR EMR imposed technical constraints that
-            shaped what was possible. The final design and research is part of
-            broader, ongoing efforts to expand pharmacist-focused functionality within OSCAR EMR,
-            and continues to inform future development.
+          <h3 class="impact__title">Impact</h3>
+          <p class="impact__body">The OSCAR-constrained prototype is currently used internally at the UBC Pharmacists
+            Clinic as it was built within a live clinical setting, using existing tools and real workflows. OSCAR’s
+            technical constraints shaped what was immediately possible, but didn't stop us from envisioning what could
+            be.
+          </p>
+          <p class="impact__body">The timeline view was one of the most well-received features in testing but couldn't
+            be implemented in the constrained version because it required connection to a chart library. So this feature
+            lives on
+            in the concept prototype, which was designed to show what the system could become without those limitations.
+            That
+            prototype now serves as the foundation for future development, and this work continues to inform ongoing
+            efforts to expand pharmacist-focused functionality within OSCAR.
           </p>
         </div>
-        <figure class="impact__imgWrapper">
-          <img src="../assets/images/ubc/DTP Constraints.jpg"
-            alt="An empty clinic room with the OSCAR EMR visible on a monitor." class="impact__img">
-          <figcaption class="impact__caption">The inside of a clinic consulation room.
-            <!--   Research-informed systems intervention. -->
+        <div class="impact__quoteWrapper">
+          <blockquote class="impact__quote">
+            <p class="impact__title">"This is the kind of information people want to know and track."</p>
+          </blockquote>
+          <p>— Pharmacist, UBC
+            Pharmacists Clinic, during usability testing</p>
+        </div>
+        <!--  <figure class="impact__imgWrapper">
+          <img src="../assets/images/ubc/" alt="An empty clinic room with the OSCAR EMR visible on a monitor."
+            class="impact__img">
+          <figcaption class="impact__caption">"This is the kind of information people want to know and track."—
+            Pharmacist, UBC Pharmacists Clinic, during usability testing
           </figcaption>
-        </figure>
+        </figure> -->
       </div>
     </section>
   </main>

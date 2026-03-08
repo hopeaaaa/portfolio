@@ -6,8 +6,8 @@
 
 body {
   font-family: $font-third;
-  font-weight: 350;
-  background-color: #f2f2f2;
+  font-weight: 400;
+  background-color: $bg-color;
   color: #767676;
   overflow-x: hidden;
 }
@@ -54,8 +54,9 @@ a:hover {
 }
 
 .header {
-  padding: 1rem;
-  font-size: 0.625rem;
+  padding: 2rem;
+  font-size: 0.75rem;
+  color: $black;
 
   &__content {
     display: flex;
@@ -63,8 +64,6 @@ a:hover {
     justify-content: space-between;
     align-items: baseline;
     gap: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid #ccc;
   }
 
   &__wordmark {
@@ -79,23 +78,44 @@ a:hover {
   &__nav {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 2rem;
     align-items: center;
   }
+  &__cv-btn {
+    background-color: #feea00;
+    padding: 0.2rem;
+    cursor: pointer;
+  }
 
-  &__tagline,
+  &__cv-btn,
   &__link {
     font-family: $font-fourth;
-    font-weight: 400;
-    text-decoration: none;
+    &:hover {
+      color: $orange;
+    }
+    &.active {
+      color: $orange;
+    }
+  }
+
+  &__wordmark {
+    &:hover {
+      font-style: italic;
+      color: $orange;
+    }
   }
 
   &__tagline {
+    font-family: $font-fourth;
+    font-weight: 500;
+    color: #6c6c6c;
+    font-size: 0.6875rem;
+    text-decoration: none;
     white-space: nowrap;
     overflow: hidden;
     position: relative;
 
-    & ::before,
+    &::before,
     &::after {
       position: absolute;
       top: 0;
@@ -147,30 +167,34 @@ a:hover {
   }
 
   @include tablet {
-    padding: 1rem;
+    padding: 4rem;
 
     &__content {
-      flex-direction: row;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      grid-template-rows: auto auto;
       align-items: center;
+      row-gap: 0.0625rem;
     }
 
     &__link,
-    &__tagline,
     &__wordmark {
       font-size: 0.875rem;
     }
 
+    &__wordmark {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
     &__nav {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 3rem;
+      grid-column: 3;
+      grid-row: 1;
     }
 
     &__tagline {
-      overflow: visible;
+      grid-column: 1;
+      grid-row: 2;
 
       &::before,
       &::after {
@@ -187,11 +211,10 @@ a:hover {
 }
 
 .hero {
-  max-width: 100%;
-  padding: 1.5rem 1.5rem 0 1.5rem;
+  margin: 0 auto;
+  padding: 2rem;
 
   &__section {
-    margin: 4rem auto 2rem auto;
     text-align: left;
   }
 
@@ -199,6 +222,7 @@ a:hover {
     font-size: 2rem;
     font-weight: 400;
     color: $black;
+    font-family: $font-secondary;
   }
 
   &__oneLiner {
@@ -208,9 +232,13 @@ a:hover {
     padding-bottom: 2rem;
   }
 
+  &__img {
+    border-radius: 0.3rem;
+    padding-bottom: 4rem;
+  }
+
   @media (min-width: 768px) {
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 4rem;
 
     &__title {
       font-size: 2.125rem;
@@ -296,8 +324,6 @@ a:hover {
 
 .context {
   &__section {
-    margin: 2rem auto;
-    max-width: 1200px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -324,13 +350,15 @@ a:hover {
     width: 120%;
     height: auto;
     display: block;
+    border-radius: 0.3rem;
   }
 
   &__caption {
     font-family: $font-fourth;
     font-size: 0.875rem;
     font-style: italic;
-    font-weight: 500;
+    font-weight: 400;
+    color: #6c6c6c;
     padding-top: 1rem;
     text-align: center;
   }
@@ -357,7 +385,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 4rem 0;
+    padding: 0 0 4rem 0;
   }
 
   &__textWrapper {
@@ -409,10 +437,9 @@ a:hover {
 //Approach
 .process {
   &__section {
-    margin: 2rem auto;
-    max-width: 1200px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 2rem;
   }
   &__title {
     font-size: 1.75rem;
@@ -431,6 +458,7 @@ a:hover {
     width: 120%;
     height: auto;
     display: block;
+    border-radius: 0.3rem;
   }
 
   &__caption {
@@ -601,57 +629,8 @@ a:hover {
   }
 }
 
-.final-design {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  &__title {
-    font-size: 1.75rem;
-    font-weight: 600;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  &__body {
-    margin-bottom: 4rem;
-    line-height: 2rem;
-    font-size: 1.25rem;
-  }
-
-  &__intro-img-container {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-  }
-
-  &__intro-img {
-    width: auto;
-    height: 15rem;
-    object-fit: contain;
-    object-position: 10% center;
-    border: 2px solid;
-    border-radius: 1rem;
-  }
-
-  &__projects-container {
-    padding-top: 4rem;
-  }
-
-  &__co-img {
-    width: 45%;
-    height: 10rem;
-    object-fit: cover;
-    object-position: 10% center;
-    border: 2px solid;
-    border-radius: 1rem;
-    cursor: zoom-in;
-  }
-}
-
 .finaldesign {
   padding-top: 2rem;
-  max-width: 1200px;
   margin: 0 auto;
 
   &__title {
