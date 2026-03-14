@@ -444,10 +444,8 @@ a:hover {
   border-radius: 0.3rem;
 }
 .context__caption {
-  font-family: "IBM Plex Mono";
   font-size: 0.875rem;
   font-style: italic;
-  font-weight: 400;
   color: #6c6c6c;
   padding-top: 1rem;
   text-align: center;
@@ -518,8 +516,6 @@ a:hover {
   display: block;
 }
 .process__caption {
-  font-family: "IBM Plex Mono";
-  font-weight: 500;
   font-size: 0.875rem;
   font-style: italic;
   padding-top: 1rem;
@@ -1011,8 +1007,6 @@ a:hover {
   display: block;
 }
 .impact__caption {
-  font-family: "IBM Plex Mono";
-  font-weight: 500;
   font-style: italic;
   font-size: 0.875rem;
   padding-top: 1rem;

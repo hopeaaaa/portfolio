@@ -466,10 +466,8 @@ a:hover {
   border-radius: 0.3rem;
 }
 .context__caption {
-  font-family: "IBM Plex Mono";
   font-size: 0.875rem;
   font-style: italic;
-  font-weight: 400;
   color: #6c6c6c;
   padding-top: 1rem;
   text-align: center;
@@ -512,12 +510,11 @@ a:hover {
   width: 120%;
   height: auto;
   display: block;
+  border-radius: 0.3rem;
 }
 .objectives__caption {
-  font-family: "IBM Plex Mono";
   font-size: 0.875rem;
   font-style: italic;
-  font-weight: 400;
   color: #6c6c6c;
   padding-top: 1rem;
   text-align: center;
@@ -554,7 +551,7 @@ a:hover {
   gap: 0rem;
 }
 .finaldesign__orange {
-  background-color: #87cdc2;
+  background-color: #fffaed;
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -575,6 +572,10 @@ a:hover {
 .finaldesign__img {
   width: 48%;
   max-width: 520px;
+  border-radius: 0.3rem;
+}
+.finaldesign__img1 {
+  width: 35%;
 }
 .finaldesign__img3 {
   /*     width: 80%;
@@ -600,8 +601,6 @@ a:hover {
 }
 .finaldesign__callouts_caption {
   margin-top: 6rem;
-  font-family: "IBM Plex Mono";
-  font-weight: 500;
   width: 40ch;
 }
 .finaldesign__gallery_container {
@@ -645,13 +644,11 @@ a:hover {
 
 .impact {
   margin: 2rem auto;
-  max-width: 1200px;
 }
 .impact__section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 4rem 0;
 }
 .impact__textWrapper {
   flex: 1;
@@ -663,8 +660,16 @@ a:hover {
 }
 .impact__body {
   font-size: 1rem;
-  line-height: 1.6;
-  margin-top: 0.8rem;
+  line-height: 1.5;
+  margin: 1.3rem 0;
+}
+.impact__bold {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #0c0c0c;
+  display: block;
+  line-height: 1rem;
+  padding-bottom: 0.5rem;
 }
 .impact__img {
   width: 120%;
@@ -672,12 +677,11 @@ a:hover {
   display: block;
 }
 .impact__caption {
-  font-family: "IBM Plex Mono";
   font-style: italic;
-  font-weight: 500;
   font-size: 0.875rem;
   padding-top: 1rem;
   text-align: center;
+  padding-top: 1rem;
 }
 .impact__imgWrapper {
   flex: 1;
@@ -687,9 +691,23 @@ a:hover {
   .impact__section {
     flex-direction: row;
     align-items: flex-start;
+    padding: 4rem 0;
+  }
+  .impact__textWrapper1 {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    overflow-x: auto;
+    align-items: end;
   }
   .impact__body {
-    width: 50ch;
+    flex: 1;
+    min-width: 0;
+  }
+  .impact__bold {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    padding-bottom: 1rem;
   }
 }
 
