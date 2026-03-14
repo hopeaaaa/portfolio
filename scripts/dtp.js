@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const slider = document.querySelector(".slider-input");
-  const topImg = document.querySelector(".slider-img--top");
+  const topWrap = document.querySelector(".slider-img-wrap--top");
   const divider = document.querySelector(".slider-divider");
   const panels = document.querySelectorAll(".slider-text__panel");
 
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const value = slider.value;
 
     // clip instead of resize — keeps image same size
-    topImg.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
+    topWrap.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
 
     // move divider
     divider.style.left = value + "%";

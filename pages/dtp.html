@@ -266,23 +266,16 @@
       <div class="slider-section">
         <div class="slider-wrapper">
           <div class="slider-container">
-            <img src="../assets/images/ubc/Concept Prototype.png" class="slider-img slider-img--bottom" alt="">
-            <img src="../assets/images/ubc/OSCAR-constrained Prototype.png" class="slider-img slider-img--top" alt="">
-            <input type="range" id="image-slider" aria-label="Compare OSCAR-constrained and Concept prototypes"
-              aria-describedby="slider-description" min="0" max="100" value="50" class="slider-input">
+            <div class="slider-img-wrap slider-img-wrap--bottom">
+              <img src="../assets/images/ubc/Concept Prototype.png" class="slider-img" alt="">
+            </div>
+            <div class="slider-img-wrap slider-img-wrap--top">
+              <img src="../assets/images/ubc/OSCAR-constrained Prototype.png" class="slider-img" alt="">
+            </div>
+            <input aria-label="Slideshow" type="range" id="image-slider" min="0" max="100" value="50"
+              class="slider-input">
             <div class="slider-divider">
               <div class="slider-handle"></div>
-            </div>
-          </div>
-          <div class="slider-text">
-            <div class="slider-text__panel visible">
-              <p class="slider-text__label">Concept Prototype</p>
-              <p class="slider-text__body">Extends the live version with a refined visual system and expanded
-                functionality unconstrained by OSCAR</p>
-            </div>
-            <div class="slider-text__panel ">
-              <p class="slider-text__label">OSCAR-constrained Prototype</p>
-              <p class="slider-text__body">Live and integrated within the clinic</p>
             </div>
           </div>
         </div>
@@ -291,8 +284,10 @@
       <div class="design-detail">
         <div class="design-detail__textWrapper">
           <p class="design-detail__subtitle">OSCAR-constrained Prototype</p>
-          <p>Arial, native HTML controls, OSCAR's native visual system, timeline feature deferred
+          <p class="design-detail__body">Arial, native HTML controls, OSCAR's native visual system, timeline feature
+            deferred
             pending chart library approval.</p>
+          <p class="design-detail__body">Live and integrated within the clinic.</p>
         </div>
         <img class="design-detail__img-long" src="../assets/images/ubc/OSCAR-constrained prototype half screen.png"
           alt="">
@@ -300,15 +295,19 @@
       <div class="design-detail">
         <div class="design-detail__textWrapper">
           <p class="design-detail__subtitle">Concept Prototype</p>
-          <p>IBM Plex Sans, custom-styled components, animated modals, SVG timeline view, and
+          <p class="design-detail__body">IBM Plex Sans, custom-styled components, animated modals, SVG timeline
+            view, and
             algorithmic filtering.</p>
+          <p class="design-detail__body">Builds on the live version with improved visuals and added functionality
+            unconstrained by OSCAR.</p>
         </div>
         <img class="design-detail__img-long" src="../assets/images/ubc/Concept Prototype half screen.png" alt="">
       </div>
       <div class="design-detail">
         <div class="design-detail__textWrapper">
           <p class="design-detail__subtitle">Both Prototypes</p>
-          <p>Information architecture, status semantics, field structure, workflow logic, and clinical
+          <p class="design-detail__body">Information architecture, status semantics, field structure, workflow logic,
+            and clinical
             reasoning.</p>
         </div>
         <img class="design-detail__img" src="../assets/images/ubc/OSCAR constrained scannability.png" alt="">
@@ -325,7 +324,7 @@
               <p class="design-detail__body">In clinical practice, why a medication was prescribed and why a patient
                 remains on
                 it or how they
-                experience it over time are two different things and both matter. This form captures both.
+                experienced it over time are two different things and both matter. This form captures both.
               </p>
               <ul class="design-detail__list">
                 <li class="design-detail__list-item">
@@ -335,8 +334,8 @@
                 </li>
                 <li class="design-detail__list-item">
                   Notes field for
-                  <span class="accordion__highlight">patient reported context </span>
-                  and observations.
+                  <span class="accordion__highlight">patient reported context,</span>
+                  longitudinal experience, and observations.
                 </li>
               </ul>
             </div>
@@ -345,18 +344,21 @@
             <img class="design-detail__img2" src="../assets/images/ubc/OSCAR-constrained-form-update cropped.png"
               alt="">
             <div class="design-detail__textWrapper">
-              <p class="design-detail__subtitle">Support consistency while allowing customization.</p>
-              <p class="design-detail__body">The forms provide a shared language for the clinical team, while
-                giving clinicians the space to document in their own words. In short, <span
-                  class="accordion__highlight">both structure and
-                  flexibility.</span>
+              <p class="design-detail__subtitle">Support consistency while allowing customization</p>
+              <p class="design-detail__body">Research revealed highly inconsistent DTP records across the clinic because
+                each
+                clinician had developed their own documentation approach. This form provides a <span
+                  class="accordion__highlight">shared structure</span> for the
+                team, while the notes fields gives each clinician space to document <span
+                  class="accordion__highlight">in
+                  their own words.</span>
               </p>
             </div>
           </div>
           <div class="design-detail">
             <img class="design-detail__img3" src="../assets/images/ubc/OSCAR-constrained-dashboard-update.png" alt="">
             <div class="design-detail__textWrapper">
-              <p class="design-detail__subtitle">Fit into existing workflows with minimal friction.</p>
+              <p class="design-detail__subtitle">Fit into existing workflows with minimal friction</p>
               <p class="design-detail__body">Built within OSCAR's native interface. View
                 <a href="../assets/pdfs/Design System & Component Reference Guide.pdf">
                   <span class="accordion__highlight">The Design System & Component
@@ -369,6 +371,27 @@
       </div>
       <div class="conceptprototype">
         <h3 class="finaldesign__title">Concept Prototype</h3>
+        <img class="design-detail__img4" src="../assets/images/ubc/Concept Prototype Mockup.jpg" alt="">
+        <div class="design-detail__megaWrapper2">
+          <div class="design-detail2">
+            <div class="design-detail__textWrapper2">
+              <p class="design-detail__subtitle">Summary Widgets</p>
+              <p class="design-detail__body">Provides an overview of issue statuses, reinforces what each status means,
+                and guides clinicians towards where their attention is needed most.
+              </p>
+            </div>
+            <img class="design-detail__img2" src="../assets/images/ubc/Concept Prototype Summary Widgets.png" alt="">
+          </div>
+          <div class="design-detail2">
+            <div class="design-detail__textWrapper2">
+              <p class="design-detail__subtitle">Timeline View</p>
+              <p class="design-detail__body">Visualizes the patterns and causal links between issues to support clinical
+                reasoning.
+              </p>
+            </div>
+            <img class="design-detail__img2" src="../assets/images/ubc/Concept Prototype Timeline View.png" alt="">
+          </div>
+        </div>
       </div>
     </section>
     <section class="impact">
@@ -391,9 +414,9 @@
         </div>
         <div class="impact__quoteWrapper">
           <blockquote class="impact__quote">
-            <p class="impact__title">"This is the kind of information people want to know and track."</p>
+            <p class="impact__title2">"This is the kind of information people want to know and track."</p>
           </blockquote>
-          <p>— Pharmacist, UBC
+          <p class="impact__body2">— Pharmacist, UBC
             Pharmacists Clinic, during usability testing</p>
         </div>
         <!--  <figure class="impact__imgWrapper">
@@ -408,7 +431,8 @@
   </main>
   <footer class="footer">
     <div class="footer__content">
-      <p class="footer__copyright">© 2025 design + code <!-- This site reflects ongoing exploration and growth. --></p>
+      <p class="footer__copyright">© 2025 design + code by me
+      </p>
       <button class="footer__topbtn" onclick="topFunction()" title="Up up to the top">↑ TOP</button>
       <p class="socials">
         <a href="https://github.com/hopeaaaa">github</a> /
