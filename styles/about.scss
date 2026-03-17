@@ -244,6 +244,18 @@ body {
     gap: 1rem;
     max-width: 60ch;
   }
+  &__img-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    padding-top: 2rem;
+  }
+  &__img {
+    height: 200px;
+    width: auto;
+    border-radius: 0.3rem;
+  }
 
   @include tablet {
     max-width: 1200px;

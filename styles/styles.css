@@ -187,14 +187,17 @@ body {
   background-color: #feea00;
   padding: 0.2rem;
   cursor: pointer;
-}
-.header__cv-btn, .header__link {
   font-family: "IBM Plex Mono";
+  color: #0c0c0c;
 }
-.header__cv-btn:hover, .header__link:hover {
+.header__link {
+  font-family: "IBM Plex Mono";
+  color: #0c0c0c;
+}
+.header__link:hover {
   color: #c44d00;
 }
-.header__cv-btn.active, .header__link.active {
+.header__link.active {
   color: #c44d00;
 }
 .header__wordmark:hover {

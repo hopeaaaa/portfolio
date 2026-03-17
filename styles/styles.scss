@@ -42,11 +42,13 @@ body {
     background-color: #feea00;
     padding: 0.2rem;
     cursor: pointer;
+    font-family: $font-fourth;
+    color: $black;
   }
 
-  &__cv-btn,
   &__link {
     font-family: $font-fourth;
+    color: $black;
     &:hover {
       color: $orange;
     }

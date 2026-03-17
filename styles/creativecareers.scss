@@ -18,11 +18,6 @@ body {
   box-sizing: border-box;
 }
 
-a:hover {
-  color: $orange;
-  font-style: italic;
-}
-
 .lightbox {
   display: none;
   position: fixed;
@@ -69,9 +64,7 @@ a:hover {
   border-radius: 10px; /* Rounded corners */
   font-size: 18px; /* Increase font size */
 }
-
 #myBtn:hover {
-  /*   background-color: #555; */
   opacity: 100%;
 }
 
@@ -106,9 +99,10 @@ a:hover {
     background-color: #feea00;
     padding: 0.2rem;
     cursor: pointer;
+    font-family: $font-fourth;
+    color: $black;
   }
 
-  &__cv-btn,
   &__link {
     font-family: $font-fourth;
     color: $black;
@@ -248,16 +242,18 @@ a:hover {
   }
 
   &__oneLiner {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     font-weight: 300;
     color: #646866;
     padding-bottom: 2rem;
   }
 
   &__img {
+    width: 100%;
+    height: auto;
     border-radius: 0.3rem;
     display: block;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 
   @media (min-width: 768px) {
@@ -270,6 +266,10 @@ a:hover {
     &__oneLiner {
       font-size: 1.75rem;
       width: 55ch;
+    }
+
+    &__img {
+      margin-bottom: 4rem;
     }
   }
 }
@@ -349,7 +349,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding-bottom: 2rem;
+    padding: 2rem 0;
   }
 
   &__textWrapper {
@@ -369,7 +369,7 @@ a:hover {
   }
 
   &__img {
-    width: 120%;
+    width: 100%;
     height: auto;
     display: block;
     border-radius: 0.3rem;
@@ -392,7 +392,11 @@ a:hover {
     &__section {
       flex-direction: row;
       align-items: flex-start;
-      padding-top: 4rem;
+      padding: 4rem 0;
+    }
+
+    &__img {
+      width: 120%;
     }
 
     &__body {
@@ -400,22 +404,17 @@ a:hover {
     }
   }
 }
+
 .objectives {
   &__section {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 4rem 0 4rem 0;
+    gap: 1rem;
+    padding: 2rem 0;
   }
 
   &__textWrapper {
     flex: 1;
-  }
-
-  &__title {
-    font-size: 1.75rem;
-    font-weight: 300;
-    color: $black;
   }
 
   &__body {
@@ -423,14 +422,6 @@ a:hover {
     line-height: 1.6;
     margin-top: 0.8rem;
   }
-
-  &__img {
-    width: 120%;
-    height: auto;
-    display: block;
-    border-radius: 0.3rem;
-  }
-
   &__caption {
     font-size: 0.875rem;
     font-style: italic;
@@ -439,15 +430,11 @@ a:hover {
     text-align: center;
   }
 
-  &__imgWrapper {
-    flex: 1;
-    overflow: visible;
-  }
-
   @media (min-width: 768px) {
     &__section {
       flex-direction: row;
       align-items: flex-start;
+      padding: 0 0 4rem 0;
     }
 
     &__body {
@@ -466,13 +453,12 @@ a:hover {
     font-size: 1.75rem;
     font-weight: 300;
     color: $black;
-    padding-bottom: 2rem;
   }
 
   &__section {
     display: flex;
     flex-direction: column;
-    gap: 0rem;
+    gap: 0;
   }
 
   &__orange {
@@ -480,77 +466,84 @@ a:hover {
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
-    padding: 4rem 0;
   }
 
   &__imgcontainer1 {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    gap: 1.5rem;
   }
+
+  &__imgcontainer1,
   &__imgcontainer2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2rem 1rem 2rem 2rem;
   }
 
   &__img {
-    width: 48%;
-    max-width: 520px;
+    width: 100%;
+    max-width: 550px;
     border-radius: 0.3rem;
   }
+
   &__img1 {
-    width: 35%;
+    width: 100%;
+    max-width: 550px;
   }
+
+  &__img2 {
+    width: 100%;
+    max-width: 320px;
+  }
+
   &__img3 {
-    /*     width: 80%;
-    max-width: 600px; */
+    width: 100%;
     max-width: 900px;
   }
 
   &__noorange {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 2rem;
-    padding: 4rem;
+    padding: 2rem 1rem;
   }
+
   &__noorange2 {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 4rem;
+    padding: 2rem 1rem;
   }
 
   &__callouts_container {
     display: flex;
-    gap: 10rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
   }
 
   &__callouts_caption {
-    margin-top: 6rem;
-    width: 40ch;
+    width: 100%;
+    text-align: center;
   }
 
   &__gallery_container {
     position: relative;
     width: 100%;
     max-width: 1200px;
-    height: 80vh;
+    height: 30vh;
     overflow: hidden;
+    border-radius: 0.3rem;
   }
 
   &__gallery_img {
     position: absolute;
     inset: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: contain;
     opacity: 0;
     transition: opacity 0.3s ease;
-    padding-top: 2rem;
   }
 
   &__gallery_img.is-active {
@@ -561,7 +554,7 @@ a:hover {
     display: flex;
     justify-content: center;
     gap: 0.75rem;
-    margin-top: 1rem;
+    padding-top: 1rem;
   }
 
   .dot {
@@ -576,10 +569,63 @@ a:hover {
   .dot.is-active {
     background: $orange;
   }
+
+  @media (min-width: 768px) {
+    margin-top: 4rem;
+
+    &__imgcontainer1 {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 4rem;
+    }
+
+    &__imgcontainer2 {
+      padding: 4rem;
+    }
+
+    &__img {
+      width: 50%;
+    }
+
+    &__img1 {
+      width: 35%;
+      max-width: none;
+    }
+
+    &__img2 {
+      width: 30%;
+      max-width: none;
+    }
+
+    &__noorange {
+      padding: 4rem 0;
+    }
+
+    &__noorange2 {
+      padding: 4rem;
+    }
+
+    &__callouts_container {
+      flex-direction: row;
+      justify-content: center;
+      gap: 10rem;
+    }
+
+    &__callouts_caption {
+      width: 40ch;
+      text-align: left;
+      margin-top: 6rem;
+    }
+
+    &__gallery_container {
+      height: 80vh;
+    }
+  }
 }
 
 .impact {
   margin: 2rem auto;
+  padding: 2rem 0;
 
   &__section {
     display: flex;
@@ -631,6 +677,7 @@ a:hover {
   }
 
   @media (min-width: 768px) {
+    padding-top: 2rem;
     &__section {
       flex-direction: row;
       align-items: flex-start;

@@ -6,7 +6,7 @@
 
 body {
   font-family: $font-third;
-  font-weight: 400;
+  font-weight: 300;
   background-color: $bg-color;
   color: #767676;
   overflow-x: hidden;
@@ -234,7 +234,7 @@ a:hover {
 
   &__img {
     border-radius: 0.3rem;
-    padding-bottom: 4rem;
+    margin-bottom: 4rem;
   }
 
   @media (min-width: 768px) {
@@ -283,7 +283,6 @@ a:hover {
 
   &__body {
     font-size: 1rem;
-    font-weight: 400;
     margin-bottom: 1.5rem;
     line-height: 1.6;
   }
@@ -321,7 +320,6 @@ a:hover {
     }
   }
 }
-
 .context {
   &__section {
     display: flex;
@@ -354,10 +352,8 @@ a:hover {
   }
 
   &__caption {
-    font-family: $font-fourth;
     font-size: 0.875rem;
     font-style: italic;
-    font-weight: 400;
     color: #6c6c6c;
     padding-top: 1rem;
     text-align: center;
@@ -373,10 +369,6 @@ a:hover {
       flex-direction: row;
       align-items: flex-start;
       padding-top: 4rem;
-    }
-
-    &__body {
-      font-weight: 350;
     }
   }
 }
@@ -404,23 +396,17 @@ a:hover {
     margin-top: 0.8rem;
   }
 
-  /*   &__img {
-    width: 120%;
-    height: auto;
-    display: block;
+  &__list {
+    padding: 1rem 0 0 1rem;
   }
+  &__li {
+    list-style-type: square;
+    line-height: 1.6rem;
 
-  &__caption {
-    font-family: $font-fourth;
-    font-size: 0.875rem;
-    font-style: italic;
-    padding-top: 1rem;
+    &::marker {
+      color: $orange;
+    }
   }
-
-  &__imgWrapper {
-    flex: 1;
-    overflow: visible;
-  } */
 
   @media (min-width: 768px) {
     &__section {
@@ -433,7 +419,61 @@ a:hover {
     }
   }
 }
+.challenges {
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
 
+  &__textWrapper {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: $black;
+  }
+
+  &__body {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 0.8rem;
+  }
+
+  &__img {
+    width: 800px;
+    height: auto;
+    display: block;
+    border-radius: 0.3rem;
+  }
+
+  &__caption {
+    font-size: 0.875rem;
+    font-style: italic;
+    color: #6c6c6c;
+    padding-top: 1rem;
+    text-align: center;
+  }
+
+  &__imgWrapper {
+    flex: 1;
+    overflow: visible;
+  }
+
+  @media (min-width: 768px) {
+    &__section {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    &__body {
+      font-weight: 350;
+    }
+  }
+}
 //Approach
 .process {
   &__section {
@@ -441,17 +481,38 @@ a:hover {
     flex-direction: column;
     padding-bottom: 2rem;
   }
+  &__wrapper {
+    display: flex;
+    padding: 2rem 0;
+  }
   &__title {
     font-size: 1.75rem;
     font-weight: 300;
     color: $black;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
+  }
+  &__subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: $grey;
+  }
+  &__text_container {
+    max-width: 67ch;
+    text-align: left;
+    padding-top: 5rem;
+  }
+  &__li {
+    line-height: 1.6;
+    list-style-type: square;
+  }
+  &__list {
+    padding: 0 2rem 1rem 2rem;
   }
 
   &__body {
     font-size: 1rem;
     line-height: 1.6;
-    margin-top: 0.8rem;
+    margin-top: 0.5rem;
   }
 
   &__img {
@@ -462,8 +523,6 @@ a:hover {
   }
 
   &__caption {
-    font-family: $font-fourth;
-    font-weight: 500;
     font-size: 0.875rem;
     font-style: italic;
     padding-top: 1rem;

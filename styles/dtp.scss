@@ -18,11 +18,6 @@ body {
   box-sizing: border-box;
 }
 
-a:hover {
-  color: $orange;
-  font-style: italic;
-}
-
 .lightbox {
   display: none;
   position: fixed;
@@ -84,9 +79,10 @@ a:hover {
     background-color: #feea00;
     padding: 0.2rem;
     cursor: pointer;
+    font-family: $font-fourth;
+    color: $black;
   }
 
-  &__cv-btn,
   &__link {
     font-family: $font-fourth;
     color: $black;
@@ -209,7 +205,6 @@ a:hover {
     }
   }
 }
-
 .hero {
   margin: 0 auto;
   padding: 2rem;
@@ -226,16 +221,18 @@ a:hover {
   }
 
   &__oneLiner {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     font-weight: 300;
     color: #646866;
     padding-bottom: 2rem;
   }
 
   &__img {
+    width: 100%;
+    height: auto;
     border-radius: 0.3rem;
     display: block;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 
   @media (min-width: 768px) {
@@ -249,9 +246,12 @@ a:hover {
       font-size: 1.75rem;
       width: 55ch;
     }
+
+    &__img {
+      margin-bottom: 4rem;
+    }
   }
 }
-
 .overview {
   &__section {
     margin: 2rem auto;
@@ -321,13 +321,12 @@ a:hover {
     }
   }
 }
-
 .context {
   &__section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding-bottom: 2rem;
+    padding: 2rem 0;
   }
 
   &__textWrapper {
@@ -347,7 +346,7 @@ a:hover {
   }
 
   &__img {
-    width: 120%;
+    width: 100%;
     height: auto;
     display: block;
     border-radius: 0.3rem;
@@ -370,7 +369,11 @@ a:hover {
     &__section {
       flex-direction: row;
       align-items: flex-start;
-      padding-top: 4rem;
+      padding: 4rem 0;
+    }
+
+    &__img {
+      width: 120%;
     }
 
     &__body {
@@ -382,18 +385,12 @@ a:hover {
   &__section {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 0 0 4rem 0;
+    gap: 1rem;
+    padding: 2rem 0;
   }
 
   &__textWrapper {
     flex: 1;
-  }
-
-  &__title {
-    font-size: 1.75rem;
-    font-weight: 300;
-    color: $black;
   }
 
   &__body {
@@ -406,6 +403,7 @@ a:hover {
     &__section {
       flex-direction: row;
       align-items: flex-start;
+      padding: 0 0 4rem 0;
     }
 
     &__body {
@@ -454,23 +452,15 @@ a:hover {
 }
 
 .accordion {
-  //PROJECT WRAPPER DIV
   &__item {
     border-bottom: 2px solid #ccc;
-
-    /*  &:hover {
-         border: 4px solid $orange;
-        background-color: $orange; 
-    } */
   }
 
-  //USER SHADOWING, INTERVIEWS, ETC.
   &__label {
     display: flex;
     align-items: center;
   }
 
-  // BUTTON
   &__trigger {
     background: none;
     border: none;
@@ -479,13 +469,12 @@ a:hover {
     padding: 1rem;
     display: flex;
     gap: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     cursor: pointer;
     transition: color 0.2s ease;
 
     &:hover {
-      /*   color: #f2f2f2; */
-      background-color: /* #383838 */ /*  #767676 */ #e9e9e9;
+      background-color: #e9e9e9;
     }
 
     &[aria-expanded="true"] {
@@ -494,18 +483,18 @@ a:hover {
         transform: rotate(45deg);
       }
     }
+
     &:focus-visible {
       outline: 2px solid #000;
       outline-offset: 2px;
     }
   }
 
-  // +
   &__icon {
+    flex-shrink: 0;
     transition: transform 0.3s ease;
   }
 
-  //LINE
   &__line {
     stroke: currentColor;
     stroke-width: 1.3;
@@ -513,29 +502,21 @@ a:hover {
     transform-origin: center;
   }
 
-  //ALL PROJECTS
   &__content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
   }
 
-  &__feature-inner {
-    padding-bottom: 1.5rem;
-  }
-
+  &__insights-layout,
   &__layout {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 0;
   }
-
-  &__insights-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 0 3.5rem;
+  &__spacer {
+    padding-top: 2rem;
   }
 
   &__text_container {
@@ -568,7 +549,7 @@ a:hover {
   &__li--insights {
     line-height: 1.6;
     list-style-type: disc;
-    padding-bottom: 3rem;
+    padding-bottom: 1.5rem;
   }
 
   &__principles {
@@ -586,7 +567,7 @@ a:hover {
   }
 
   &__list {
-    padding: 0 2rem 1rem 2rem;
+    padding: 0 1rem 1rem 1.5rem;
   }
 
   &__img {
@@ -594,6 +575,7 @@ a:hover {
     max-width: 26.25rem;
     height: auto;
     border-radius: 0.3rem;
+    align-self: center;
   }
 
   &__img--large {
@@ -604,10 +586,13 @@ a:hover {
   }
 
   @media (min-width: 768px) {
+    &__trigger {
+      font-size: 1.25rem;
+    }
+
     &__layout {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
-      gap: 3rem;
       padding: 0.5rem 3rem 2rem 3.5rem;
       align-items: stretch;
     }
@@ -615,8 +600,7 @@ a:hover {
     &__insights-layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      padding-top: 2rem;
+      /*      padding-top: 2rem; */
     }
 
     &__text_container {
@@ -631,88 +615,65 @@ a:hover {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      align-self: auto;
     }
+    &__img--large {
+      display: block;
+      margin: 0 auto;
+      grid-column: 1 / -1;
+    }
+    &__insights-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      /*       padding: 2rem 3.5rem; */
+    }
+    &__spacer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
     &__body--aside {
-      /*   grid-column: 1/-1;
-      grid-row: 2;
-      justify-self: center; */
       max-width: 50ch;
       text-align: left;
     }
+
+    &__body--heuristic_eval {
+      max-width: 100%;
+      width: 85ch;
+    }
+
+    &__li--insights {
+      padding-bottom: 3rem;
+    }
+
+    &__list {
+      padding: 0 2rem 1rem 2rem;
+    }
+
     &__content--feature {
       .accordion__text_container {
-        max-width: 90ch;
-        padding: 0 3rem 2rem 3.5rem;
-      }
-      .accordion__feature-inner {
-        padding-top: 2rem;
+        max-width: 100ch;
       }
     }
   }
 }
-
 .finaldesign {
-  padding-top: 4rem;
+  padding-top: 2rem;
   margin: 0 auto;
 
   &__title {
     font-size: 1.75rem;
     font-weight: 300;
     color: $black;
+    padding-bottom: 0.25rem;
   }
 
   &__subtitle {
     font-size: 1.125rem;
-    padding-bottom: 1rem;
-  }
-
-  &__body {
-    font-size: 0.875rem;
-    color: $bg-color;
-    width: 30ch;
-  }
-
-  &__textWrapper {
-    white-space: normal;
-    width: 45ch;
-    flex-shrink: 0;
-  }
-
-  &__orange {
-    background-color: #c4cce3;
-    /*     background-color: $orange;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    padding: 4rem 0; */
-  }
-
-  &__gallery_container {
-    display: flex;
-    flex-direction: column;
-    /*     display: flex;
-    flex-direction: column;
-        overflow-x: auto;
-    white-space: nowrap;
-    height: 80vh;
-    scroll-behavior: smooth;
-    gap: 2rem;
-    padding: 2rem;
-    &::-webkit-scrollbar {
-      display: none;
-    } */
-  }
-  &__gallery_img {
-    height: 100%;
-    scroll-snap-align: start;
-    object-fit: contain;
-    width: 70vw;
-  }
-  @media (min-width: 768px) {
-    &__gallery_container {
-      flex-direction: row;
-      align-items: center;
-    }
+    padding-bottom: 1.5rem;
+    color: #767676;
   }
 }
 
@@ -720,26 +681,35 @@ a:hover {
   background-color: #c4cce3;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
   align-items: center;
-  padding: 4rem;
+  padding: 2rem 1rem;
   border-radius: 0.3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
+
+  @media (min-width: 768px) {
+    padding: 4rem;
+    margin-bottom: 6rem;
+  }
 }
+
 .slider-wrapper {
   display: flex;
   justify-content: center;
-  align-content: center;
   align-items: center;
   gap: 1.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  width: 100%;
 }
+
 .slider-container {
   position: relative;
-  width: 70vw;
+  width: 90vw;
   cursor: ew-resize;
-  aspect-ratio: 785/390;
+  aspect-ratio: 785 / 390;
+
+  @media (min-width: 768px) {
+    width: 70vw;
+  }
 
   .slider-img {
     width: 100%;
@@ -749,6 +719,7 @@ a:hover {
     pointer-events: none;
     position: absolute;
   }
+
   .slider-img-wrap {
     position: absolute;
     inset: 0;
@@ -759,6 +730,7 @@ a:hover {
       clip-path: inset(0 50% 0 0);
     }
   }
+
   .slider-divider {
     position: absolute;
     top: 0;
@@ -822,89 +794,67 @@ a:hover {
     }
   }
 }
+
 .slider-text {
-  position: relative;
-  margin-top: 1.5rem;
-  min-height: 3rem;
-  padding: 2rem;
-
-  &__panel {
-    opacity: 0;
-    transform: translateY(6px);
-    transition:
-      opacity 0.3s ease,
-      transform 0.3s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-
-    &.visible {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
-      position: relative;
-    }
-  }
-
-  &__label {
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
-    color: $black;
-  }
-
   &__body {
     font-size: 0.875rem;
     color: $grey;
-    max-width: 50ch;
-  }
-
-  &__instruction {
-    padding-bottom: 2rem;
     font-style: italic;
+    margin-top: 0.5rem;
   }
 }
 
 .design-detail {
-  margin-bottom: 2rem;
   display: flex;
-  gap: 2rem;
-  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
 
   &__megaWrapper {
-    padding-top: 1rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
   }
+
   &__megaWrapper2 {
     padding-top: 1rem;
     display: flex;
-    gap: 4rem;
+    flex-direction: column;
+    gap: 2rem;
   }
 
   &__img-long {
-    width: 62vw;
+    width: 100%;
     border-radius: 0.3rem;
   }
+
   &__img {
-    width: 30vw;
+    width: 100%;
     border-radius: 0.3rem;
   }
+
   &__img2 {
-    width: 40vw;
+    width: 100%;
     border-radius: 0.3rem;
   }
+
   &__img3 {
-    width: 50vw;
+    width: 100%;
     border-radius: 0.3rem;
   }
+
   &__img4 {
-    width: 60vw;
+    width: 100%;
     border-radius: 0.3rem;
-    margin: 2rem auto 0;
+    margin: 2rem auto;
     display: block;
   }
+
   &__subtitle {
     font-size: 1.125rem;
     color: $black;
+    margin-bottom: 0.5rem;
   }
 
   &__body {
@@ -923,29 +873,75 @@ a:hover {
   &__list-item {
     line-height: 1.6;
     color: $grey;
-    /* margin-left: 2rem; */
   }
 
   &__textWrapper {
-    width: 55ch;
+    width: 100%;
   }
+
   &__textWrapper2 {
-    width: 55ch;
-    padding: 4rem 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+
+    &__megaWrapper2 {
+      flex-direction: row;
+      gap: 4rem;
+    }
+
+    &__img-long {
+      width: 52.5vw;
+    }
+
+    &__img {
+      width: 24.5vw;
+    }
+
+    &__img2 {
+      width: 40vw;
+    }
+
+    &__img3 {
+      width: 50vw;
+    }
+
+    &__img4 {
+      width: 60vw;
+    }
+
+    &__textWrapper {
+      width: 55ch;
+      flex-shrink: 0;
+    }
+
+    &__textWrapper2 {
+      width: 55ch;
+      padding: 4rem 0;
+      flex-shrink: 0;
+    }
   }
 }
 
 .design-detail2 {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
 }
 
 .research-to-design {
   padding-top: 4rem;
+  margin-top: 2rem;
 }
 
 .conceptprototype {
   padding-top: 4rem;
+  margin-top: 2rem;
 }
 
 .impact {
@@ -954,8 +950,8 @@ a:hover {
   &__section {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 4rem 0;
+    gap: 3rem;
+    padding: 3rem 0;
   }
 
   &__textWrapper {
@@ -966,11 +962,7 @@ a:hover {
     font-size: 1.75rem;
     font-weight: 300;
     color: $black;
-  }
-  &__title2 {
-    font-size: 1.75rem;
-    font-weight: 300;
-    color: #2f3d65;
+    margin-bottom: 1rem;
   }
 
   &__body {
@@ -978,25 +970,50 @@ a:hover {
     line-height: 1.6;
     margin-top: 0.8rem;
   }
-  &__body2 {
-    padding: 0 4rem;
-  }
 
   &__quoteWrapper {
-    width: 50ch;
-    border-left: 0.5rem solid #2f3d65;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #eef0f7;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    position: relative;
+
+    &::before {
+      content: "\201C";
+      font-size: 6rem;
+      line-height: 1;
+      color: #c4cce3;
+      font-family: Georgia, serif;
+      position: absolute;
+      top: -1rem;
+      left: 1.5rem;
+    }
   }
 
   &__quote {
-    margin: 10px auto;
-    padding: 4rem;
+    margin: 0;
+    padding: 1rem 0 0;
+  }
+
+  &__title2 {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #2f3d65;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  &__body2 {
+    font-size: 0.875rem;
+    color: #767676;
+    padding: 1rem 0 0;
     text-align: right;
-    /*  background-color: #ededed;
-    border-radius: 0.3rem; */
   }
 
   &__img {
-    width: 120%;
+    width: 100%;
     height: auto;
     display: block;
   }
@@ -1017,14 +1034,29 @@ a:hover {
     &__section {
       flex-direction: row;
       align-items: flex-start;
+      padding: 4rem 0;
+      gap: 6rem;
     }
 
     &__body {
       width: 50ch;
     }
+
+    &__quoteWrapper {
+      min-width: 30ch;
+      max-width: 40ch;
+      padding: 2.5rem 2rem 2rem;
+    }
+
+    &__title2 {
+      font-size: 1.375rem;
+    }
+
+    &__img {
+      width: 120%;
+    }
   }
 }
-
 .footer {
   padding: 0 2rem;
   font-family: $font-fourth;

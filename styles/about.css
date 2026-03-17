@@ -337,6 +337,18 @@ body {
   gap: 1rem;
   max-width: 60ch;
 }
+.hero__img-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.hero__img {
+  height: 200px;
+  width: auto;
+  border-radius: 0.3rem;
+}
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 1200px;

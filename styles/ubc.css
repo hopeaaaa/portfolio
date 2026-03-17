@@ -153,7 +153,7 @@ a {
 }
 body {
   font-family: "Lexend";
-  font-weight: 400;
+  font-weight: 300;
   background-color: #fffaed;
   color: #767676;
   overflow-x: hidden;
@@ -344,7 +344,7 @@ a:hover {
 }
 .hero__img {
   border-radius: 0.3rem;
-  padding-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 @media (min-width: 768px) {
   .hero {
@@ -385,7 +385,6 @@ a:hover {
 }
 .overview__body {
   font-size: 1rem;
-  font-weight: 400;
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
@@ -444,10 +443,8 @@ a:hover {
   border-radius: 0.3rem;
 }
 .context__caption {
-  font-family: "IBM Plex Mono";
   font-size: 0.875rem;
   font-style: italic;
-  font-weight: 400;
   color: #6c6c6c;
   padding-top: 1rem;
   text-align: center;
@@ -461,9 +458,6 @@ a:hover {
     flex-direction: row;
     align-items: flex-start;
     padding-top: 4rem;
-  }
-  .context__body {
-    font-weight: 350;
   }
 }
 
@@ -486,24 +480,15 @@ a:hover {
   line-height: 1.6;
   margin-top: 0.8rem;
 }
-.objectives {
-  /*   &__img {
-    width: 120%;
-    height: auto;
-    display: block;
-  }
-
-  &__caption {
-    font-family: $font-fourth;
-    font-size: 0.875rem;
-    font-style: italic;
-    padding-top: 1rem;
-  }
-
-  &__imgWrapper {
-    flex: 1;
-    overflow: visible;
-  } */
+.objectives__list {
+  padding: 1rem 0 0 1rem;
+}
+.objectives__li {
+  list-style-type: square;
+  line-height: 1.6rem;
+}
+.objectives__li::marker {
+  color: #c44d00;
 }
 @media (min-width: 768px) {
   .objectives__section {
@@ -515,21 +500,88 @@ a:hover {
   }
 }
 
+.challenges__section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+.challenges__textWrapper {
+  flex: 1;
+}
+.challenges__title {
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: #0c0c0c;
+}
+.challenges__body {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 0.8rem;
+}
+.challenges__img {
+  width: 800px;
+  height: auto;
+  display: block;
+  border-radius: 0.3rem;
+}
+.challenges__caption {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: #6c6c6c;
+  padding-top: 1rem;
+  text-align: center;
+}
+.challenges__imgWrapper {
+  flex: 1;
+  overflow: visible;
+}
+@media (min-width: 768px) {
+  .challenges__section {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .challenges__body {
+    font-weight: 350;
+  }
+}
+
 .process__section {
   display: flex;
   flex-direction: column;
   padding-bottom: 2rem;
 }
+.process__wrapper {
+  display: flex;
+  padding: 2rem 0;
+}
 .process__title {
   font-size: 1.75rem;
   font-weight: 300;
   color: #0c0c0c;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
+}
+.process__subtitle {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #555;
+}
+.process__text_container {
+  max-width: 67ch;
+  text-align: left;
+  padding-top: 5rem;
+}
+.process__li {
+  line-height: 1.6;
+  list-style-type: square;
+}
+.process__list {
+  padding: 0 2rem 1rem 2rem;
 }
 .process__body {
   font-size: 1rem;
   line-height: 1.6;
-  margin-top: 0.8rem;
+  margin-top: 0.5rem;
 }
 .process__img {
   width: 120%;
@@ -538,8 +590,6 @@ a:hover {
   border-radius: 0.3rem;
 }
 .process__caption {
-  font-family: "IBM Plex Mono";
-  font-weight: 500;
   font-size: 0.875rem;
   font-style: italic;
   padding-top: 1rem;
