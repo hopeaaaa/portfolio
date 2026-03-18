@@ -533,6 +533,13 @@ body {
 
   &__highlight {
     color: $black;
+    &--link {
+      color: $black;
+      &:hover {
+        font-style: italic;
+        color: $orange;
+      }
+    }
   }
 
   &__body {
@@ -688,7 +695,7 @@ body {
 
   @media (min-width: 768px) {
     padding: 4rem;
-    margin-bottom: 6rem;
+    /*     margin-bottom: 6rem; */
   }
 }
 
@@ -811,10 +818,9 @@ body {
   margin-bottom: 3rem;
 
   &__megaWrapper {
-    padding-top: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    /*     gap: 3rem; */
   }
 
   &__megaWrapper2 {
@@ -846,6 +852,9 @@ body {
 
   &__img4 {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
     border-radius: 0.3rem;
     margin: 2rem auto;
     display: block;
@@ -912,7 +921,9 @@ body {
     }
 
     &__img4 {
-      width: 60vw;
+      width: 100vw;
+      height: 630px;
+      margin-bottom: 4rem;
     }
 
     &__textWrapper {
@@ -999,7 +1010,7 @@ body {
 
   &__title2 {
     font-size: 1.25rem;
-    font-weight: 300;
+    font-weight: 350;
     color: #2f3d65;
     line-height: 1.5;
     font-style: italic;
@@ -1041,7 +1052,10 @@ body {
     &__body {
       width: 50ch;
     }
-
+    &__megaWrapper {
+      display: flex;
+      flex-direction: column;
+    }
     &__quoteWrapper {
       min-width: 30ch;
       max-width: 40ch;
