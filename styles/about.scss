@@ -255,6 +255,15 @@ body {
     height: 200px;
     width: auto;
     border-radius: 0.3rem;
+    &--1 {
+      transform: rotate(-3deg);
+    }
+    &--2 {
+      transform: rotate(1deg);
+    }
+    &--3 {
+      transform: rotate(3deg);
+    }
   }
 
   @include tablet {

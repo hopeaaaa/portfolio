@@ -349,6 +349,15 @@ body {
   width: auto;
   border-radius: 0.3rem;
 }
+.hero__img--1 {
+  transform: rotate(-3deg);
+}
+.hero__img--2 {
+  transform: rotate(1deg);
+}
+.hero__img--3 {
+  transform: rotate(3deg);
+}
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 1200px;

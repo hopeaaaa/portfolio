@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../styles/ubc.css" />
   <link rel="icon" type="image/x-icon" href="../assets/images/about/favicon.svg" />
   <script defer src="../scripts/accordion.js"></script>
+  <script defer src="../scripts/ubc.js"></script>
 </head>
 
 <body>
@@ -24,7 +25,7 @@
   </header>
   <main class="hero">
     <section class="hero__section">
-      <img src="../assets/images/ubc/MACs hero.png" alt="MACs appointment service blueprint" class="hero__img" />
+      <img src="../assets/images/ubc/MAC hero.png" alt="MACs appointment service blueprint" class="hero__img" />
       <h1 class="hero__title">UBC Pharmacists Clinic</h1>
       <p class="hero__oneLiner">
         Designing services and interfaces to support patient-centered care.
@@ -50,9 +51,9 @@
           <p class="overview__body">
             Appointment Booking Process <br>
             Appointment Booking Portal <br>
+            Patient Communication (Graphics, UX Writing) <br>
             Billing Process <br>
             Website <br>
-            Operational Documentation (vendor evaluation, workflow maps, audits with recommendations)
           </p>
         </div>
         <div class="overview__container">
@@ -64,7 +65,7 @@
         <div class="overview__container">
           <h3 class="overview__title">TIMEFRAME</h3>
           <p class="overview__body">
-            2.5 month
+            3 months
           </p>
         </div>
       </div>
@@ -79,7 +80,7 @@
         </p>
         <p class="context__body">In 2023, a provincial initiative enabled pharmacists in British Columbia to prescribe
           medications for 21 minor
-          ailments and contraceptives (MAC). For the clinic, this meant
+          ailments and contraceptives (MACs). For the clinic, this meant
           rethinking workflows across every level: how patients accessed care, how intake data was
           collected, how clinicians documented and billed, and how staff coordinated across systems. All of this had to
           happen without disrupting care for existing patients.</p>
@@ -89,7 +90,51 @@
         <figcaption class="context__caption">The front desk of the UBC Pharmacists Clinic</figcaption>
       </figure>
     </section>
-    <!--  <section class="objectives__section">
+    <section class="problem__section">
+      <div class="problem__textWrapper">
+        <h3 class="problem__title">Problem</h3>
+        <p class="problem__body--big">A new provincial policy allowed pharmacists to treat minor ailments and
+          contraceptives (MAC), but the
+          clinic had <span class="problem__highlight">no infrastructure for:</span>
+        </p>
+        <div class="problem__wrapper">
+          <div class="problem__problem-container">
+            <div class="problem__icon-container">
+              <img class="problem__icon" src="../assets/images/ubc/booking icon.svg"
+                alt="black outline illustration of a calendar">
+            </div>
+            <p class="problem__body--black">Booking</p>
+            <p class="problem__body--small">How patients book appts for MAC services</p>
+          </div>
+          <div class="problem__problem-container">
+            <div class="problem__icon-container">
+              <img class="problem__icon" src="../assets/images/ubc/billing icon.svg"
+                alt="black outline illustration of a calendar">
+            </div>
+            <p class="problem__body--black">Billing</p>
+            <p class="problem__body--small">How the clinic bills the government for MAC services</p>
+          </div>
+          <div class="problem__problem-container">
+            <div class="problem__icon-container">
+              <img class="problem__icon" src="../assets/images/ubc/workflow icon.svg"
+                alt="black outline illustration of a calendar">
+            </div>
+            <p class="problem__body--black">Admin Workflow</p>
+            <p class="problem__body--small">How the clinicians and office assistants work together to treat more
+              patients</p>
+          </div>
+          <div class="problem__problem-container">
+            <div class="problem__icon-container">
+              <img class="problem__icon" src="../assets/images/ubc/website icon.svg"
+                alt="black outline illustration of a calendar">
+            </div>
+            <p class="problem__body--black">Patient Communication</p>
+            <p class="problem__body--small">How patients discover the new service offering</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="objectives__section">
       <div class="objectives__textWrapper">
         <h3 class="context__title">Objectives</h3>
         <div class="objectives__wrapper">
@@ -100,122 +145,259 @@
           </ul>
         </div>
       </div>
-    </section> -->
-    <section class="challenges__section">
-      <figure class="challenges__imgWrapper">
-        <img src="../assets/images/ubc/MACs challenges diagram.png" alt="" class="challenges__img">
-        <figcaption class="challenges__caption">Overview of the MAC services challenges</figcaption>
-      </figure>
-      <!-- <div class="challenges__textWrapper">
-        <h3 class="challenges__title">Challenges</h3>
-        <p class="challenges__body">The new provincial policy allowed pharmacists to treat minor ailments, but the
-          clinic had no infrastructure for:
-        </p>
-        <ul class="objectives__list">
-          <li class="objectives__li">booking</li>
-          <li class="objectives__li">billing</li>
-          <li class="objectives__li">patient preparation</li>
-          <li class="objectives__li">clinician workflow</li>
-          <li class="objectives__li">website communication</li>
-        </ul>
-      </div> -->
     </section>
-    <!-- Process/Approach Section -->
+    <section class="solutions__section">
+      <div class="solutions__textWrapper">
+        <h3 class="solutions__title">Solutions</h3>
+        <div class="solutions__wrapper">
+          <div class="solutions__solution-container">
+            <div class="solutions__img-container">
+              <img class="solutions__img" src="../assets/images/ubc/ubc-Booking Portal.png"
+                alt="the initial MACs booking portal">
+            </div>
+            <p class="solutions__body--black">Booking Portal</p>
+          </div>
+          <div class="solutions__solution-container">
+            <div class="solutions__img-container">
+              <img class="solutions__img" src="../assets/images/ubc/ubc-Service Redesign Blueprints.png"
+                alt="black outline illustration of a calendar">
+            </div>
+            <p class="solutions__body--black">Service Redesign</p>
+          </div>
+          <div class="solutions__solution-container">
+            <div class="solutions__img-container">
+              <img class="solutions__img" src="../assets/images/ubc/ubc-Updated Website.png"
+                alt="black outline illustration of a calendar">
+            </div>
+            <p class="solutions__body--black">Website + Graphics</p>
+          </div>
+        </div>
+        <figure class="solutions__figure">
+          <div class="solutions__video-wrapper">
+            <video class="solutions__gif" src="../assets/images/ubc/MACS booking flow.mp4" autoplay loop muted></video>
+            <button class="solutions__pause-btn" aria-label="Pause/Play video" button type="button">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <rect x="3" y="2" width="4" height="12" rx="1" fill="currentColor" />
+                <rect x="9" y="2" width="4" height="12" rx="1" fill="currentColor" />
+              </svg>
+            </button>
+          </div>
+          <figcaption class="solutions__caption">Booking flow for virtual MAC appointments</figcaption>
+        </figure>
+      </div>
+    </section>
     <section class="process__section">
-      <h3 class="process__title">Approach</h3>
-      <div class="process__wrapper">
-        <div class="process__text_container">
-          <h4 class="process__subtitle">Requirements Gathering</h4>
-          <p class="process__body">Working with the clinical leadership team, I defined the requirements for integrating
-            the new MAC services. This meant determining which ailments required in-person versus virtual care,
-            establishing what patient data needed to be collected for charts and government billing, and clarifying how
-            the booking logic would need to distinguish between MAC and existing appointment types. Requirements were
-            then
-            communicated to developers to begin scoping implementation.</p>
+      <h3 class="process__title">Process</h3>
+      <div class="accordion">
+        <!-- Workshop -->
+        <div class="accordion__item">
+          <button class="accordion__trigger" type="button" aria-expanded="false">
+            <svg class="accordion__icon" width="20" height="20" viewBox="0 0 16 16" aria-hidden="true">
+              <line x1="2" y1="8" x2="14" y2="8" class="accordion__line accordion__line--horizontal" />
+              <line x1="8" y1="2" x2="8" y2="14" class="accordion__line accordion__line--vertical" />
+            </svg>
+            <span class="accordion__label">Requirements Gathering Workshop
+            </span>
+          </button>
+          <div class="accordion__content">
+            <div class="accordion__layout">
+              <div class="accordion__text_container">
+                <p class="accordion__body">I facilitated a meeting with the leadership team, where we defined
+                  the requirements for integrating the new MAC services. This meant determining:
+                </p>
+                <ul class="accordion__list">
+                  <li class="accordion__li"><span class="accordion__highlight">Channels of care: </span>which ailments
+                    required in-person vs virtual care.</li>
+                  <li class="accordion__li"><span class="accordion__highlight">Patient data collected: </span>what
+                    patient data needed to be collected for
+                    charts and government billing.</li>
+                  <li class="accordion__li"><span class="accordion__highlight">New booking system: </span>how the
+                    booking logic would need to distinguish between
+                    MAC and existing appointment types.</li>
+                </ul>
+              </div>
+              <img class="accordion__img" src="../assets/images/ubc/MACs whiteboarding.png" alt="MACs whiteboarding">
+            </div>
+          </div>
         </div>
-        <figure class="process">
-          <img src="../assets/images/ubc/MACs whiteboarding.png" alt="" class="process__img">
-          <figcaption class="process__caption">Working session mapping service types
-          </figcaption>
-        </figure>
-      </div>
-      <div class="process__wrapper">
-        <div class="process__text_container">
-          <h4 class="process__subtitle">Mapping</h4>
-          <p class="process__body">Using journey mapping and service blueprints, I documented both the frontstage
-            patient experience and the backstage administrative and clinical processes — mapping existing booking,
-            intake, clinical, and billing workflows to understand how patients, staff, and clinicians interacted across
-            the service.</p>
-          <p class="process__body">
-            The Goal: Find where the new MAC services would create friction — where they conflicted with existing
-            appointment types, introduced new routing and eligibility logic, and required different information to flow
-            between systems than what the clinic was already set up to handle.
-          </p>
+        <!-- Mapping -->
+        <div class="accordion__item">
+          <button class="accordion__trigger" type="button">
+            <svg class="accordion__icon" width="20" height="20" viewBox="0 0 16 16" aria-hidden="true">
+              <line x1="2" y1="8" x2="14" y2="8" class="accordion__line accordion__line--horizontal" />
+              <line x1="8" y1="2" x2="8" y2="14" class="accordion__line accordion__line--vertical" />
+            </svg>
+            <span class="accordion__label">Defining Current vs Future State
+            </span>
+          </button>
+          <div class="accordion__content">
+            <div class="accordion__layout">
+              <div class="accordion__text_container">
+                <h4 class="accordion__subheader">Mapping the current state</h4>
+                <p class="accordion__body">Using journey maps and service blueprints, I quickly documented both the
+                  patient experience and
+                  admin/clinical processes to understand how patients, staff, and clinicians interact.</p>
+                <p class="accordion__body">The goal of this was to gain a deep understanding of current operational
+                  processes and build alignment
+                  with the clinical leadership team.</p>
+              </div>
+              <div class="accordion__text_container">
+                <h4 class="accordion__subheader">Identifying friction points </h4>
+                <p class="accordion__body">
+                  Additionally, the maps helped pinpoint where the new MAC services would create friction within
+                  existing processes.
+                </p>
+              </div>
+
+            </div>
+            <div class="accordion__gallery">
+              <div class="accordion__gallery_container">
+                <button class="accordion__gallery_prev" type="button" aria-label="previous image">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6" />
+                  </svg>
+                </button>
+                <img src="../assets/images/ubc/MACS current online booking process.png" alt=""
+                  class="accordion__gallery_img is-active">
+                <img src="../assets/images/ubc/MACS mapping summary.png" alt="" class="accordion__gallery_img">
+                <button class="accordion__gallery_next" type="button" aria-label="Next image">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
+              </div>
+              <div class="accordion__gallery_controls">
+                <button class="accordion__dot is-active" type="button" aria-label="Show first image"></button>
+                <button class="accordion__dot" type="button" aria-label="Show second image"></button>
+              </div>
+            </div>
+          </div>
         </div>
-        <figure class="process">
-          <img src="../assets/images/ubc/MACs whiteboarding.png" alt="" class="process__img">
-          <figcaption class="process__caption">Current-state service blueprint
-          </figcaption>
-        </figure>
+        <!-- Booking Portal -->
+        <div class="accordion__item">
+          <button class="accordion__trigger" type="button">
+            <svg class="accordion__icon" width="20" height="20" viewBox="0 0 16 16" aria-hidden="true">
+              <line x1="2" y1="8" x2="14" y2="8" class="accordion__line accordion__line--horizontal" />
+              <line x1="8" y1="2" x2="8" y2="14" class="accordion__line accordion__line--vertical" />
+            </svg>
+            <span class="accordion__label">New Booking Portal Design
+            </span>
+          </button>
+          <div class="accordion__content">
+            <div class="accordion__insights-layout">
+              <img class="accordion__img--large" src="../assets/images/ubc/Group 1597880442.png" alt="">
+            </div>
+          </div>
+        </div>
+        <!-- Service Rollout -->
+        <div class="accordion__item">
+          <button class="accordion__trigger" type="button">
+            <svg class="accordion__icon" width="20" height="20" viewBox="0 0 16 16" aria-hidden="true">
+              <line x1="2" y1="8" x2="14" y2="8" class="accordion__line accordion__line--horizontal" />
+              <line x1="8" y1="2" x2="8" y2="14" class="accordion__line accordion__line--vertical" />
+            </svg>
+            <span class="accordion__label">Service Rollout and Maintenance
+            </span>
+          </button>
+          <div class="accordion__content">
+            <div class="accordion__layout">
+              <div class="accordion__text_container">
+                <h4 class="accordion__subheader">Initial Pilot Plan</h4>
+                <p class="accordion__body">The MAC services was piloted by initially offering appointments one day a
+                  week, with one available clinician, supporting a subset of 10 out of the 21 eligible minor ailments.
+                </p>
+                <p class="accordion__body">
+                  Over the first two months, several improvements were made to the service. Training sessions
+                  and regular clinical staff meetings helped build clinician confidence in assessing minor ailments, and
+                  the service grew from having a single dedicated clinician to all clinical staff being available for
+                  MAC appointments. By the two-month mark, the clinic was able to expand to the full 21 minor
+                  ailments.
+                </p>
+                <h4 class="accordion__subheader">My Roles</h4>
+                <p class="accordion__body">Pilot Lead: I acted as the
+                  primary point of coordination between the clinical
+                  team and
+                  developers, ensuring clear communication across both sides throughout the pilot.</p>
+                <p class="accordion__body">
+                  Patient Advocate: In technical discussions, I advocated
+                  for patient needs while also communicating
+                  system constraints and implementation considerations back to clinic staff.
+                </p>
+                <p class="accordion__body">
+                  Service Decision-Making: I led decision-making around
+                  service updates and workflow changes, ensuring
+                  feedback from the clinic was translated into actionable, human-centred improvements.
+                </p>
+              </div>
+              <figure class="accordion__imgWrapper">
+                <img src="../assets/images/ubc/MACS Timeline.png" alt="" class="accordion__img">
+                <figcaption class="accordion__caption">MACs pilot project timeline
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="process__text_container">
-        <h4 class="process__subtitle">Design</h4>
-        <p class="accordion__body">Designed updated service logic to support MAC appointments, including:
-        </p>
-        <ul class="accordion__list">
-          <li class="accordion__li">How patients identify their condition</li>
-          <li class="accordion__li">How appointment types are routed (virtual vs in-person)</li>
-          <li class="accordion__li">How intake data flows into clinical and billing systems</li>
-        </ul>
-        <p class="accordion__body">Defined what information needed to be collected:
-        </p>
-        <ul class="accordion__list">
-          <li class="accordion__li">During intake</li>
-          <li class="accordion__li">At the point of care</li>
-          <li class="accordion__li">During billing</li>
-        </ul>
       </div>
-      <div class="process__text_container">
-        <h4 class="process__subtitle">Service Rollout and Maintenance</h4>
-        <p class="accordion__body">The updated MAC service was piloted by initially offering
-          appointments two days per week and supporting a subset of 10 out of the 21 eligible minor ailments. This
-          phased approach allowed the clinic to test new workflows and assess capacity
-          before expanding the service. <br> <br>
-          During this phase, I acted as the primary point of coordination between
-          clinicians, MOAs, and developers, advocating for clinical and patient needs in technical discussions
-          while also communicating system constraints and implementation considerations back to clinic staff. I
-          led decision-making around service updates and workflow changes, ensuring feedback from the clinic was
-          translated into actionable, human-centred improvements.
-        </p>
       </div>
     </section>
-    <!-- <section class="finaldesign">
-      <h3 class="finaldesign__title">Final Design</h3>
-      <div class="finaldesign__orange">
-        <div class="finaldesign__gallery_container">
-          <img src="../assets/images/ubc/ubc-final1.png" alt="" class="finaldesign__gallery_img">
-          <img src="../assets/images/ubc/ubc-final2.png" alt="" class="finaldesign__gallery_img">
-          <img src="../assets/images/ubc/ubc-final3.png" alt="" class="finaldesign__gallery_img">
-        </div>
-    </section> -->
-    <!-- <section class="impact">
+    <section class="impact">
       <div class="impact__section">
-        <div class="impact__textWrapper">
-          <h3 class="impact__title">Impact</h3>
-          <p class="impact__body">Developed and implemented a new patient intake system that decreased
-            appointment booking time by 30% and minimized back-and-forth between
-            staff and patients. <br> <br>
-            Redesigned clinic website architecture and content flow, resulting in a 45% increase in user engagement and
-            improved accessibility for patients.
+        <h3 class="impact__title">Impact</h3>
+        <div class="impact__stats">
+          <div class="impact__stat">
+            <span class="impact__bold">210</span>
+            <p class="impact__statLabel">Patients treated during the pilot period</p>
+          </div>
+          <div class="impact__stat">
+            <span class="impact__bold">~105</span>
+            <p class="impact__statLabel">Appointments completed per month</p>
+          </div>
+          <div class="impact__stat">
+            <span class="impact__bold">4 Weeks</span>
+            <p class="impact__statLabel">From pilot to full adoption</p>
+          </div>
         </div>
-        <figure class="impact__imgWrapper">
-          <img src="../assets/images/ubc/Group 1597880424.jpg" alt="" class="impact__img">
-          <figcaption class="impact__caption">A clinician with a patient who booked their appointment through the new
-            process.
-          </figcaption>
-        </figure>
+        <div class="impact__bottom">
+          <div class="impact__textWrapper">
+            <div class="impact__text-container">
+              <h4 class="impact__subtitle">Services Expanded</h4>
+              <p class="impact__body">The MAC service expanded beyond the initial 10-ailment pilot to support the full
+                range of eligible conditions.</p>
+            </div>
+            <div class="impact__text-container">
+              <h4 class="impact__subtitle">Uninterrupted Care</h4>
+              <p class="impact__body">New services were integrated without disrupting care for existing patients.</p>
+            </div>
+            <div class="impact__text-container">
+              <h4 class="impact__subtitle">Staff Workload Improved</h4>
+              <p class="impact__body">Online booking adoption reduced inbound phone calls, lightening the administrative
+                load on the medical office assistants.</p>
+            </div>
+            <div class="impact__text-container">
+              <h4 class="impact__subtitle">Website Improvements</h4>
+              <p class="impact__body">While integrating the MAC services, I identified gaps in how the clinic
+                communicated with patients, specifically around how patients found information and prepared for visits.
+              </p>
+              <p class="impact__body">After piloting MACs, I began redesigning the clinic's website and created a
+                dedicated patient information section, including suggested questions to ask the care team and a resource
+                for downloading personal prescription history. Both remain live on the clinic's website.</p>
+            </div>
+          </div>
+          <figure class="impact__imgWrapper">
+            <div class="impact__imgInner">
+              <img src="../assets/images/ubc/MACS impact photo.png" alt="" class="impact__img">
+              <figcaption class="impact__caption">A clinician with a patient who booked their appointment through the
+                new
+                process</figcaption>
+            </div>
+          </figure>
+        </div>
+
       </div>
-    </section> -->
+    </section>
   </main>
   <footer class="footer">
     <div class="footer__content">
@@ -232,39 +414,6 @@
     <span class="lightbox__close">&times;</span>
     <img class="lightbox__img" id="lightbox-img" src="" alt="Expanded image" />
   </div>
-  <script src="../scripts/main.js">
-    const accordionTriggers = document.querySelectorAll('.accordion__trigger');
-
-    accordionTriggers.forEach(trigger => {
-      trigger.addEventListener('click', () => {
-        const item = trigger.closest('.accordion__item');
-        const content = item.querySelector('.accordion__content');
-
-        // Toggle active class
-        const isActive = item.classList.toggle('accordion__item--active');
-        trigger.setAttribute('aria-expanded', isActive);
-
-        // Adjust max-height for smooth animation
-        if (isActive) {
-          content.style.maxHeight = content.scrollHeight + 'px';
-        } else {
-          content.style.maxHeight = null;
-        }
-
-        //Only one open at a time
-        accordionTriggers.forEach(otherTrigger => {
-          if (otherTrigger !== trigger) {
-            const otherItem = otherTrigger.closest('.accordion__item');
-            const otherContent = otherItem.querySelector('.accordion__content');
-            otherItem.classList.remove('accordion__item--active');
-            otherTrigger.setAttribute('aria-expanded', false);
-            otherContent.style.maxHeight = null;
-          }
-        });
-      });
-    });
-
-  </script>
 </body>
 
 </html>

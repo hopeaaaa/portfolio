@@ -708,7 +708,7 @@ body {
 }
 
 .finaldesign {
-  padding-top: 2rem;
+  padding-top: 4rem;
   margin: 0 auto;
 }
 .finaldesign__title {
@@ -735,7 +735,6 @@ body {
 @media (min-width: 768px) {
   .slider-section {
     padding: 4rem;
-    /*     margin-bottom: 6rem; */
   }
 }
 
@@ -957,13 +956,11 @@ body {
 }
 
 .research-to-design {
-  padding-top: 4rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .conceptprototype {
-  padding-top: 4rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .impact {
@@ -1075,8 +1072,8 @@ body {
 .footer__content {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
-  font-size: 0.75rem;
+  padding-bottom: 1rem;
+  font-size: 0.5625rem;
   color: #5e5e5e;
 }
 .footer__social:hover {
@@ -1090,6 +1087,8 @@ body {
 @media screen and (min-width: 768px) {
   .footer {
     padding: 4rem 4rem 1.5rem 4rem;
-    font-size: 0.875rem;
+  }
+  .footer__content {
+    font-size: 0.75rem;
   }
 }/*# sourceMappingURL=dtp.css.map */

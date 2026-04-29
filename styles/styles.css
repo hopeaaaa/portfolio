@@ -384,12 +384,23 @@ body {
 .casestudies__preview:hover .casestudies__tags {
   opacity: 1;
 }
-.casestudies__img, .casestudies__img-ubc, .casestudies__img-code {
+.casestudies__img, .casestudies__img-ubc, .casestudies__img-f {
   width: 100%;
   height: auto;
   display: block;
   transition: transform 0.6s ease;
   border-radius: 0.3rem;
+}
+.casestudies {
+  /*   &__img-f {
+    width: 80%;
+    height: 50%;
+
+    object-fit: cover;
+    object-position: 10% center;
+    transition: transform 0.6s ease;
+    border-radius: 0.3rem;
+  } */
 }
 .casestudies__img-ubc {
   -o-object-position: 5% center;
@@ -433,8 +444,8 @@ body {
 .footer__content {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
-  font-size: 0.625rem;
+  padding-bottom: 1rem;
+  font-size: 0.5625rem;
   color: #5e5e5e;
 }
 .footer__social:hover {
@@ -448,6 +459,8 @@ body {
 @media screen and (min-width: 768px) {
   .footer {
     padding: 4rem 4rem 1.5rem 4rem;
-    font-size: 0.875rem;
+  }
+  .footer__content {
+    font-size: 0.75rem;
   }
 }/*# sourceMappingURL=styles.css.map */

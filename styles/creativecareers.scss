@@ -711,8 +711,8 @@ body {
   &__content {
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
-    font-size: 0.75rem;
+    padding-bottom: 1rem;
+    font-size: 0.5625rem;
     color: #5e5e5e;
   }
   &__social {
@@ -728,6 +728,8 @@ body {
 
   @include tablet {
     padding: 4rem 4rem 1.5rem 4rem;
-    font-size: 0.875rem;
+    &__content {
+      font-size: 0.75rem;
+    }
   }
 }
