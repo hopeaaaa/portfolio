@@ -151,10 +151,11 @@ a {
   font-style: normal;
   font-display: swap;
 }
+/* $bg-color: #fffaed; */
 body {
   font-family: "Lexend";
   font-weight: 300;
-  background-color: #fffaed;
+  background-color: #fff;
   color: #767676;
   overflow-x: hidden;
 }

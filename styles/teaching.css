@@ -151,10 +151,11 @@ a {
   font-style: normal;
   font-display: swap;
 }
+/* $bg-color: #fffaed; */
 body {
   font-family: "Lexend";
   font-weight: 400;
-  background-color: #fffaed;
+  background-color: #fff;
   color: #0c0c0c;
 }
 
@@ -197,7 +198,7 @@ a:hover {
 .header__cv-btn {
   font-family: "Lexend";
   font-weight: 500;
-  color: #fffaed;
+  color: #fff;
   background-color: #c44d00;
   border: solid 2px #c44d00;
   border-radius: 1rem;
@@ -208,11 +209,11 @@ a:hover {
 .header__cv-btn:hover {
   transform: scale(1.05);
   color: #c44d00;
-  background-color: #fffaed;
+  background-color: #fff;
 }
 .header__cv-btn.active {
   color: #c44d00;
-  background-color: #fffaed;
+  background-color: #fff;
 }
 @media screen and (min-width: 768px) {
   .header {

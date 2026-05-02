@@ -151,11 +151,12 @@ a {
   font-style: normal;
   font-display: swap;
 }
+/* $bg-color: #fffaed; */
 /* #da8b5e */
 body {
   font-family: "Lexend";
   font-weight: 400;
-  background-color: #fffaed;
+  background-color: #fff;
   color: #0c0c0c;
 }
 

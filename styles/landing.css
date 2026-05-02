@@ -151,11 +151,12 @@ a {
   font-style: normal;
   font-display: swap;
 }
+/* $bg-color: #fffaed; */
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   background-color: #c44d00;
-  color: #fffaed;
+  color: #fff;
   margin: 0;
   padding: 0;
   overflow: hidden;
