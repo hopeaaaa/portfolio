@@ -180,149 +180,127 @@ a:hover {
   }
 }
 
-/* ── Hero ── */
 .hero {
   margin: 0 auto;
   padding: 2rem;
+
+  &__label {
+    font-family: $font-fourth;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    color: $grey;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 400;
+    color: $black;
+    font-family: var(--font-secondary);
+    max-width: 30ch;
+    line-height: 1.3;
+  }
+  &__oneLiner {
+    font-size: 1rem;
+    font-weight: 300;
+    color: $grey;
+    padding: 1.5rem 0 2.5rem;
+    max-width: 60ch;
+    line-height: 1.7;
+  }
 }
 
-.hero__label {
-  font-family: var(--font-fourth);
-  font-size: 0.6875rem;
-  letter-spacing: 0.08rem;
-  text-transform: uppercase;
-  color: var(--grey);
-  margin-bottom: 1rem;
-}
-
-.hero__title {
-  font-size: 2rem;
-  font-weight: 400;
-  color: var(--black);
-  font-family: var(--font-secondary);
-  max-width: 22ch;
-  line-height: 1.3;
-}
-
-.hero__oneLiner {
-  font-size: 1rem;
-  font-weight: 300;
-  color: var(--grey);
-  padding: 1.5rem 0 2.5rem;
-  max-width: 60ch;
-  line-height: 1.7;
-}
-
-/* ── Divider ── */
 .divider {
   border: none;
   border-top: 1px solid #d4d4d4;
   margin: 0 2rem;
 }
 
-/* ── Entry (each facilitation role) ── */
 .entry {
   padding: 3rem 2rem;
   border-bottom: 1px solid #d4d4d4;
-}
 
-.entry__meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.75rem;
-  margin-bottom: 0.6rem;
-}
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 0.6rem;
+  }
+  &__org {
+    font-size: 0.75rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+  }
+  &__period {
+    font-size: 0.75rem;
+  }
+  &__title {
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: $black;
+    margin-bottom: 1.25rem;
+    line-height: 1.3;
+  }
 
-.entry__org {
-  font-family: var(--font-fourth);
-  font-size: 0.6875rem;
-  letter-spacing: 0.08rem;
-  text-transform: uppercase;
-  color: var(--black);
-}
-
-.entry__period {
-  font-family: var(--font-fourth);
-  font-size: 0.6875rem;
-  color: var(--grey);
-}
-
-.entry__title {
-  font-size: 1.75rem;
-  font-weight: 300;
-  color: var(--black);
-  margin-bottom: 1.25rem;
-  line-height: 1.3;
-}
-
-.entry__img {
-  margin-bottom: 1.5rem;
-}
-
-.entry__body {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--grey);
-  max-width: 68ch;
-  margin-bottom: 1.25rem;
-}
-
-/* Sub-sections (course lists, event lists) */
-.entry__subheader {
-  font-family: var(--font-fourth);
-  font-size: 0.6875rem;
-  letter-spacing: 0.08rem;
-  text-transform: uppercase;
-  color: var(--grey);
-  margin: 1.25rem 0 0.5rem;
-}
-
-.entry__list {
-  padding-left: 0;
-}
-
-.entry__list li {
-  font-size: 0.9375rem;
-  line-height: 1.7;
-  color: var(--grey);
-  padding-left: 1.25rem;
-  position: relative;
-}
-
-.entry__list li::before {
-  content: "–";
-  position: absolute;
-  left: 0;
-  color: var(--grey);
+  &__imgwrapper {
+    margin-bottom: 1.5rem;
+  }
+  &__img {
+    border-radius: 0.3rem;
+  }
+  &__body {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: $grey;
+    max-width: 68ch;
+    margin-bottom: 1.25rem;
+  }
+  &__subheader {
+    font-family: $font-fourth;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    color: $grey;
+    margin: 1.25rem 0 0.5rem;
+  }
+  &__list {
+    padding-left: 0;
+  }
+  &__list li {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: $grey;
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1.25rem;
+  }
 }
 
 .entry__list li strong {
   font-weight: 400;
-  color: var(--black);
-}
-
-/* Tags */
-.entry__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 1.25rem;
+  color: $black;
 }
 
 .tag {
-  font-family: var(--font-fourth);
+  font-family: $font-fourth;
   font-size: 0.6875rem;
   padding: 0.25rem 0.75rem;
   border: 1px solid #c4c4c4;
   border-radius: 20px;
-  color: var(--grey);
+  color: $grey;
 }
 
 /* ── Footer (matches your .footer BEM block) ── */
 .footer {
   padding: 2rem;
-  font-family: var(--font-fourth);
+  font-family: $font-fourth;
   font-weight: 400;
 }
 
@@ -344,7 +322,6 @@ a:hover {
   cursor: pointer;
 }
 
-/* ── Tablet breakpoint (768px, mirrors your @include tablet) ── */
 @media (min-width: 768px) {
   .header {
     padding: 4rem;

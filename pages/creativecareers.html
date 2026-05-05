@@ -23,182 +23,364 @@
       </nav>
     </div>
   </header>
-  <main class="hero">
-    <section class="hero__section">
-      <img src="../assets/images/creative careers/Creative Careers hero v1.png" alt="hero image" class="hero__img" />
+  <main>
+    <section class="hero">
+      <figure class="hero__figure">
+        <img src="../assets/images/creative careers/Creative Careers hero v2.png"
+          alt="Creative Careers project hero image" class="hero__img" />
+      </figure>
       <h1 class="hero__title">Creative Careers</h1>
-      <p class="hero__oneLiner">
-        <!-- Digital career resources developed to streamline advising and improve
-          student engagement. -->
-        Designing a system to help users explore identity and role within a
-        creative community.
+      <p class="hero__one-liner">
+        Designing a system that uses visual language to make fragmented information accessible and personal.
       </p>
     </section>
-    <section class="overview__section">
-      <h2 class="overview__subtitle">Overview</h2>
-      <div class="overview__wrapper">
-        <div class="overview__container">
-          <h3 class="overview__title">CLIENT</h3>
-          <p class="overview__body">
-            <a href="https://www.creativecareers.ca/">Emily Carr University's Career Development + Work Integrated
-              Learning Office
+    <section class="overview" aria-labelledby="overview-title">
+      <h2 class="section-title">Overview</h2>
+      <dl class="overview__grid">
+        <div class="overview__item">
+          <dt class="overview__label">Client</dt>
+          <dd class="overview__value">
+            <a href="https://www.creativecareers.ca/" class="overview__link">
+              Emily Carr University's Career Development + WIL Office
               <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 15 15" fill="none"
                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                class="arrow-icon">
+                class="arrow-icon" aria-hidden="true">
                 <line x1="4" y1="14" x2="14" y2="4" />
                 <polyline points="4 4 14 4 14 14" />
-              </svg></a>
+              </svg>
+            </a>
+          </dd>
+        </div>
+        <div class="overview__item">
+          <dt class="overview__label">Outputs</dt>
+          <dd class="overview__value">Website (digital resource hub)<br>Digitized resources<br> 3 Interactive
+            Tools<br>Illustration
+            System<br>Infographic</dd>
+        </div>
+        <div class="overview__item">
+          <dt class="overview__label">Role</dt>
+          <dd class="overview__value">Design Lead, PM</dd>
+        </div>
+        <div class="overview__item">
+          <dt class="overview__label">Timeframe</dt>
+          <dd class="overview__value">8 months</dd>
+        </div>
+      </dl>
+    </section>
+    <section class="context" aria-labelledby="context-title">
+
+      <div class="context__text">
+        <h2 class="section-title" id="context-title">Context</h2>
+
+        <div class="context__paragraph">
+          <p class="context__subtitle">Background</p>
+          <p class="context__body">
+            The Career Development + WIL Office provides career advising and career-related
+            programming for students and alumni.
           </p>
         </div>
-        <div class="overview__container">
-          <h3 class="overview__title">OUTPUTS</h3>
-          <p class="overview__body">
-            Website/Digital resource hub <br>
-            Three interactive career tools
+
+        <div class="context__paragraph">
+          <p class="context__subtitle">Problem</p>
+          <p class="context__body">
+            Valuable career resources were siloed across multiple university departments and even
+            when students could find them, career information for creative fields can be hard to
+            navigate and connect with.
           </p>
         </div>
-        <div class="overview__container">
-          <h3 class="overview__title">ROLE</h3>
-          <p class="overview__body">
-            Design Lead and Project Manager overseeing a team of 5 student designers and developers
+
+        <div class="context__paragraph">
+          <p class="context__subtitle">Opportunity</p>
+          <p class="context__body">
+            Centralize the information in a comprehensive hub, design three interactive tools to
+            address the most common challenges students bring to advising, and build a visual
+            language that makes it all feel approachable and relevant to the students using it.
           </p>
         </div>
-        <div class="overview__container">
-          <h3 class="overview__title">TIMEFRAME</h3>
-          <p class="overview__body">
-            8 months
+        <div class="context__callout">
+          <p class="context__callout-body">
+            Advisors noticed a pattern: students were coming into advisory meetings unprepared,
+            not because they weren't motivated, but because they didn't know how to prepare.
+            Emailed instructions were not enough.
           </p>
         </div>
       </div>
+
+      <figure class="context__figure">
+        <img src="../assets/images/creative careers/career resources.jpg"
+          alt="Various career resources from university departments before centralization" class="context__img" />
+        <figcaption class="context__caption">
+          Career resources from various university departments, before centralization
+        </figcaption>
+      </figure>
+
     </section>
-    <section class="context__section">
-      <div class="context__textWrapper">
-        <h3 class="context__title">Context</h3>
-        <p class="context__body">The Career Development + WIL Office provides career advising and career-related
-          programming for students and alumni. The office discovered that valuable career resources were siloed and
-          dispersed across multiple university departments. To address this, they envisioned a centralized website
-          that
-          would serve as a comprehensive hub for all career resources.
+    <section class="resource-hub" aria-labelledby="resource-hub-title">
+      <div class="resource-hub__intro">
+        <div class="resource-hub__text-container">
+          <h2 class="section-title" id="resource-hub-title">The Resource Hub</h2>
+          <p class="resource-hub__body">
+            The final design of the resource hub is organized around how students think. We structured
+            everything around the questions students ask, using plain language in the copy.
+            Advisors helped surface the most common questions and those became the architecture.
+          </p>
+        </div>
+        <img class="resource-hub__intro-img" src="../assets/images/creative careers/platform homepage.jpg"
+          alt="The Creative Careers homepage on a device" />
+      </div>
+      <div class="resource-hub__hub-container">
+        <img class="resource-hub__hub-img" src="../assets/images/creative careers/Homepage.jpg"
+          alt="The Creative Careers homepage" />
+        <img class="resource-hub__hub-img" src="../assets/images/creative careers/Resources 1.jpg"
+          alt="The Creative Careers resources page" />
+        <img class="resource-hub__hub-img" src="../assets/images/creative careers/Resources 2.jpg"
+          alt="The Creative Careers resources page with expanded sections" />
+      </div>
+    </section>
+
+    <section class="tools" aria-labelledby="tools-title">
+      <div class="tools__intro">
+        <div class="tools__text-container">
+          <h2 class="section-title" id="tools-title">The Tools</h2>
+          <p class="tools__body">
+            The office knew they needed three interactive tools, one for each recurring challenge
+            students brought to appointments.
+          </p>
+        </div>
+      </div>
+
+      <div class="tools__tabs" role="tablist">
+        <button class="tools__tab tools__tab--resume" role="tab" aria-selected="false" aria-controls="panel-resume"
+          id="tab-resume" onclick="activateTool('resume')">
+          <p class="tools__tab-question">"What do I put on my resume?"</p>
+          <div class="tools__tab-header">
+            <span class="tools__tab-name">Resume Builder</span>
+            <span class="tools__tab-pill">student-led</span>
+          </div>
+        </button>
+
+        <button class="tools__tab tools__tab--skills" role="tab" aria-selected="false" aria-controls="panel-skills"
+          id="tab-skills" onclick="activateTool('skills')">
+          <p class="tools__tab-question">"How do I show what I'm learning? What are my skills??"</p>
+          <div class="tools__tab-header">
+            <span class="tools__tab-name">Skill Identifier</span>
+            <span class="tools__tab-pill">student-led</span>
+          </div>
+        </button>
+
+        <button class="tools__tab tools__tab--career" role="tab" aria-selected="true" aria-controls="panel-career"
+          id="tab-career" onclick="activateTool('career')">
+          <p class="tools__tab-question">"What should I do with my degree?!"</p>
+          <div class="tools__tab-header">
+            <span class="tools__tab-name">Career Pathfinder</span>
+            <span class="tools__tab-pill tools__tab-pill--mine">my design</span>
+          </div>
+        </button>
+
+      </div>
+
+      <!-- ─── Resume Builder Panel ─────────────────────────────────────────────── -->
+      <div class="tools__panel tools__panel--resume" role="tabpanel" id="panel-resume" aria-labelledby="tab-resume"
+        hidden>
+        <div class="tools__panel-content">
+          <div class="tools__panel-text">
+            <span class="tools__metaphor-tag">Visual metaphor: magnifying glass</span>
+            <h3 class="tools__panel-title">Resume Builder</h3>
+            <p class="tools__panel-body">
+              The Resume Builder helps students build a master resume — a comprehensive document
+              they can draw from when tailoring job applications.
+            </p>
+            <div class="tools__panel-callout">
+              <p>The design is a form with illustrations to communicate the value of inputting
+                the information. The closet analogy came from something an advisor said in a meeting.
+                When we needed a way to explain what a master resume actually is, I drew it: your
+                master resume is a closet, the resumes you send to employers are the outfits.</p>
+            </div>
+            <div class="tools__credits">
+              <span class="tools__credit">Visual identity — design students</span>
+              <span class="tools__credit">Illustrations — me</span>
+              <span class="tools__credit">Interaction logic — team</span>
+            </div>
+          </div>
+          <figure class="tools__panel-figure">
+            <img src="../assets/images/creative careers/resume-builder-illustration.png"
+              alt="Microscope illustration for the Resume Builder tool" class="tools__panel-illustration" />
+          </figure>
+        </div>
+
+        <div class="tools__panel-screens">
+          <img src="../assets/images/creative careers/resume-builder-screen.jpg" alt="Resume Builder tool screenshot"
+            class="tools__panel-screen" />
+        </div>
+      </div>
+
+      <!-- ─── Skill Identifier Panel ───────────────────────────────────────────── -->
+      <div class="tools__panel tools__panel--skills" role="tabpanel" id="panel-skills" aria-labelledby="tab-skills"
+        hidden>
+        <div class="tools__panel-content">
+          <div class="tools__panel-text">
+            <span class="tools__metaphor-tag">Visual metaphor: telescope + constellations</span>
+            <h3 class="tools__panel-title">Skill Identifier</h3>
+            <p class="tools__panel-body">
+              Students often struggle to identify and name their transferable skills. The tool
+              needed to show students the many hard and soft skills associated with their education.
+              The design starts broad by asking for your degree, and narrows toward more specific
+              and personal content: your actual skills.
+            </p>
+            <div class="tools__panel-callout">
+              <p>"What are your skills?" is an intimidating question. Instead of starting there,
+                the design starts with users selecting their degree and major, then the specific
+                software tools associated with their coursework. From these concrete selections,
+                the associated hard and soft skills are surfaced.</p>
+            </div>
+            <p class="tools__panel-body">
+              Every software tool, hard skill, and soft skill is mapped to a major and lives in
+              a spreadsheet built collaboratively with the student team.
+            </p>
+            <div class="tools__credits">
+              <span class="tools__credit">Visual identity — design students</span>
+              <span class="tools__credit">Illustrations — me</span>
+              <span class="tools__credit">Data structure — me + developer student</span>
+              <span class="tools__credit">Interaction logic — team</span>
+            </div>
+          </div>
+          <figure class="tools__panel-figure">
+            <img src="../assets/images/creative careers/skill-identifier-illustration.png"
+              alt="Telescope illustration for the Skill Identifier tool" class="tools__panel-illustration" />
+          </figure>
+        </div>
+
+        <div class="tools__panel-screens">
+          <img src="../assets/images/creative careers/skill-identifier-screen.jpg"
+            alt="Skill Identifier tool screenshot" class="tools__panel-screen" />
+        </div>
+      </div>
+
+      <!-- ─── Career Pathfinder Panel ──────────────────────────────────────────── -->
+      <div class="tools__panel tools__panel--career" role="tabpanel" id="panel-career" aria-labelledby="tab-career">
+        <div class="tools__panel-content">
+          <div class="tools__panel-text">
+            <span class="tools__metaphor-tag">Visual metaphor: binoculars + jungle path</span>
+            <h3 class="tools__panel-title">Career Pathfinder</h3>
+            <p class="tools__panel-body">
+              This tool took the longest to develop and was designed by me, after the students'
+              early concepts kept producing the same result: degree name → job title.
+              Photography → Photographer. Illustration → Illustrator. This didn't feel like a
+              career pathfinder — it felt like a predictable list. I wanted to challenge that
+              and present something more expansive.
+            </p>
+
+            <h4 class="tools__panel-subheading">The Reframe</h4>
+            <p class="tools__panel-body">
+              Instead of degree → career, the tool became a self-reflection instrument. It asks
+              about passions, skills, and workplace values, then surfaces career directions based
+              on that combination. Your degree is one input, not the answer.
+            </p>
+
+            <h4 class="tools__panel-subheading">Drag and drop interaction</h4>
+            <p class="tools__panel-body">
+              With each question, students drag and drop floating shapes into a holding circle —
+              claiming their selections rather than typing or checking boxes. Each question has
+              its own geometry, running from the drag targets back to the illustrations at the
+              top of the page.
+            </p>
+
+            <div class="tools__shapes">
+              <div class="tools__shape-item">
+                <div class="tools__shape-demo tools__shape-demo--circles">
+                  <span class="tools__shape tools__shape--circle"></span>
+                  <span class="tools__shape tools__shape--circle"></span>
+                  <span class="tools__shape tools__shape--circle"></span>
+                </div>
+                <p class="tools__shape-label">Q1 — Industries</p>
+                <p class="tools__shape-sub">circle bubbles</p>
+              </div>
+              <div class="tools__shape-item">
+                <div class="tools__shape-demo">
+                  <span class="tools__shape tools__shape--semi"></span>
+                  <span class="tools__shape tools__shape--semi"></span>
+                  <span class="tools__shape tools__shape--semi"></span>
+                </div>
+                <p class="tools__shape-label">Q2 — Skills</p>
+                <p class="tools__shape-sub">semi-circle bubbles</p>
+              </div>
+              <div class="tools__shape-item">
+                <div class="tools__shape-demo">
+                  <span class="tools__shape tools__shape--pill"></span>
+                  <span class="tools__shape tools__shape--pill"></span>
+                </div>
+                <p class="tools__shape-label">Q3 — Values</p>
+                <p class="tools__shape-sub">pill bubbles</p>
+              </div>
+            </div>
+
+            <h4 class="tools__panel-subheading">Results</h4>
+            <p class="tools__panel-body">
+              At the end, students receive a four-page PDF worksheet with space to reflect on
+              their passions, skills, and values. I drew from my experience teaching when I
+              designed it — students needed something that could live beyond the screen, something
+              to hand an advisor to help start the conversation. This tool is a starting point,
+              not a verdict.
+            </p>
+
+            <div class="tools__credits">
+              <span class="tools__credit">Visual identity — design students</span>
+              <span class="tools__credit">Illustrations — me</span>
+              <span class="tools__credit">Infographic — me</span>
+              <span class="tools__credit">Interaction + PDF — me</span>
+            </div>
+          </div>
+
+          <figure class="tools__panel-figure">
+            <img src="../assets/images/creative careers/illustration-career pathfinder.png"
+              alt="Binoculars and jungle path illustration for the Career Pathfinder tool"
+              class="tools__panel-illustration" />
+          </figure>
+        </div>
+
+        <div class="tools__panel-screens">
+          <img src="../assets/images/creative careers/career-pathfinder-screen.jpg"
+            alt="Career Pathfinder tool screenshot" class="tools__panel-screen" />
+        </div>
+      </div>
+
+    </section>
+    <section class="impact" aria-labelledby="impact-title">
+      <h2 class="section-title" id="impact-title">Impact</h2>
+      <div class="impact__stats">
+        <div class="impact__stat">
+          <span class="impact__number">1,800+</span>
+          <p class="impact__body">Students, alumni, and prospective applicants supported annually</p>
+        </div>
+        <div class="impact__stat">
+          <span class="impact__number">24/7</span>
+          <p class="impact__body">Transformed in-person services into an accessible digital resource</p>
+        </div>
+        <div class="impact__stat">
+          <span class="impact__number">30+</span>
+          <p class="impact__body">Resources consolidated, streamlining access for students, alumni, and advisors</p>
+        </div>
+        <div class="impact__stat">
+          <span class="impact__number">Curriculum Integration</span>
+          <p class="impact__body">Adopted by faculty and shared across other institutions</p>
+        </div>
+      </div>
+    </section>
+    <section class="update" aria-labelledby="update-title">
+      <div class="update__text">
+        <h2 class="section-title" id="update-title">Update</h2>
+        <p class="update__body">
+          Since launch, the Creative Careers site has continued to evolve. While the current
+          design reflects updated university branding, the core functionality, layout, and
+          structure remain true to our original goals of making career resources more
+          accessible, student-centered, and actionable.
         </p>
       </div>
-      <figure class="context__imgWrapper">
-        <img src="../assets/images/creative careers/20251127_141239 2.svg" alt="" class="context__img">
-        <figcaption class="context__caption">Career resources from various university departments</figcaption>
+      <figure class="update__figure">
+        <img src="../assets/images/creative careers/creativecareers_website_update.png"
+          alt="The updated Creative Careers website" class="update__img" />
+        <figcaption class="update__caption">The updated Creative Careers website</figcaption>
       </figure>
-    </section>
-    <section class="objectives__section">
-      <div class="objectives__textWrapper">
-        <h3 class="context__title">Objectives</h3>
-        <div class="objectives__wrapper">
-          <ol>
-            <li class="objectives__body">A digital hub for career resources;</li>
-            <li class="objectives__body">Three interactive career tools addressing the most common challenges students
-              bring to career advisors.</li>
-          </ol>
-        </div>
-      </div>
-      <figure class="objectives__imgWrapper">
-        <img src="../assets/images/creative careers/Creative Careers IA.jpg" alt="" class="objectives__img">
-        <figcaption class="objectives__caption">The information architecture</figcaption>
-      </figure>
-    </section>
-    <section class="finaldesign">
-      <div class="finaldesign__inner">
-        <h3 class="finaldesign__title">Final Design</h3>
-        <div class="finaldesign__section">
-          <div class="finaldesign__orange">
-            <div class="finaldesign__imgcontainer1">
-              <img src="../assets/images/creative careers/Resources 1.svg" alt="" class="finaldesign__img">
-              <img src="../assets/images/creative careers/Group 1597880418.svg" alt="" class="finaldesign__img">
-            </div>
-          </div>
-          <div class="finaldesign__noorange">
-            <figure class="finaldesign__callouts_container">
-              <img src="../assets/images/creative careers/callout_expandable.png"
-                alt="close up shot of expandable section on the resources page" class="finaldesign__img1">
-              <figcaption class="finaldesign__callouts_caption">Expandable sections to reduce scroll fatigue
-              </figcaption>
-            </figure>
-            <figure class="finaldesign__callouts_container">
-              <figcaption class="finaldesign__callouts_caption">Consistent language, as determined by the Career
-                Development Office
-              </figcaption>
-              <img src="../assets/images/creative careers/callout_consistent_language.png"
-                alt="close up shot of a list of resources beginning with the phrase 'How to...'" class="
-                finaldesign__img1">
-            </figure>
-            <figure class="finaldesign__callouts_container">
-              <img src="../assets/images/creative careers/callout_modular_design.png"
-                alt="close up shot of the resources page with expandable sections" class="finaldesign__img1">
-              <figcaption class="finaldesign__callouts_caption">Modular design for easy updates and additions
-              </figcaption>
-            </figure>
-          </div>
-          <div class="finaldesign__orange">
-            <div class="finaldesign__imgcontainer2">
-              <img src="../assets/images/creative careers/Tools.gif" alt="" class="finaldesign__img3">
-            </div>
-          </div>
-          <div class="finaldesign__orange">
-            <div class="finaldesign__imgcontainer1">
-              <img src="../assets/images/creative careers/Mask group (2).svg" alt="" class="finaldesign__img2">
-              <img src="../assets/images/creative careers/Mask group (3).svg" alt="" class="finaldesign__img2">
-              <img src="../assets/images/creative careers/Mask group (4).svg" alt="" class="finaldesign__img2">
-            </div>
-          </div>
-          <div class="finaldesign__noorange2">
-            <div class="finaldesign__gallery">
-              <div class="finaldesign__gallery_container">
-                <img src="../assets/images/creative careers/skill-identifier.gif" alt=""
-                  class="finaldesign__gallery_img is-active">
-                <img src="../assets/images/creative careers/career-pathway.gif" alt="" class="finaldesign__gallery_img">
-              </div>
-              <div class="finaldesign__gallery_controls">
-                <button class="dot is-active" aria-label="Show first gif"></button>
-                <button class="dot" aria-label="Show second gif"></button>
-              </div>
-            </div>
-            <div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="impact">
-      <div class="impact__section">
-        <div class="impact__textWrapper">
-          <h3 class="impact__title">Impact</h3>
-          <div class="impact__textWrapper1">
-            <p class="impact__body"> <span class="impact__bold">1,800+</span>
-              Students, alumni, and prospective applicants supported annually
-            </p>
-            <p class="impact__body"> <span class="impact__bold">24/7 Access</span>
-              Transformed in-person services into an accessible digital resource
-            </p>
-            <p class="impact__body"> <span class="impact__bold">30+ Resources</span>
-              Consolidated, streamlining access for students, alumni, and advisors</p>
-            <p class="impact__body"> <span class="impact__bold">Curriculum Integration</span>
-              Adopted by faculty and shared across other institutions</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="impact">
-      <div class="impact__section">
-        <div class="impact__textWrapper">
-          <h3 class="impact__title">Update</h3>
-          <p class="impact__body">Since launch, the Creative Careers site has continued to evolve. While the
-            current design reflects updated university branding, the core functionality, layout, and structure
-            remain true to our original goals of making career resources more accessible, student-centered,
-            and actionable. <!-- This progression reflects one of my biggest takeaways from the project: good
-                      design should adapt, scale, and serve the needs of its community over time. --></p>
-        </div>
-        <figure class="impact__imgWrapper">
-          <img src="../assets/images/creative careers/creativecareers_website_update.png" alt="" class="impact__img">
-          <figcaption class="impact__caption">The updated Creative Careers website
-          </figcaption>
-        </figure>
-      </div>
     </section>
   </main>
   <footer class="footer">
