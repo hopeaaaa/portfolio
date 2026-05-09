@@ -207,9 +207,9 @@ body {
 
   &__title {
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 300;
     color: $black;
-    font-family: $font-secondary;
+    font-family: $font-primary;
   }
 
   &__one-liner {
@@ -221,7 +221,7 @@ body {
   &__img {
     width: 100%;
     height: auto;
-    border-radius: 0.3rem;
+    border-radius: 0.75rem;
     display: block;
     margin-bottom: 1rem;
   }
@@ -256,7 +256,7 @@ body {
   }
 
   &__item {
-    flex: 1 1 40%;
+    flex: 1 1 30%;
     min-width: 18.75rem;
     margin-bottom: 1.5rem;
   }
@@ -289,8 +289,7 @@ body {
     &__grid {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 0 4rem;
+      gap: 0 17rem;
     }
   }
 }
@@ -330,7 +329,7 @@ body {
     border-left: 2px solid #7b6cf6;
     padding: 1rem 1.25rem;
     background: #eeedfe;
-    border-radius: 0 0.3rem 0.3rem 0;
+    border-radius: 0 0.75rem 0.75rem 0;
     max-width: 40rem;
     margin-top: 1.5rem;
   }
@@ -369,6 +368,11 @@ body {
     align-items: flex-start;
     padding: 0 4rem 4rem 4rem;
 
+    /*     &__text {
+      flex: none;
+      width: 50%;
+    } */
+
     &__figure {
       width: 40%;
       flex-shrink: 0;
@@ -381,7 +385,7 @@ body {
 }
 
 .resource-hub {
-  padding: 0 2rem 2rem 2rem;
+  padding: 2rem;
 
   &__intro {
     display: flex;
@@ -419,29 +423,47 @@ body {
   }
 
   &__hub-img {
-    width: 100%;
+    flex: 0 0 80%;
+    scroll-snap-align: start;
     height: auto;
     display: block;
+    border-radius: 0.5rem;
+    object-fit: cover;
     @include tablet {
       width: 5%;
+      height: auto;
+      display: block;
       flex-shrink: 0;
+      /*       flex: 1; */
     }
   }
 
   &__hub-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     margin-top: 2rem;
     background-color: #fafafa;
-    border-radius: 0.3rem;
+    border-radius: 0.75rem;
     padding: 4rem;
+    overflow-x: auto;
+    scroll-snap-type: mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     @include tablet {
-      flex-direction: row;
+      /*   flex-direction: row;
       gap: 1.5rem;
-      margin-top: 4rem;
-
+      margin-top: 4rem; */
+      overflow-x: visible;
+      scroll-snap-type: none;
+      gap: 1.5rem;
+      padding-bottom: 0;
       .resource-hub__hub-img {
         flex: 1;
       }
@@ -521,7 +543,7 @@ $tool-career-accent: #c1d42f;
 
 // Active panel backgrounds
 $tool-resume-active: #fce8f3;
-$tool-skills-active: #e0f5ef;
+$tool-skills-active: #c8eee3;
 $tool-career-active: #dfe996;
 
 // Inactive tab tints
@@ -530,13 +552,14 @@ $tool-skills-inactive: #f0faf6;
 $tool-career-inactive: #f8fbe6;
 
 .tools {
-  padding: 0 2rem 2rem 2rem;
+  padding: 2rem;
 
+  // ─── Intro ────────────────────────────────────────────────────────────────
   &__intro {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 
   &__text-container {
@@ -555,11 +578,192 @@ $tool-career-inactive: #f8fbe6;
     height: auto;
   }
 
+  // ─── Accordion (mobile only) ───────────────────────────────────────────────
+  &__accordion {
+    display: block;
+
+    .accordion__content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .accordion__line {
+      stroke: $black;
+      stroke-width: 1.3;
+      transition: transform 0.25s ease;
+      transform-origin: center;
+    }
+
+    .accordion__trigger[aria-expanded="true"] {
+      .accordion__line--vertical,
+      .accordion__line--horizontal {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__accordion-trigger {
+    // overrides accordion__trigger to accommodate the new header layout
+    &.accordion__trigger {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      width: 100%;
+      padding: 1.25rem 1rem;
+
+      &:hover {
+        .tools__accordion-question {
+          font-size: 1.125rem;
+          color: $black;
+        }
+      }
+    }
+  }
+
+  &__accordion-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__accordion-question {
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: $grey;
+    text-align: left;
+    max-width: 30ch;
+    padding-bottom: 0.2rem;
+  }
+
+  &__accordion-meta {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__accordion-name {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: $black;
+  }
+
+  &__accordion-icon {
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+    color: $black;
+  }
+
+  // per-tool background colors on accordion items
+  &__accordion-item {
+    &--resume {
+      background: $tool-resume-inactive;
+      border-radius: 0.5rem 0.5rem 0 0;
+      .accordion__trigger:hover {
+        background: #f5e8f2;
+        .tools__accordion-question {
+          font-size: 1.125rem;
+          color: $black;
+        }
+        .tools__accordion-name {
+          color: $tool-resume-accent;
+        }
+      }
+      .accordion__trigger:hover {
+        background: $tool-resume-active;
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+    }
+    &--skills {
+      background: $tool-skills-inactive;
+      .accordion__trigger:hover {
+        background: #dff0ea;
+        .tools__accordion-question {
+          font-size: 1.125rem;
+          color: $black;
+        }
+        .tools__accordion-name {
+          color: $tool-skills-accent;
+        }
+      }
+      .accordion__trigger:hover {
+        background: $tool-skills-active;
+      }
+    }
+    &--career {
+      background: $tool-career-inactive;
+      border-radius: 0 0 0.5rem 0.5rem;
+      .accordion__trigger:hover {
+        background: #eef2d4;
+        .tools__accordion-question {
+          font-size: 1.125rem;
+          color: $black;
+        }
+        .tools__accordion-name {
+          color: #4a5200;
+        }
+      }
+      .accordion__trigger:hover {
+        background: $tool-career-active;
+        border-radius: 0 0 0.5rem 0.5rem;
+      }
+    }
+
+    &--resume.accordion__item--active {
+      background: $tool-resume-active;
+      .tools__accordion-name {
+        color: $tool-resume-accent;
+      }
+      .tools__accordion-question {
+        font-size: 1.125rem;
+        color: $black;
+      }
+      .accordion__trigger:hover {
+        background: darken(#fce8f3, 4%);
+      }
+    }
+    &--skills.accordion__item--active {
+      background: $tool-skills-active;
+      .tools__accordion-name {
+        color: $tool-skills-accent;
+      }
+      .tools__accordion-question {
+        font-size: 1.125rem;
+        color: $black;
+      }
+      .accordion__trigger:hover {
+        background: darken(#e0f5ef, 4%);
+      }
+    }
+    &--career.accordion__item--active {
+      background: $tool-career-active;
+      .tools__accordion-name {
+        color: #4a5200;
+      }
+      .tools__accordion-question {
+        font-size: 1.125rem;
+        color: $black;
+      }
+      .accordion__trigger:hover {
+        background: darken(#dfe996, 4%);
+      }
+    }
+  }
+
+  // ─── Tabs wrapper (tablet only) ────────────────────────────────────────────
+  &__tabs-wrapper {
+    display: none; // hidden on mobile
+  }
+
+  // ─── Tab buttons ──────────────────────────────────────────────────────────
   &__tabs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
-    margin-bottom: 0;
   }
 
   &__tab {
@@ -568,24 +772,21 @@ $tool-career-inactive: #f8fbe6;
     cursor: pointer;
     text-align: left;
     font-family: inherit;
-
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    padding: 2rem;
+    gap: 0.625rem;
+    padding: 1.1rem;
     border-radius: 0.5rem 0.5rem 0 0;
     transition: background 0.2s ease;
 
     &--resume {
       background: $tool-resume-inactive;
-
       &[aria-selected="true"] {
         background: $tool-resume-active;
-
         .tools__tab-name {
           color: $tool-resume-accent;
+          font-weight: 400;
         }
-
         .tools__tab-pill {
           background: $tool-resume-accent;
           color: #fff;
@@ -595,15 +796,12 @@ $tool-career-inactive: #f8fbe6;
 
     &--skills {
       background: $tool-skills-inactive;
-
       &[aria-selected="true"] {
         background: $tool-skills-active;
-
         .tools__tab-name {
-          color: darken-safe($tool-skills-accent);
           color: #007a5e;
+          font-weight: 400;
         }
-
         .tools__tab-pill {
           background: $tool-skills-accent;
           color: #fff;
@@ -613,28 +811,39 @@ $tool-career-inactive: #f8fbe6;
 
     &--career {
       background: $tool-career-inactive;
-
       &[aria-selected="true"] {
         background: $tool-career-active;
-
         .tools__tab-name {
           color: #4a5200;
+          font-weight: 400;
         }
-
         .tools__tab-pill--mine {
           background: #4a5200;
-          color: #dfe996;
+          color: $tool-career-active;
         }
       }
     }
   }
 
-  &__tab-header {
+  &__tab-question {
+    font-size: 0.9375rem;
+    font-style: italic;
+    font-weight: 400;
+    color: $black;
+    line-height: 1.4;
+
+    [aria-selected="false"] & {
+      color: #6c6c6c;
+      font-size: 0.875rem;
+      font-weight: 300;
+    }
+  }
+
+  &__tab-meta {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 0.5rem;
     flex-wrap: wrap;
-    padding-top: 0.5rem;
   }
 
   &__tab-name {
@@ -646,7 +855,8 @@ $tool-career-inactive: #f8fbe6;
 
   &__tab-pill {
     font-size: 0.625rem;
-    padding: 0.15rem 0.5rem;
+    letter-spacing: 0.06em;
+    padding: 0.15rem 0.5rem 0.25rem 0.5rem;
     border-radius: 99px;
     background: rgba(0, 0, 0, 0.08);
     color: $black;
@@ -661,21 +871,10 @@ $tool-career-inactive: #f8fbe6;
     }
   }
 
-  &__tab-question {
-    font-size: 1rem;
-    font-style: italic;
-    color: $black;
-    line-height: 1.4;
-
-    [aria-selected="false"] & {
-      font-size: 0.875rem;
-      color: #6c6c6c;
-    }
-  }
-
+  // ─── Panels ───────────────────────────────────────────────────────────────
   &__panel {
-    border-radius: 0 0 0.75rem 0.75rem;
     padding: 2rem;
+    border-radius: 0 0 0.75rem 0.75rem;
 
     &--resume {
       background: $tool-resume-active;
@@ -692,10 +891,16 @@ $tool-career-inactive: #f8fbe6;
     }
   }
 
-  &__panel-content {
+  &__panel-inner {
+    // used inside accordion on mobile
+    padding: 1rem 1rem 1.5rem;
+  }
+
+  &__panel-layout {
+    // used inside tabs on tablet
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   &__panel-text {
@@ -717,6 +922,7 @@ $tool-career-inactive: #f8fbe6;
   &__metaphor-tag {
     display: inline-block;
     font-size: 0.6875rem;
+    font-weight: 500;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.5);
@@ -734,21 +940,21 @@ $tool-career-inactive: #f8fbe6;
     font-size: 0.875rem;
     font-weight: 500;
     color: $black;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.375rem;
   }
 
   &__panel-body {
     font-size: 0.9375rem;
     line-height: 1.75;
     color: rgba(0, 0, 0, 0.75);
-    margin-bottom: 0.875rem;
+    margin-bottom: 0.75rem;
   }
 
   &__panel-callout {
     border-left: 2px solid rgba(0, 0, 0, 0.2);
     padding: 0.75rem 1rem;
-    margin: 1.25rem 0;
+    margin: 1rem 0;
 
     p {
       font-size: 0.875rem;
@@ -758,7 +964,7 @@ $tool-career-inactive: #f8fbe6;
   }
 
   &__panel-screens {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -771,6 +977,7 @@ $tool-career-inactive: #f8fbe6;
     border-radius: 0.5rem;
   }
 
+  // ─── Credits ──────────────────────────────────────────────────────────────
   &__credits {
     display: flex;
     flex-wrap: wrap;
@@ -787,17 +994,18 @@ $tool-career-inactive: #f8fbe6;
     white-space: nowrap;
   }
 
+  // ─── Shape system ─────────────────────────────────────────────────────────
   &__shapes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
-    margin: 1.25rem 0;
+    margin: 1rem 0;
   }
 
   &__shape-item {
     background: rgba(255, 255, 255, 0.4);
     border-radius: 0.5rem;
-    padding: 0.875rem;
+    padding: 0.75rem;
     text-align: center;
   }
 
@@ -807,7 +1015,7 @@ $tool-career-inactive: #f8fbe6;
     align-items: center;
     gap: 4px;
     height: 28px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.375rem;
   }
 
   &__shape {
@@ -846,6 +1054,7 @@ $tool-career-inactive: #f8fbe6;
     font-style: italic;
   }
 
+  // ─── Tablet+ ──────────────────────────────────────────────────────────────
   @include tablet {
     padding: 4rem;
 
@@ -860,11 +1069,21 @@ $tool-career-inactive: #f8fbe6;
       flex-shrink: 0;
     }
 
+    // swap: hide accordion, show tabs
+    &__accordion {
+      display: none;
+    }
+
+    &__tabs-wrapper {
+      display: block;
+    }
+
     &__tab-question {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
+      width: 30ch;
 
       [aria-selected="false"] & {
-        font-size: 0.9375rem;
+        font-size: 1rem;
       }
     }
 
@@ -872,9 +1091,10 @@ $tool-career-inactive: #f8fbe6;
       padding: 2.5rem;
     }
 
-    &__panel-content {
+    &__panel-layout {
       flex-direction: row;
       align-items: flex-start;
+      gap: 2.5rem;
     }
 
     &__panel-figure {
@@ -884,7 +1104,6 @@ $tool-career-inactive: #f8fbe6;
 
     &__panel-screens {
       flex-direction: row;
-      flex-wrap: wrap;
 
       .tools__panel-screen {
         flex: 1;
@@ -895,7 +1114,7 @@ $tool-career-inactive: #f8fbe6;
 }
 
 .impact {
-  padding: 0 2rem 2rem 2rem;
+  padding: 2rem;
 
   &__stats {
     display: flex;
@@ -910,12 +1129,11 @@ $tool-career-inactive: #f8fbe6;
     gap: 0.375rem;
     background-color: #fafafa;
     padding: 2rem;
-    border-radius: 0.3rem;
-    height: 12rem;
+    border-radius: 0.75rem;
   }
 
   &__number {
-    font-size: 2rem;
+    font-size: 1.375rem;
     font-weight: 500;
     color: $black;
     line-height: 1;
@@ -926,7 +1144,6 @@ $tool-career-inactive: #f8fbe6;
     font-size: 1rem;
     line-height: 1.5;
     color: #6c6c6c;
-    max-width: 28ch;
   }
 
   @include tablet {
@@ -941,16 +1158,21 @@ $tool-career-inactive: #f8fbe6;
     &__stat {
       flex: 1;
       min-width: 0;
+      padding: 2rem;
+      height: 12rem;
     }
 
     &__number {
-      font-size: 2.5rem;
+      font-size: 2rem;
+    }
+    &__body {
+      max-width: 28ch;
     }
   }
 }
 
 .update {
-  padding: 0 2rem 2rem 2rem;
+  padding: 2rem 2rem 8rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -959,7 +1181,7 @@ $tool-career-inactive: #f8fbe6;
     font-size: 1rem;
     line-height: 1.6;
     margin-top: 0.8rem;
-    max-width: 60ch;
+    max-width: 68ch;
   }
 
   &__figure {
@@ -981,7 +1203,7 @@ $tool-career-inactive: #f8fbe6;
     padding-top: 0.75rem;
     color: #6c6c6c;
     display: block;
-    text-align: left;
+    text-align: center;
   }
 
   @include tablet {
@@ -993,10 +1215,6 @@ $tool-career-inactive: #f8fbe6;
     &__figure {
       width: 35%;
       flex-shrink: 0;
-    }
-
-    &__caption {
-      text-align: center;
     }
   }
 }

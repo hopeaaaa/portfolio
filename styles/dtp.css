@@ -1198,7 +1198,7 @@ body {
   border-radius: 0 0 0.3rem 0.3rem;
 }
 .impact__quote-bar {
-  width: 0.5rem;
+  width: 0.25rem;
   height: auto;
   align-self: stretch;
   flex-shrink: 0;
