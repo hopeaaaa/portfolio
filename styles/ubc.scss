@@ -23,6 +23,13 @@ a:hover {
   font-style: italic;
 }
 
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: $black;
+  margin-bottom: 1rem;
+}
+
 .lightbox {
   display: none;
   position: fixed;
@@ -387,6 +394,7 @@ a:hover {
     margin-top: 0.2rem;
     margin-top: 0.8rem;
     color: $black;
+    max-width: 55ch;
   }
   &__body--black {
     font-size: 1rem;
@@ -436,10 +444,10 @@ a:hover {
     &__title {
       font-size: 1.75rem;
     }
-    &__body--big {
+    /*     &__body--big {
       font-size: 2.125rem;
       line-height: 1.6;
-    }
+    } */
     &__body--black {
       font-size: 1.4375rem;
       line-height: 1.6;
@@ -473,8 +481,9 @@ a:hover {
   }
   &__li {
     list-style-type: disc;
-    line-height: 1.6rem;
     color: $black;
+    font-size: 1.5rem;
+    line-height: 1.6;
   }
 
   @media (min-width: 768px) {
@@ -487,10 +496,10 @@ a:hover {
     &__body {
       width: 50ch;
     }
-    &__li {
+    /*     &__li {
       font-size: 2.125rem;
       line-height: 1.6;
-    }
+    } */
   }
 }
 .solutions {
@@ -1006,53 +1015,53 @@ a:hover {
     padding: 4rem 0;
   }
 }
+
 .impact {
-  /*   background-color: $orange; */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  margin-top: 4rem;
-  &__section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
-    padding: 0 2.5rem;
-  }
+  padding-top: 2rem;
+
   &__stats {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
   }
+
   &__stat {
     display: flex;
     flex-direction: column;
-    flex-shrink: 0;
-    padding: 2rem 0;
+    gap: 0.375rem;
+    background-color: #fafafa;
+    padding: 2rem;
+    border-radius: 0.75rem;
   }
-  &__bold {
-    font-size: 2.5rem;
-    line-height: 1;
-    font-weight: 300;
+
+  &__number {
+    font-size: 1.375rem;
+    font-weight: 500;
     color: $black;
+    line-height: 1;
+    display: block;
   }
-  &__statLabel {
+
+  &__body {
     font-size: 1rem;
-    color: $grey;
-    margin-top: 0.5rem;
+    line-height: 1.5;
+    color: #6c6c6c;
   }
+
   &__bottom {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    margin-top: 4rem;
   }
+
   &__textWrapper {
     flex: 1;
   }
-  &__title {
-    font-size: 1.75rem;
-    font-weight: 300;
-    color: $black;
+
+  &__text-container {
+    padding-bottom: 2rem;
   }
 
   &__subtitle {
@@ -1061,63 +1070,58 @@ a:hover {
     color: $black;
   }
 
-  &__body {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-top: 0.4rem;
-    margin-bottom: 1rem;
-    color: $grey;
-  }
-  &__text-container {
-    padding-bottom: 2rem;
-  }
-  &__imgWrapper {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-bottom: 4rem;
-  }
-
-  &__imgInner {
+  &__figure {
+    flex: none;
     width: 100%;
-    display: inline-block;
+    margin: 0;
   }
 
   &__img {
     width: 100%;
     height: auto;
-    border-radius: 0.3rem;
+    display: block;
+    border-radius: 0.5rem;
   }
 
   &__caption {
-    font-size: 0.875rem;
     font-style: italic;
-    padding-top: 1rem;
-    color: $grey;
+    font-size: 0.875rem;
+    padding-top: 0.75rem;
+    color: #6c6c6c;
+    display: block;
     text-align: center;
   }
-  @media (min-width: 768px) {
-    &__section {
-      padding: 5rem;
-      margin-top: 4rem;
-    }
+
+  @include tablet {
+    padding-top: 4rem;
 
     &__stats {
       flex-direction: row;
-      justify-content: space-between;
+      align-items: flex-end;
+      gap: 3rem;
     }
+
+    &__stat {
+      flex: 1;
+      min-width: 0;
+    }
+
+    &__number {
+      font-size: 2rem;
+    }
+
     &__bottom {
       flex-direction: row;
       align-items: flex-start;
       gap: 6rem;
     }
-
-    &__imgInner {
-      width: 80%;
+    &__figure {
+      width: 45%;
+      flex-shrink: 0;
     }
   }
 }
+
 .footer {
   padding: 0 2rem;
   font-family: $font-fourth;
