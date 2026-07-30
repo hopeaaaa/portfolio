@@ -99,7 +99,7 @@
         </div>
         <div class="context__callout">
           <p class="context__callout-body">
-            Advisors noticed a pattern: students were coming into advisory meetings unprepared,
+            Advisors noticed a pattern: students were coming into advisory meetings unprepared;
             not because they weren't motivated, but because they didn't know how to prepare.
             Emailed instructions were not enough.
           </p>
@@ -126,7 +126,7 @@
           </p>
         </div>
         <img class="resource-hub__intro-img" src="../assets/images/creative careers/platform homepage.jpg"
-          alt="The Creative Careers homepage on a device" />
+          alt="The Creative Careers homepage on a tablet" />
       </div>
       <div class="resource-hub__hub-container">
         <img class="resource-hub__hub-img" src="../assets/images/creative careers/Homepage.jpg"
@@ -142,8 +142,11 @@
         <div class="tools__text-container">
           <h2 class="section-title" id="tools-title">The Tools</h2>
           <p class="tools__body">
-            The office knew they needed three interactive tools, one for each recurring challenge
-            students brought to appointments.
+            Advisors came to the project with three tools already in mind: a resume builder, a skill identifier, and a
+            career pathfinder. Through user research, we reframed each tool around the question students were actually
+            trying to answer. By helping students answer these questions beforehand, the tools help make
+            appointments
+            more focused and productive, and even extend advising beyond the appointment itself.
           </p>
         </div>
       </div>
@@ -169,7 +172,7 @@
             <div class="tools__panel-inner">
               <span class="tools__metaphor-tag">Visual metaphor: magnifying glass</span>
               <p class="tools__panel-body">
-                The Resume Builder helps students build a master resume — a comprehensive document
+                The Resume Builder helps students build a master resume, a comprehensive document
                 they can draw from when tailoring job applications.
               </p>
               <div class="tools__panel-callout">
@@ -189,7 +192,6 @@
             </div>
           </div>
         </div>
-
         <!-- Skill Identifier -->
         <div class="accordion__item tools__accordion-item tools__accordion-item--skills">
           <button class="accordion__trigger tools__accordion-trigger" aria-expanded="false">
@@ -198,7 +200,7 @@
                 <span class="tools__accordion-name">Skill Identifier</span>
                 <span class="tools__tab-pill">student-led</span>
               </div>
-              <p class="tools__accordion-question">"How do I show what I'm learning? What are my skills??"</p>
+              <p class="tools__accordion-question">"How do I talk about what I'm learning? What are my skills??"</p>
             </div>
             <svg class="accordion__icon tools__accordion-icon" width="20" height="20" viewBox="0 0 16 16"
               aria-hidden="true">
@@ -232,7 +234,6 @@
             </div>
           </div>
         </div>
-
         <!-- Career Pathfinder -->
         <div class="accordion__item tools__accordion-item tools__accordion-item--career">
           <button class="accordion__trigger tools__accordion-trigger" aria-expanded="false">
@@ -255,20 +256,22 @@
               <span class="tools__metaphor-tag">Visual metaphor: binoculars + jungle path</span>
               <p class="tools__panel-body">
                 This tool took the longest to develop and was designed by me, after the students' early
-                concepts kept producing the same result: degree name → job title. I wanted to challenge
+                concepts kept producing the same result: degree name → job title (photography major → photographer.) I
+                wanted to challenge
                 that and present something more expansive.
               </p>
               <h4 class="tools__panel-subheading">The Reframe</h4>
               <p class="tools__panel-body">
-                Instead of degree → career, the tool became a self-reflection instrument. It asks about
+                Instead of degree = career, the tool became a self-reflection instrument. It asks about
                 passions, skills, and workplace values, then surfaces career directions based on that
-                combination. Your degree is one input, not the answer.
+                combination. Your degree is one input, not the final answer.
               </p>
-              <h4 class="tools__panel-subheading">Drag and drop interaction</h4>
+              <h4 class="tools__panel-subheading">How It Works: Drag and drop interaction</h4>
               <p class="tools__panel-body">
                 With each question, students drag and drop floating shapes into a holding circle —
                 claiming their selections rather than typing or checking boxes.
               </p>
+              <p>TESTSTTTTTT</p>
               <div class="tools__shapes">
                 <div class="tools__shape-item">
                   <div class="tools__shape-demo">
@@ -315,36 +318,35 @@
             </div>
           </div>
         </div>
-
       </div><!-- end accordion -->
 
       <!-- ─── Tablet+: tabs (hidden on mobile) ─────────────────────────────────── -->
       <div class="tools__tabs-wrapper">
-
         <div class="tools__tabs" role="tablist">
           <button class="tools__tab tools__tab--resume" role="tab" aria-selected="false" aria-controls="panel-resume"
             id="tab-resume" onclick="activateTool('resume')">
-            <p class="tools__tab-question">"What do I put on my resume?"</p>
             <div class="tools__tab-meta">
               <span class="tools__tab-name">Resume Builder</span>
-              <span class="tools__tab-pill">student-led</span>
+              <span class="tools__tab-pill">designed by students</span>
             </div>
+            <p class="tools__tab-question" id="tab-resume-question">"What do I put on my resume?"</p>
           </button>
           <button class="tools__tab tools__tab--skills" role="tab" aria-selected="false" aria-controls="panel-skills"
             id="tab-skills" onclick="activateTool('skills')">
-            <p class="tools__tab-question">"How do I show what I'm learning? What are my skills??"</p>
             <div class="tools__tab-meta">
               <span class="tools__tab-name">Skill Identifier</span>
-              <span class="tools__tab-pill">student-led</span>
+              <span class="tools__tab-pill">designed by students</span>
             </div>
+            <p class="tools__tab-question" id="tab-skill-question">"How do I communicate what I'm
+              learning? What are my skills??"</p>
           </button>
           <button class="tools__tab tools__tab--career" role="tab" aria-selected="true" aria-controls="panel-career"
             id="tab-career" onclick="activateTool('career')">
-            <p class="tools__tab-question">"What should I do with my degree?!"</p>
             <div class="tools__tab-meta">
               <span class="tools__tab-name">Career Pathfinder</span>
-              <span class="tools__tab-pill tools__tab-pill--mine">my design</span>
+              <span class="tools__tab-pill tools__tab-pill--mine">designed by me</span>
             </div>
+            <p class="tools__tab-question" id="tab-career-question">"What should I do with my degree?!"</p>
           </button>
         </div>
 
@@ -354,7 +356,7 @@
             <div class="tools__panel-text">
               <span class="tools__metaphor-tag">Visual metaphor: magnifying glass</span>
               <h3 class="tools__panel-title">Resume Builder</h3>
-              <p class="tools__panel-body">The Resume Builder helps students build a master resume — a
+              <p class="tools__panel-body">The Resume Builder helps students build a master resume, a
                 comprehensive document they can draw from when tailoring job applications.</p>
               <div class="tools__panel-callout">
                 <p>The closet analogy came from something an advisor said in a meeting. When we needed
@@ -362,13 +364,13 @@
                   closet, the resumes you send to employers are the outfits.</p>
               </div>
               <div class="tools__credits">
-                <span class="tools__credit">Visual identity — design students</span>
-                <span class="tools__credit">Illustrations — me</span>
-                <span class="tools__credit">Interaction logic — team</span>
+                <span class="tools__credit">Visual identity by students</span>
+                <span class="tools__credit">Illustrations by me</span>
+                <span class="tools__credit">Interaction logic by team</span>
               </div>
             </div>
             <figure class="tools__panel-figure">
-              <img src="../assets/images/creative careers/resume-builder-illustration.png" alt="Microscope illustration"
+              <img src="../assets/images/creative careers/illustration_resume.png" alt="Magnifying glass illustration"
                 class="tools__panel-illustration" />
             </figure>
           </div>
@@ -385,11 +387,12 @@
               <span class="tools__metaphor-tag">Visual metaphor: telescope + constellations</span>
               <h3 class="tools__panel-title">Skill Identifier</h3>
               <p class="tools__panel-body">Students often struggle to identify and name their transferable
-                skills. The design starts broad by asking for your degree, and narrows toward your actual skills.</p>
+                skills. This tool starts broad by asking for your degree, and narrows toward your actual skills.</p>
               <div class="tools__panel-callout">
-                <p>"What are your skills?" is an intimidating question. Instead, the design starts with
-                  users selecting their degree and major, then the specific software tools associated with
-                  their coursework. From these selections, the associated skills are surfaced.</p>
+                <p>"What are your skills?" is an intimidating question. Instead of starting with this question, the
+                  design starts with
+                  users selecting their degree and major, then the specific software/tools associated with
+                  3coursework. From these selections, the associated skills are surfaced.</p>
               </div>
               <div class="tools__credits">
                 <span class="tools__credit">Visual identity — design students</span>
@@ -414,67 +417,85 @@
             <div class="tools__panel-text">
               <span class="tools__metaphor-tag">Visual metaphor: binoculars + jungle path</span>
               <h3 class="tools__panel-title">Career Pathfinder</h3>
-              <p class="tools__panel-body">This tool took the longest to develop and was designed by me,
-                after the students' early concepts kept producing degree name → job title. I wanted to
-                challenge that and present something more expansive.</p>
+              <p class="tools__panel-body"> This tool took the longest to develop and was designed by me, after the
+                students' early
+                concepts kept producing the same result: degree name → job title (i.e. photography major →
+                photographer).
+                I
+                wanted to challenge
+                this and present something more expansive.</p>
+              <div class="tools__example-container">
+                <div class="tools__example">Cinematographer</div>
+                <div class="tools__example">Community Engaged Artist</div>
+                <div class="tools__example">Digital Death Retoucher</div>
+                <!--                 <div class="tools__example">Graphic Designer</div>
+                <div class="tools__example">Drone Camera Operator</div>
+                <div class="tools__example">Personal Memory Curator</div>
+                <div class="tools__example">Digital Death Retoucher</div>
+                <div class="tools__example">Augmented Advertisting Specalist</div> -->
+              </div>
               <h4 class="tools__panel-subheading">The Reframe</h4>
-              <p class="tools__panel-body">Instead of degree → career, the tool became a self-reflection
-                instrument. It asks about passions, skills, and workplace values, then surfaces career
-                directions based on that combination. Your degree is one input, not the answer.</p>
-              <h4 class="tools__panel-subheading">Drag and drop interaction</h4>
+              <p class="tools__panel-body">Instead of degree = career, the tool became a self-reflection
+                facilitator. It asks the user what their passions, skills, and workplace values are, then surfaces
+                career
+                directions based on that combination. Your degree is one input, not the final answer.</p>
+              <h4 class="tools__panel-subheading">How It Works</h4>
               <p class="tools__panel-body">With each question, students drag and drop floating shapes into
-                a holding circle — claiming their selections rather than typing or checking boxes.</p>
+                a holding circle. At the end, students receive a PDF summary that also doubles as a short
+                worksheet to bring to an advising appointment. This tool, and the others, are designed to be starting
+                points for career
+                reflection and discussion.</p>
               <div class="tools__shapes">
                 <div class="tools__shape-item">
                   <div class="tools__shape-demo">
                     <span class="tools__shape tools__shape--circle"></span>
-                    <span class="tools__shape tools__shape--circle"></span>
-                    <span class="tools__shape tools__shape--circle"></span>
+                    <!--  <span class="tools__shape tools__shape--circle"></span>
+                    <span class="tools__shape tools__shape--circle"></span> -->
                   </div>
-                  <p class="tools__shape-label">Q1 — Industries</p>
-                  <p class="tools__shape-sub">circle bubbles</p>
+                  <p class="tools__shape-label"> Industries</p>
+                  <!--      <p class="tools__shape-sub">circle bubbles</p> -->
                 </div>
                 <div class="tools__shape-item">
                   <div class="tools__shape-demo">
                     <span class="tools__shape tools__shape--semi"></span>
-                    <span class="tools__shape tools__shape--semi"></span>
-                    <span class="tools__shape tools__shape--semi"></span>
+                    <!--     <span class="tools__shape tools__shape--semi"></span>
+                    <span class="tools__shape tools__shape--semi"></span> -->
                   </div>
-                  <p class="tools__shape-label">Q2 — Skills</p>
-                  <p class="tools__shape-sub">semi-circle bubbles</p>
+                  <p class="tools__shape-label">Skills</p>
+                  <!-- <p class="tools__shape-sub">semi-circle bubbles</p> -->
                 </div>
                 <div class="tools__shape-item">
                   <div class="tools__shape-demo">
                     <span class="tools__shape tools__shape--pill"></span>
-                    <span class="tools__shape tools__shape--pill"></span>
+                    <!-- <span class="tools__shape tools__shape--pill"></span> -->
                   </div>
-                  <p class="tools__shape-label">Q3 — Values</p>
-                  <p class="tools__shape-sub">pill bubbles</p>
+                  <p class="tools__shape-label">Values</p>
+                  <!-- <p class="tools__shape-sub">pill bubbles</p> -->
                 </div>
               </div>
-              <h4 class="tools__panel-subheading">Results</h4>
-              <p class="tools__panel-body">At the end, students receive a four-page PDF worksheet to bring
-                to an advising appointment. This tool is a starting point, not a verdict.</p>
-              <div class="tools__credits">
+              <!--               <img src="../assets/images/ubc/placeholder.png" alt="video of career pathfinder tool in action">
+ -->
+              <video class="tools__video" autoplay="" controls="" loop="">
+                <source src="../assets/images/creative careers/career-pathway-video.mp4" type="video/mp4">
+              </video>
+              <!--               <div class="tools__credits">
                 <span class="tools__credit">Visual identity — design students</span>
                 <span class="tools__credit">Illustrations — me</span>
                 <span class="tools__credit">Infographic — me</span>
                 <span class="tools__credit">Interaction + PDF — me</span>
-              </div>
+              </div> -->
             </div>
             <figure class="tools__panel-figure">
-              <img src="../assets/images/creative careers/career-pathfinder-illustration.png"
+              <img src="../assets/images/creative careers/pathfinder illustration.png"
                 alt="Binoculars and jungle path illustration" class="tools__panel-illustration" />
             </figure>
           </div>
-          <div class="tools__panel-screens">
+          <!--     <div class="tools__panel-screens">
             <img src="../assets/images/creative careers/career-pathfinder-screen.jpg" alt="Career Pathfinder screenshot"
               class="tools__panel-screen" />
-          </div>
+          </div> -->
         </div>
-
-      </div><!-- end tabs wrapper -->
-
+      </div>
     </section>
     <section class="impact" aria-labelledby="impact-title">
       <h2 class="section-title" id="impact-title">Impact</h2>
@@ -489,7 +510,7 @@
         </div>
         <div class="impact__stat">
           <span class="impact__number">30+</span>
-          <p class="impact__body">Resources consolidated, streamlining access for students, alumni, and advisors</p>
+          <p class="impact__body">Resources consolidated; streamlining access for students, alumni, and advisors</p>
         </div>
         <div class="impact__stat">
           <span class="impact__number">Curriculum Integration</span>
@@ -517,7 +538,7 @@
   <footer class="footer">
     <div class="footer__content">
       <p class="footer__copyright">© 2025</p>
-      <button class="footer__topbtn" onclick="topFunction()" title="Up up to the top">↑ TOP</button>
+      <button class="footer__topbtn" onclick="topFunction()" title="Up up to the top">top</button>
       <p class="socials">
         <a href="https://github.com/hopeaaaa">github</a> /
         <a href="https://www.linkedin.com/in/hope-akello/">linkedin</a>

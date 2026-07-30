@@ -215,7 +215,7 @@ body {
     font-size: 2rem;
     font-weight: 400;
     color: $black;
-    font-family: $font-secondary;
+    font-family: $font-primary;
   }
 
   &__oneLiner {
@@ -236,7 +236,7 @@ body {
     padding: 0 4rem 4rem 4rem;
 
     &__title {
-      font-size: 2.125rem;
+      font-size: 3rem;
     }
 
     &__oneLiner {

@@ -1,5 +1,6 @@
 const dots = document.querySelectorAll(".dot");
 const images = document.querySelectorAll(".finaldesign__gallery_img");
+const video = document.getElementById("myVideo");
 
 dots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
@@ -25,3 +26,7 @@ function activateTool(tool) {
 document.addEventListener("DOMContentLoaded", () => {
   activateTool("career");
 });
+
+function pauseVideo() {
+  video.pause();
+}
